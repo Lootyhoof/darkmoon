@@ -1,0 +1,26 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+window,
+dialog {
+  padding: 6px;
+}
+
+#instructions {
+  font-weight: bold;
+  font-size: larger;
+}
+
+#palette-box {
+  -moz-appearance: none;
+  margin: 0 0 10px;
+  background-color: rgb(50,50,50);
+  color: #fff;
+  border: 1px solid rgb(75,75,75);
+}
+
+#palette-box > toolbarpaletteitem {
+  padding: 8px 2px;
+  margin: 0 8px;
+}

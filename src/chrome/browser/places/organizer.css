@@ -1,0 +1,214 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Toolbar */
+#placesToolbar {
+  padding: 3px;
+  -moz-padding-end: 6px;
+}
+
+#placesToolbar > toolbarbutton[disabled] > .toolbarbutton-icon {
+  opacity: .4;
+}
+
+#back-button,
+#forward-button {
+  list-style-image: url("chrome://browser/skin/Toolbar.png");
+}
+
+
+#back-button {
+  -moz-image-region: rect(0, 18px, 18px, 0);
+}
+
+#forward-button {
+  -moz-image-region: rect(0, 36px, 18px, 18px);
+  margin-left: 5px;
+}
+
+#back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+#forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+  transform: scaleX(-1);
+}
+
+/* Menu */
+#placesMenu {
+  -moz-margin-start: 6px;
+  -moz-appearance: none;
+  border: none;
+}
+
+#placesMenu > menu {
+  -moz-padding-start: 4px;
+  -moz-padding-end: 1px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  -moz-appearance: none;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+#placesMenu > menu[_moz-menuactive="true"] {
+  background-color: rgb(110,110,110);
+}
+
+#placesMenu > menu:hover {
+  border: 1px solid rgb(50,50,50);
+  background-color: rgb(75,75,75);
+}
+
+#placesMenu > menu[open="true"] {
+  border: 1px solid rgb(50,50,50);
+  background-color: rgb(110,110,110);
+}
+
+#placesMenu > menu > .menubar-text {
+  -moz-padding-end: 8px;
+  background: url(chrome://global/skin/arrow/arrow-dn.gif) right center no-repeat;
+}
+
+#placesMenu > menu > .menubar-text:-moz-locale-dir(rtl) {
+  background-position: left center;
+}
+
+/* organize, view and maintenance buttons icons */
+#organizeButton, 
+#viewMenu, 
+#maintenanceButton {
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.png");
+}
+
+/* organize button */
+#organizeButton {
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+#organizeButton:hover,
+#organizeButton[open="true"] {
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+}
+
+/* view button */
+#viewMenu {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+#viewMenu:hover,
+#viewMenu[open="true"] {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+/* maintenance button */
+#maintenanceButton {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+#maintenanceButton:hover,
+#maintenanceButton[open="true"] {
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
+}
+
+/* Root View */
+#placesView {
+  border-top: 1px solid rgb(75,75,75);
+}
+
+/* Info box */
+#detailsDeck {
+  border-top: 1px solid rgb(75,75,75);
+  padding: 5px;
+}
+
+#infoBoxExpanderLabel {
+  -moz-padding-start: 2px;
+}
+
+#searchFilter {
+  margin: 0;
+}
+
+/**
+ * Downloads pane
+ */
+
+#clearDownloadsButton > .toolbarbutton-icon {
+  display: none;
+}
+
+#clearDownloadsButton {
+  -moz-appearance: none;
+  -moz-padding-start: 9px;
+  -moz-padding-end: 9px;
+}
+
+
+#placesView {
+  border-top: none;
+}
+
+#placesToolbox {
+  border-top: none;
+}
+
+#placesToolbar {
+  background-color: rgb(43,43,43);
+}
+  
+#placesView > splitter {
+  border: 0;
+  -moz-border-end: 1px solid rgb(75,75,75);
+  min-width: 0;
+  width: 3px;
+  background-color: transparent;
+  -moz-margin-start: -3px;
+  position: relative;
+}
+
+#placesToolbar {
+  color: #fff;
+}
+
+#detailsDeck {
+  border-top-color: rgb(75,75,75);
+}
+
+#searchFilter {
+  -moz-appearance: none;
+  padding: 4px;
+  -moz-padding-start: 6px;
+  background-color: rgb(50,50,50);
+  background-clip: padding-box;
+  border: 1px solid rgb(75,75,75);
+  border-radius: 5px;
+}
+
+#placesToolbar > toolbarbutton {
+  border-radius: 3px;
+  margin-left: 7px;
+}
+#placesToolbar > toolbarbutton:not([disabled="true"]):hover {
+  border: 1px solid rgb(50,50,50);
+  background-color: rgb(75,75,75);
+}
+
+#placesToolbar > toolbarbutton:not([disabled="true"]):hover:active,
+#placesToolbar > toolbarbutton:not([disabled="true"])[open="true"] {
+  border: 1px solid rgb(50,50,50);
+  background-color: rgb(110,110,110);
+}
+#placesToolbar > toolbarbutton > .toolbarbutton-icon {
+  margin-right: 4px;
+}
+#back-button,
+#forward-button {
+  margin-right: 0;
+}

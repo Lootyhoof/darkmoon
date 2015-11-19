@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!-- This Source Code is subject to the terms of the Mozilla Public License
+   - version 2.0 (the "License"). You can obtain a copy of the License at
+   - http://mozilla.org/MPL/2.0/. -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>darkmoon@lootyhoof-pm</em:id>
+    <em:version>1.0.0b2</em:version>
+    <em:name>Dark Moon</em:name>
+    <em:description>The ultimate dark experience.</em:description>
+    <em:creator>Lootyhoof</em:creator>
+    <em:type>4</em:type>
+    <em:internalName>darkmoon</em:internalName>
+
+    <em:contributor>Louis Chan</em:contributor>
+
+    <em:targetApplication>
+      <Description>
+        <!-- Pale Moon -->
+        <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+        <em:minVersion>25.6.0</em:minVersion>
+        <em:maxVersion>26.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

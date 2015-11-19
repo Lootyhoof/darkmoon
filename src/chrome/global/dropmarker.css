@@ -1,0 +1,28 @@
+dropmarker {
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  border: 1px solid;
+  -moz-border-top-colors: rgb(75,75,75);
+  -moz-border-right-colors: rgb(75,75,75);
+  -moz-border-bottom-colors: rgb(75,75,75);
+  -moz-border-left-colors: rgb(75,75,75);
+  background-color: rgb(50,50,50);
+  padding: 1px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn-sharp.gif");
+  -moz-image-region: auto;
+}
+
+dropmarker:hover:active:not([disabled="true"]) {
+  background-color: rgb(110,110,110);
+  padding-top: 2px;
+  padding-bottom: 0px;
+  -moz-padding-start: 2px;
+  -moz-padding-end: 0px;
+}
+
+dropmarker[disabled="true"] {
+  background-color: rgb(62,62,62);
+}
