@@ -40,3 +40,7 @@ body.normal > #errorPageContainer {
 #moreInfoLinkContainer {
   margin-top: 0.5em;
 }
+
+#moreInfoLinkContainer a {
+  color: #fff;
+}
