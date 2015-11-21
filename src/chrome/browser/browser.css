@@ -2086,11 +2086,12 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 #ctrlTab-panel {
   padding: 20px 10px 10px;
   font-weight: bold;
-  text-shadow: 0 0 1px rgb(27%,27%,27%), 0 0 2px rgb(27%,27%,27%);
+  background: rgb(50,50,50);
+  color: #fff;
 }
 
 .ctrlTab-favicon[src] {
-  background-color: white;
+  background-color: rgb(72,72,72);
   width: 20px;
   height: 20px;
   padding: 2px;
@@ -2137,8 +2138,8 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   padding-bottom: 10px;
   -moz-appearance: none;
   border: none;
-  background: -moz-dialog;
-  color: -moz-dialogText;
+  background: rgb(50,50,50);
+  color: #fff;
 }
 
 #allTabs-meta {
@@ -2155,7 +2156,7 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 }
 
 .allTabs-favicon[src] {
-  background-color: -moz-dialog;
+  background-color: rgb(75,75,75);
   width: 22px;
   height: 22px;
   padding-top: 1px;
@@ -2172,6 +2173,10 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   border-bottom-left-radius: 4px;
 }
 
+.allTabs-preview {
+  text-shadow: none;
+}
+
 .allTabs-preview-inner > .tabPreview-canvas {
   background-color: rgb(60%,60%,60%);
   box-shadow: 0 0 1.5px ThreeDShadow;
@@ -2185,6 +2190,11 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   outline: 1px dotted -moz-dialogText;
 }
 
+#allTabs-tab-close-button {
+  background: rgb(75,75,75);
+  border-bottom-left-radius: 4px;
+  padding: 2px 1px;
+}
 
 #addon-bar,
 #FindToolbar {
