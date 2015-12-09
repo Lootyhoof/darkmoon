@@ -1266,7 +1266,7 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   -moz-appearance: none;
   border-top: none;
   border-bottom: none;
-  background-image: rgb(50,50,50);
+  background-color: rgb(50,50,50);
   color: #fff;
 }
 
