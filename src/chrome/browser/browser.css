@@ -1266,8 +1266,8 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   -moz-appearance: none;
   border-top: none;
   border-bottom: none;
-  background-image: -moz-linear-gradient(rgba(240,240,240,1), rgba(248,248,248,1));
-  color: #666;
+  background-image: rgb(50,50,50);
+  color: #fff;
 }
 
 /* ::::: throbber ::::: */
