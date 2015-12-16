@@ -235,7 +235,7 @@ menuitem.bookmark-item {
 
   #sidebar-splitter {
     border: 0;
-    -moz-border-end: 1px solid #A9B7C9;
+    -moz-border-end: 1px solid rgb(75,75,75);
     min-width: 0;
     width: 3px;
     background-color: transparent;

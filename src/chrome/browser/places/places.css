@@ -3,7 +3,7 @@
   -moz-appearance: none;
   border: 0;
   margin: 0;
-  border-top: 1px solid ThreeDShadow;
+  border-top: 1px solid rgb(75,75,75);
 }
 
 .sidebar-placesTreechildren::-moz-tree-cell(leaf) ,
