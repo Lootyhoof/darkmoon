@@ -5,7 +5,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 spinbuttons {
-  -moz-appearance: spinner;
+  -moz-appearance: none;
   cursor: default;
 }
 
@@ -13,37 +13,32 @@ spinbuttons {
   min-width: 13px;
   min-height: 11px;
   margin: 0 !important;
-  border: 2px solid;
-  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow;
-  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow;
-  background-color: ThreeDFace;
+  border: 1px solid;
+  -moz-border-top-colors: rgb(75,75,75);
+  -moz-border-right-colors: rgb(75,75,75);
+  -moz-border-bottom-colors: rgb(75,75,75);
+  -moz-border-left-colors: rgb(75,75,75);
+  background-color: rgb(50,50,50);
 }
 
 .spinbuttons-button > .button-box {
   border: 0;
 }
 
-.spinbuttons-button:hover:active
-{
-  border: 2px solid;
-  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow;
+.spinbuttons-button:hover {
+  background-color: rgb(75,75,75);
+}
+
+.spinbuttons-button:hover:active {
+  background-color: rgb(23,23,23);
 }
 
 .spinbuttons-button[disabled="true"] {
-  border: 2px solid;
-  -moz-border-top-colors: ThreeDHighlight ThreeDLightShadow !important;
-  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow !important;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow !important;
-  -moz-border-left-colors: ThreeDHighlight ThreeDLightShadow !important;
+  background-color: rgb(62,62,62);
 }
 
 .spinbuttons-up {
-  -moz-appearance: spinner-upbutton;
+  -moz-appearance: none;
   background-image: url("chrome://global/skin/arrow/arrow-up.gif");
   background-position: center center;
   background-repeat: no-repeat;
@@ -54,7 +49,7 @@ spinbuttons {
 }
 
 .spinbuttons-down {
-  -moz-appearance: spinner-downbutton;
+  -moz-appearance: none;
   background-image: url("chrome://global/skin/arrow/arrow-dn.gif");
   background-position: center center;
   background-repeat: no-repeat;
