@@ -5,7 +5,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 notification {
-  background-color: rgb(50,50,50);
+  background-color: rgb(60,60,60);
   color: #fff;
   text-shadow: none;
 }
@@ -16,7 +16,7 @@ notification[type="info"] {
 }
 
 notification[type="critical"] {
-  background-image: linear-gradient(rgb(212,0,0), rgb(152,0,0));
+  background-color: rgb(107,40,40);
   color: white;
 }
 
