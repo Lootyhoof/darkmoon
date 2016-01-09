@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.1.1
+- (PM26) add download location styling
+- darken spinbuttons
+- use SVG icons for categories in about:addons
+- use more theme-native error icons
+- make critical notifications more theme-native
+
 ### 1.1.0
 - (PM26) add history menu button
 - show more icons in history/bookmarks menus
