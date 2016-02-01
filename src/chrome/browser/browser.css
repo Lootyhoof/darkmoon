@@ -1393,6 +1393,10 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   background-image: -moz-linear-gradient(rgba(255,255,255,1) -8px, rgba(235,235,235,.4), rgba(235,235,235,.4));
 }
 
+.tabbrowser-tab:not([selected=true]):not(:hover):not(:-moz-lwtheme) > * > * > .tab-text {
+  opacity: .4;
+}
+
 .tab-throbber,
 .tab-icon-image {
   width: 16px;
