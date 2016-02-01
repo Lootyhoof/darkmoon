@@ -71,7 +71,8 @@ h1 {
 }
 
 h2 {
-  background: #ddd;
+  background-color: rgb(110,110,110);
+  color: #fff;
   padding-left: .1em;
 }
 
@@ -84,12 +85,12 @@ h2 {
 }
 
 .treeline {
-  color: #888;
+  color: rgb(75,75,75);
 }
 
 .mrValue {
   font-weight: bold;
-  color: #400;
+  color: #fff;
 }
 
 .mrPerc {
@@ -99,11 +100,11 @@ h2 {
 }
 
 .mrName {
-  color: #004;
+  color: #fff;
 }
 
 .mrNote {
-  color: #604;
+  color: #fff;
 }
 
 .hasKids {
@@ -121,11 +122,13 @@ h2 {
 .option {
   font-size: 80%;
   -moz-user-select: none;  /* no need to include this when cutting+pasting */
+  color: #fff;
 }
 
 .legend {
   font-size: 80%;
   -moz-user-select: none;  /* no need to include this when cutting+pasting */
+  color: #fff;
 }
 
 .debug {
