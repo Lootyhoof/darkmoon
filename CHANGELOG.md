@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.1.2
+- darken about:memory
+- make buttons in about:addons more consistent
+- make selected tab more visible
+
 ### 1.1.1
 - (PM26) add download location styling
 - darken spinbuttons
