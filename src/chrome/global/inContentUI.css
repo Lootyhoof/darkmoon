@@ -81,11 +81,10 @@ html|html {
     -moz-appearance: none;
     color: #fff;
     padding: 0 5px;
-    background: -moz-linear-gradient(rgba(50,50,50, 0.95), rgba(75,75,75, 0) 49%, 
-                                     rgba(23,23,23, 0.45) 51%, rgba(43,43,43, 0.3));
+    background-color: rgb(50,50,50);
     background-clip: padding-box;
     border-radius: 3px;
-    border: 1px solid rgb(50,50,50);
+    border: 1px solid rgb(75,75,75);
   }
 
   menulist {
@@ -100,21 +99,20 @@ html|html {
   button[disabled="true"],
   menulist[disabled="true"],
   colorpicker[type="button"][disabled="true"] {
-    -moz-border-top-colors: rgba(31, 64, 100, 0.3) !important;
-    -moz-border-right-colors: rgba(31, 64, 100, 0.4) !important;
-    -moz-border-bottom-colors: rgba(31, 64, 100, 0.4) !important;
-    -moz-border-left-colors: rgba(31, 64, 100, 0.4) !important;
-    opacity: 0.8;
-    color: #505050;
+    -moz-border-top-colors: rgb(75,75,75) !important;
+    -moz-border-right-colors: rgb(75,75,75) !important;
+    -moz-border-bottom-colors: rgb(75,75,75) !important;
+    -moz-border-left-colors: rgb(75,75,75) !important;
+	background-color: rgb(62,62,62);
+    color: #GrayText;
   }
 
   html|button:not([disabled]):active:hover,
   button:not([disabled="true"]):active:hover,
   menulist[open="true"]:not([disabled="true"]),
   colorpicker[type="button"][open="true"]:not([disabled="true"]) {
-    background-color: rgb(110,110,110);
-    border-color: rgba(39, 53, 68, 0.5);
-    box-shadow: 0 0 3px 1px rgba(39, 53, 68, 0.2) inset;
+    background-color: rgb(23,23,23);
+    border-color: rgb(75,75,75);
   }
   
   html|button:not([disabled]):hover,
