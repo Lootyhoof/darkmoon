@@ -35,19 +35,9 @@ findbar[hidden] {
   border: none;
   padding: 0;
   margin: 0 4px;
-  list-style-image: url("chrome://global/skin/icons/close.png");
   -moz-appearance: none;
-  -moz-image-region: rect(0, 16px, 16px, 0);
   /* make sure the closebutton is displayed as the first element in the bar: */
   -moz-box-ordinal-group: 0;
-}
-
-.findbar-closebutton:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.findbar-closebutton:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 /* Search field */
