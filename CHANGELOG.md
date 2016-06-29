@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.0
+- refactor media controls for Pale Moon 26.3
+- use unified close button icons
+- darken statusbar element
+- brighten text in menulist-editable-input
+
 ### 1.1.2
 - darken about:memory
 - make buttons in about:addons more consistent
