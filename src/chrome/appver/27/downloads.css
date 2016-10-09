@@ -1,0 +1,13 @@
+#downloadsPanel[hasdownloads] > #emptyDownloads {
+  display: none;
+}
+
+#emptyDownloads {
+  padding: 10px 20px;
+  max-width: 40ch;
+}
+
+#downloadsFooter {
+  background: rgb(75,75,75);
+  border-top: 1px solid rgb(75,75,75);
+}
