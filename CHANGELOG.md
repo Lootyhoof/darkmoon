@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.3.0
+- PM27: add statusbar styling
+- PM27: add styling for downloads panel components
+- PM27: style devtools
+- improve appearance of about:
+
 ### 1.2.0
 - refactor media controls for Pale Moon 26.3
 - use unified close button icons
