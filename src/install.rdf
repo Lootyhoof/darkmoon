@@ -9,15 +9,16 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>darkmoon@lootyhoof-pm</em:id>
-    <em:version>1.2.0</em:version>
+    <em:version>1.3.0</em:version>
     <em:name>Dark Moon</em:name>
     <em:description>The ultimate dark experience.</em:description>
     <em:creator>Lootyhoof</em:creator>
     <em:type>4</em:type>
     <em:internalName>darkmoon</em:internalName>
+    <em:skinnable>true</em:skinnable>
 
     <em:contributor>Louis Chan</em:contributor>
-	<em:contributor>Graciliano</em:contributor>
+    <em:contributor>Graciliano</em:contributor>
 
     <em:targetApplication>
       <Description>
