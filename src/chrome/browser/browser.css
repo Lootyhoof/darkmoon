@@ -1302,16 +1302,6 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   list-style-image: url("chrome://global/skin/icons/notloading_16.png");
 }
 
-.tabbrowser-tab:not([pinned]) {
-  max-width: 210px;
-  min-width: 36px;
-}
-
-.tabbrowser-tab:not([pinned]):not([fadein]) {
-  max-width: 0.1px;
-  min-width: 0.1px;
-}
-
 .tabbrowser-tab,
 .tabs-newtab-button {
   -moz-appearance: none;
