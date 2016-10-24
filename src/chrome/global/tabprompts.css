@@ -6,11 +6,11 @@ tabmodalprompt {
 }
 
 .mainContainer {
-  color: black;
-  background-color: white;
+  color: #fff;
+  background-color: rgb(43,43,43);
   background-clip: padding-box;
-  border-radius: 2px;
-  border: 1px solid hsla(0,0%,0%,.5);
+  border-radius: 5px;
+  border: 1px solid rgb(75,75,75);
 }
 
 .topContainer {
@@ -19,6 +19,4 @@ tabmodalprompt {
 
 .buttonContainer {
   padding: 12px 20px 15px;
-  background-color: hsla(0,0%,0%,.05);
-  border-top: 1px solid hsla(0,0%,0%,.05);
 }
