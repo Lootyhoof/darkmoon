@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16"
+     shape-rendering="geometricPrecision">
+  <style>
+    g:not([id$="-shape"]):not(:target) {
+      display: none;
+    }
+  </style>
+  <defs>
+    <g id="x-shape">
+      <line x1="5" y1="5" x2="11" y2="11" stroke-width="0.757" stroke="#fff"/>
+      <line x1="5" y1="11" x2="11" y2="5" stroke-width="0.757" stroke="#fff"/>
+    </g>
+    <g id="hover-circle-shape">
+      <circle cx="8" cy="8" r="5.62" stroke-width="1" stroke="#fff" fill="none" opacity="0.54"/>
+    </g>
+    <g id="active-circle-shape">
+      <circle cx="8" cy="8" r="3.52" stroke-width="1" stroke="#fff" fill="none" opacity="0.78125"/>
+    </g>
+  </defs>
+  <g id="normal">
+    <use xlink:href="#x-shape"/>
+  </g>
+  <g id="hover">
+    <use xlink:href="#x-shape"/>
+    <use xlink:href="#hover-circle-shape"/>
+  </g>
+  <g id="active">
+    <use xlink:href="#active-circle-shape"/>
+  </g>
+  <g id="disabled">
+    <use xlink:href="#x-shape" opacity=".375"/>
+  </g>
+</svg>

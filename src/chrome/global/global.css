@@ -58,19 +58,19 @@ window.dialog {
 }
 
 .message-icon {
-  list-style-image: url("chrome://global/skin/icons/information-32.png");
+  list-style-image: url("chrome://global/skin/icons/information-16.svg");
 }
 
 .alert-icon {
-  list-style-image: url("chrome://global/skin/icons/Warning.png");
+  list-style-image: url("chrome://global/skin/icons/warning-16.svg");
 }
 
 .error-icon {
-  list-style-image: url("chrome://global/skin/icons/Error.png");
+  list-style-image: url("chrome://global/skin/icons/error-16.svg");
 }
 
 .question-icon {
-  list-style-image: url("chrome://global/skin/icons/Question.png");
+  list-style-image: url("chrome://global/skin/icons/question-16.svg");
 }
 
 /* ::::: iframe ::::: */
@@ -314,14 +314,13 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
 /* :::::: Close button icons ::::: */
 
 .close-icon {
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0, 16px, 16px, 0);
+  list-style-image: url("chrome://global/skin/icons/close.svg#normal");
 }
 
 .close-icon:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
+  list-style-image: url("chrome://global/skin/icons/close.svg#hover");
 }
 
 .close-icon:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
+  list-style-image: url("chrome://global/skin/icons/close.svg#active");
 }

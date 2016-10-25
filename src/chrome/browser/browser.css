@@ -1434,16 +1434,16 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   padding: 0px;
 }
 
+.tabbrowser-tab:not(:hover):not([selected="true"]) .tab-close-button {
+  opacity: .375; /* It is much faster to leave the normal image and change the opacity here --johnGraciliano */
+}
+
 .tab-close-button:-moz-lwtheme-darktext {
-  list-style-image: url(chrome://global/skin/icons/close-bright.png);
+  filter: url("chrome://global/skin/icons/invert.svg#invert");
 }  
 
 .tab-close-button:-moz-system-metric(touch-enabled) {
   -moz-transform: scale(1.2);
-}
-
-.tab-close-button:not([selected]):not(:hover):not(:active) {
-  -moz-image-region: rect(0, 64px, 16px, 48px);
 }
 
 .tab-close-button:focus {
@@ -1613,6 +1613,10 @@ toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   padding: 4px 2px;
   margin: 0px;
   border: none;
+}
+
+.tabs-closebutton:-moz-lwtheme-darktext {
+  filter: url("chrome://global/skin/icons/invert.svg#invert");
 }
 
 .tabs-closebutton > .toolbarbutton-icon {
@@ -2214,6 +2218,10 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   border: none;
   padding: 0 5px;
   -moz-appearance: none;
+}
+
+#addonbar-closebutton:-moz-lwtheme-darktext {
+  filter: url("chrome://global/skin/icons/invert.svg#invert");
 }
 
 .statuspanel-label {

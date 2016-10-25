@@ -4,6 +4,10 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+.findbar-closebutton:-moz-lwtheme-brighttext {
+  filter: url("chrome://global/skin/icons/invert.svg#invert");
+}
+
 findbar {
   padding: 4px 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,.1) inset;

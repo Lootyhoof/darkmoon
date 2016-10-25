@@ -68,8 +68,7 @@ textbox.plain {
 /* ::::: search textbox ::::: */
 
 .textbox-search-icon {
-  list-style-image: url(chrome://global/skin/icons/Search-glass.png);
-  -moz-image-region: rect(0, 16px, 16px, 0);
+  list-style-image: url(chrome://global/skin/icons/Search-glass.svg);
 }
 
 .textbox-search-icon:-moz-locale-dir(rtl) {
@@ -80,23 +79,32 @@ textbox.plain {
   cursor: pointer;
 }
 
+.textbox-search-icon[searchbutton]:not([disabled]):active {
+  opacity: .8;
+}
+
+.textbox-search-icon[disabled],
+.textbox-search-icon:not([searchbutton]),
+.textbox-search-icon:not(:hover):not(:active) {
+  opacity: .7;
+}
+
+/* ::::: Search clear ::::: */
+
 .textbox-search-clear {
-  list-style-image: url(chrome://global/skin/icons/Search-close.png);
-  -moz-image-region: rect(0, 16px, 16px, 0);
+  list-style-image: url(chrome://global/skin/icons/close.svg#normal);
 }
 
 .textbox-search-clear:not([disabled]) {
   cursor: default;
 }
 
-.textbox-search-clear:not([disabled]):hover ,
-.textbox-search-icon[searchbutton]:not([disabled]):hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
+.textbox-search-clear:not([disabled]):hover {
+  list-style-image: url("chrome://global/skin/icons/close.svg#hover");
 }
 
-.textbox-search-clear:not([disabled]):hover:active ,
-.textbox-search-icon[searchbutton]:not([disabled]):hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
+.textbox-search-clear:not([disabled]):hover:active {
+  list-style-image: url("chrome://global/skin/icons/close.svg#active");
 }
 
 /* ::::: textboxes inside toolbarpaletteitems ::::: */
