@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="14"
+     height="14"
+     viewBox="0 0 14 14"
+     shape-rendering="geometricPrecision">
+  <style>
+    use:not(:target) {
+      display: none;
+    }
+    use {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 1;
+    }
+    use[id$="normal"] {
+      opacity: 0.6;
+    }
+    use[id="reload-active"] {
+      stroke: #128ED3;
+    }
+    use[id="stop-active"] {
+      stroke: #C62323;
+    }
+    use[id="go-active"] {
+      stroke: #469046;
+    }
+  </style>
+  <defs style="display: none;">
+    <g id="reload-shape">
+      <path d="M 6,8   m 4.537,0   a 4.537,4.537 0 1,1 -4.537,-4.537
+                     l 2.5,0  m -2.5,-2.5   l 2.65,2.5   l -2.65,2.5"   stroke-width="1.027"/>
+    </g>
+    <g id="stop-shape">
+      <line x1="3" y1="3" x2="11" y2="11"/>
+      <line x1="3" y1="11" x2="11" y2="3"/>
+    </g>
+    <g id="go-shape0">
+      <path  d="M 2,7.5   l 10,0   m -5,-5   l 5,5   l -5,5" fill="none"/>
+    </g>
+    <g id="go-shape">
+      <path  d="M 2,7.5   l 9.2,0   m -4.2,-4.5   l 4.5,4.5   l -4.5,4.5" fill="none"/>
+    </g>
+  </defs>
+  <use id="reload"        xlink:href="#reload-shape"/>
+  <use id="reload-normal" xlink:href="#reload-shape"/>
+  <use id="reload-hover"  xlink:href="#reload-shape"/>
+  <use id="reload-active" xlink:href="#reload-shape"/>
+  <use id="stop"        xlink:href="#stop-shape"/>
+  <use id="stop-normal" xlink:href="#stop-shape"/>
+  <use id="stop-hover"  xlink:href="#stop-shape"/>
+  <use id="stop-active" xlink:href="#stop-shape"/>
+  <use id="go"        xlink:href="#go-shape"/>
+  <use id="go-normal" xlink:href="#go-shape"/>
+  <use id="go-hover"  xlink:href="#go-shape"/>
+  <use id="go-active" xlink:href="#go-shape"/>
+</svg>

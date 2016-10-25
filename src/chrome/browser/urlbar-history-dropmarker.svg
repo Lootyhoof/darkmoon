@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="11"
+     height="14"
+     viewBox="0 0 11 14">#1796DD
+  <style>
+    use:not(:target) {
+      display: none;
+    }
+    use {
+      fill: #fff;
+      stroke: none;
+      stroke-width: 0;
+    }
+    use[id="normal"] {
+      opacity: 0.15;
+    }
+    use[id="open"] {
+      fill: #1796DD;
+    }
+  </style>
+  <defs style="display: none;">
+    <path id="drop-shape" d="M 1,4   l 9,0   l -4.5,6.5   l -4.5,-6.5   z"/>
+  </defs>
+  <use id="closed" xlink:href="#drop-shape"/>
+  <use id="open"   xlink:href="#drop-shape"/>
+</svg>

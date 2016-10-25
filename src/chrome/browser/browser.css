@@ -235,7 +235,7 @@
 
 #appmenu_bookmarks {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
-  -moz-image-region: rect(0px 48px 16px 32px);
+  -moz-image-region: rect(0px 32px 16px 16px);
 }
 
 #appmenu_privateBrowsing,
@@ -864,17 +864,16 @@ html|*.urlbar-input:-moz-lwtheme:-moz-placeholder,
   background-color: transparent;
   border: none;
   width: auto;
-  list-style-image: url("chrome://browser/skin/urlbar-history-dropmarker.png");
-  -moz-image-region: rect(0px, 11px, 14px, 0px);
+  list-style-image: url("chrome://browser/skin/urlbar-history-dropmarker.svg#closed");
 }
 
-.urlbar-history-dropmarker:hover {
-  -moz-image-region: rect(0px, 22px, 14px, 11px);
+.urlbar-history-dropmarker:not(:hover):not(:active):not([open="true"]) {
+  opacity: 0.15;
 }
 
-.urlbar-history-dropmarker:hover:active,
+.urlbar-history-dropmarker:active,
 .urlbar-history-dropmarker[open="true"] {
-  -moz-image-region: rect(0px, 33px, 14px, 22px);
+  list-style-image: url("chrome://browser/skin/urlbar-history-dropmarker.svg#open");
 }
 
 
@@ -962,15 +961,14 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 .ac-result-type-bookmark,
 .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
   list-style-image: url("chrome://browser/skin/places/bookmark.png");
-  -moz-image-region: rect(0px 48px 16px 32px);
+  -moz-image-region: rect(0px 32px 16px 16px);
   width: 16px;
   height: 16px;
 }
 
 .ac-result-type-keyword,
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-  list-style-image: url(chrome://global/skin/icons/Search-glass.png);
-  -moz-image-region: rect(0px 32px 16px 16px);
+  list-style-image: url(chrome://global/skin/icons/Search-glass.svg);
   width: 16px;
   height: 16px;
 }
@@ -1016,15 +1014,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border-top: 1px solid GrayText;
 }
 
-
-
 #go-button,
 #urlbar > toolbarbutton {
   -moz-appearance: none;
   padding: 0 2px;
   background-origin: border-box;
   border: none;
-  list-style-image: url("chrome://browser/skin/reload-stop-go.png");
 }
 
 #go-button {
@@ -1032,15 +1027,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar-reload-button {
-  -moz-image-region: rect(0, 14px, 14px, 0);
-}
-
-#urlbar-reload-button:not([disabled]):hover {
-  -moz-image-region: rect(14px, 14px, 28px, 0);
+  list-style-image: url("chrome://browser/skin/reload-stop-go.svg#reload");
 }
 
 #urlbar-reload-button:not([disabled]):hover:active {
-  -moz-image-region: rect(28px, 14px, 42px, 0);
+  list-style-image: url("chrome://browser/skin/reload-stop-go.svg#reload-active");
 }
 
 #urlbar-reload-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
@@ -1049,17 +1040,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #go-button,
 #urlbar-go-button {
-  -moz-image-region: rect(0, 42px, 14px, 28px);
-}
-
-#go-button:hover,
-#urlbar-go-button:hover {
-  -moz-image-region: rect(14px, 42px, 28px, 28px);
+  list-style-image: url("chrome://browser/skin/reload-stop-go.svg#go");
 }
 
 #go-button:hover:active,
 #urlbar-go-button:hover:active {
-  -moz-image-region: rect(28px, 42px, 42px, 28px);
+  list-style-image: url("chrome://browser/skin/reload-stop-go.svg#go-active");
 }
 
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
@@ -1068,18 +1054,20 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar-stop-button {
-  -moz-image-region: rect(0, 28px, 14px, 14px);
+  list-style-image: url("chrome://browser/skin/reload-stop-go.svg#stop");
 }
 
-#urlbar-stop-button:not([disabled]):hover {
-  -moz-image-region: rect(14px, 28px, 28px, 14px);
-}
 
 #urlbar-stop-button:hover:active {
-  -moz-image-region: rect(28px, 28px, 42px, 14px);
+  list-style-image: url("chrome://browser/skin/reload-stop-go.svg#stop-active");
 }
 
-
+#urlbar-reload-button:not(:hover):not(:active),
+#urlbar-stop-button:not(:hover):not(:active),
+#urlbar-go-button:not(:hover):not(:active),
+#go-button:not(:hover):not(:active) {
+  opacity: .6;
+}
 
 #page-report-button {
   list-style-image: url("chrome://browser/skin/urlbar-popup-blocked.png");
@@ -1094,9 +1082,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #page-report-button[open="true"] {
   -moz-image-region: rect(0, 48px, 16px, 32px);
 }
-
-
-
 
 #social-share-panel > iframe {
   background: linear-gradient(to bottom, #f0f4f7, #fafbfc);
