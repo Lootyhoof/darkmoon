@@ -86,14 +86,14 @@
 /*** notification icons ***/
 
 .warning-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-warning.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-warning.svg");
   width: 16px;
   height: 15px;
   margin: 3px 0;
 }
 
 .error-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.svg");
   width: 16px;
   height: 15px;
   margin: 3px 0;
@@ -101,7 +101,7 @@
 
 .pending-icon,
 .info-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-positive.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-positive.svg");
   width: 16px;
   height: 15px;
   margin: 3px 0;
@@ -109,7 +109,7 @@
 
 .addon-view[pending="disable"] .pending-icon,
 .addon-view[pending="uninstall"] .pending-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.svg");
   width: 16px;
   height: 15px;
   margin: 3px 0;
@@ -525,15 +525,15 @@
 }
 
 .addon-view .warning {
-  color: #916D15;
+  color: #d8b826;
 }
 
 .addon-view .error {
-  color: #864441;
+  color: #e62117;
 }
 
 .addon-view .pending {
-  color: #1B7123;
+  color: #62c44e;
 }
 
 .addon-view[pending="disable"] .pending,
