@@ -1,5 +1,18 @@
 # Changelog
 
+### 1.4.0
+- keep appmenu size consistent between normal and private modes
+- use browser-defined tab widths
+- darken modal prompts
+- darken generic addon icons
+- darken identity panel icons
+- improve legibility of labels in about:addons
+- replace several icons with SVG variants
+- flatten popup notification button
+- flatten navbar buttons clicked state
+- use plugin icons from Simple White/X
+- PM27: improve statusbar options window appearance
+
 ### 1.3.0
 - PM27: add statusbar styling
 - PM27: add styling for downloads panel components
