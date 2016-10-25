@@ -490,14 +490,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon,
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-badge-container {
-  background-image: linear-gradient(hsla(0,0%,0%,.6), hsla(0,0%,0%,.1));
-  background-color: hsla(0,0%,0%,.1);
-  border-color: hsla(0,0%,0%,.2) hsla(0,0%,0%,.24) hsla(0,0%,0%,.22);
-  box-shadow: 0 1px 1px hsla(0,0%,0%,.06) inset,
-              0 0 1px hsla(0,0%,0%,.12) inset,
-              
-              0 1px 0 hsla(0,0%,0%,0),
-              0 0 2px hsla(0,0%,0%,0);
+  background: rgb(75,75,75);
   text-shadow: none;
   transition: none;
 }
