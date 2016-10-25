@@ -84,8 +84,8 @@ XXX: apply styles to all themes until bug 509642 is fixed
   .popup-notification-menubutton > .button-menubutton-dropmarker {
     -moz-appearance: none;
     margin: 0;
-    border: 1px solid rgba(0,0,0,.2);
-    background-image: linear-gradient(rgba(75,75,75,.8), rgba(50,50,50,.8));
+    border: 1px solid rgb(75,75,75);
+    background: rgb(50,50,50);
   }
 
   .popup-notification-menubutton > .button-menubutton-button {
@@ -125,23 +125,18 @@ XXX: apply styles to all themes until bug 509642 is fixed
   .popup-notification-menubutton:not([type="menu-button"]):hover,
   .popup-notification-menubutton > .button-menubutton-button:hover,
   .popup-notification-menubutton > .button-menubutton-dropmarker:hover {
-    background-image: linear-gradient(rgba(62,62,62,.8), rgba(43,43,43,.8));
+    background: rgb(75,75,75);
   }
 
   .popup-notification-menubutton:not([type="menu-button"]):hover:active,
   .popup-notification-menubutton > .button-menubutton-button:hover:active,
   .popup-notification-menubutton > .button-menubutton-dropmarker:hover:active,
   .popup-notification-menubutton[open="true"] > .button-menubutton-dropmarker {
-    background-image: linear-gradient(rgba(50,50,50,.8), rgba(23,23,23,.8));
+    background: rgb(23,23,23);
   }
 /*}*/
 
 .popup-notification-closebutton {
   -moz-margin-end: -14px;
   margin-top: -10px;
-}
-
-.popup-notification-closeitem {
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0, 16px, 16px, 0);
 }
