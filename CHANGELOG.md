@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.4.1
+- improve menubar legibility on Vista/Win7/Win8
+- make bookmarks toolbar items more theme-native
+
 ### 1.4.0
 - keep appmenu size consistent between normal and private modes
 - use browser-defined tab widths
