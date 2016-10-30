@@ -8,7 +8,7 @@
   #main-window[sizemode="normal"] > #titlebar {
 	-moz-appearance: none !important;
   }
-	
+
   #main-window[tabsintitlebar] #titlebar {
     visibility: hidden;
   }
@@ -53,7 +53,7 @@
 }
 
 .titlebar-placeholder[type="caption-buttons"] {
-  margin-left: 22px; 
+  margin-left: 22px;
 }
 
 
@@ -207,7 +207,7 @@ menuitem.bookmark-item {
     -moz-border-left-colors: rgba(255,255,255,.5) rgba(83,42,6,.9);
     -moz-border-bottom-colors: rgba(255,255,255,.5) rgba(83,42,6,.9);
     -moz-border-right-colors: rgba(255,255,255,.5) rgba(83,42,6,.9);
-    margin-bottom: 1px; 
+    margin-bottom: 1px;
     box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,
                 0 0 2px 1px rgba(255,255,255,.25) inset;
   }
@@ -230,7 +230,7 @@ menuitem.bookmark-item {
     background-color: rgb(43,43,43);
   }
 
-  
+
 
   #sidebar-splitter {
     border: 0;
@@ -263,7 +263,7 @@ menuitem.bookmark-item {
       margin-top: -1px !important;
       margin-bottom: 5px !important;
     }
-		
+
     #tabbrowser-tabs {
       min-height: 28px;
     }
@@ -328,7 +328,7 @@ menuitem.bookmark-item {
    #titlebar-close:hover:-moz-lwtheme-darktext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline);
    }
-		
+
    /* dark persona */
    #titlebar-min:-moz-lwtheme-brighttext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-outline-inverted);
@@ -345,7 +345,7 @@ menuitem.bookmark-item {
    #titlebar-close:hover:-moz-lwtheme-brighttext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-outline-inverted);
    }
-        
+
    /* the 12px image renders a 10px icon, and the 10px upscaled gets rounded to 12.5, which
    * rounds up to 13px, which makes the icon one pixel too big on 1.25dppx. Fix: */
    @media (min-resolution: 1.20dppx) and (max-resolution: 1.45dppx) {
@@ -408,7 +408,7 @@ menuitem.bookmark-item {
    #titlebar-close:hover:active {
       background-color: hsl(355, 82%, 69%);
    }
-          
+
    /* light persona */
    .titlebar-button:-moz-lwtheme-darktext:hover {
       background-color: hsla(0, 0%, 0%, .12);
@@ -430,7 +430,7 @@ menuitem.bookmark-item {
     #main-window {
       -moz-appearance: -moz-win-borderless-glass;
     }
-    
+
     /* These should be hidden w/ glass enabled. Windows draws its own buttons. */
     .titlebar-button {
       display: none;
@@ -470,31 +470,15 @@ menuitem.bookmark-item {
     }
 
     #appmenu-button {
-      margin-bottom: -1px; 
+      margin-bottom: -1px;
     }
   }
-    
-  @media (-moz-os-version: windows-vista),
-         (-moz-os-version: windows-win7),
-         (-moz-os-version: windows-win8) {
-    #toolbar-menubar:not(:-moz-lwtheme),
-    #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme),
-    #nav-bar[tabsontop=false]:not(:-moz-lwtheme),
-    #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child:not(:-moz-lwtheme) {
-	  text-shadow: 0 0 .5em white, 0 0 .5em white, 0 1px 0 rgba(255,255,255,.4);
-	}
-	
-    #main-menubar:not(:-moz-lwtheme):not(:-moz-window-inactive) {
-      background-color: rgba(255,255,255,.5);
-      border-radius: 4px;
-    }
-  }
-  
+
   #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
     -moz-appearance: none;
     background-color: #556;
   }
-  
+
 
   #toolbar-menubar:not(:-moz-lwtheme),
   #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme),
@@ -507,8 +491,8 @@ menuitem.bookmark-item {
   }
 
   /* Show toolbar borders on vista through win8, but not on win10 and later: */
-  @media (-moz-os-version: windows-vista),          
-  (-moz-os-version: windows-win7),          
+  @media (-moz-os-version: windows-vista),
+  (-moz-os-version: windows-win7),
   (-moz-os-version: windows-win8) {
      /* Vertical toolbar border */
     #main-window[sizemode=normal] #navigator-toolbox::after,
@@ -518,7 +502,7 @@ menuitem.bookmark-item {
       border-right: 1px solid hsla(0,0%,12%,0.25);
       background-clip: padding-box;
     }
-  
+
     #main-window[sizemode=normal] #navigator-toolbox > toolbar:-moz-lwtheme {
       border-color: transparent !important;
     }
@@ -533,7 +517,7 @@ menuitem.bookmark-item {
       border-top-style: none;
     }
   }
-  
+
   /* Round top corners on Vista/7/8, but not Win10 because it's flush against the window edge */
   @media (-moz-os-version: windows-vista),
   (-moz-os-version: windows-win7),
@@ -542,7 +526,7 @@ menuitem.bookmark-item {
       border-top-left-radius: 3.5px;
       border-top-right-radius: 3.5px;
     }
-	
+
 	#main-window[sizemode=normal][tabsontop=true] #nav-bar:not(:-moz-lwtheme),
     #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + toolbar:not(:-moz-lwtheme),
     #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme) {
@@ -550,8 +534,8 @@ menuitem.bookmark-item {
       border-top-right-radius: 2px;
     }
   }
-  
-  
+
+
   #main-window[sizemode=normal][tabsontop=true] #nav-bar:not(:-moz-lwtheme),
   #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + toolbar:not(:-moz-lwtheme),
   #main-window[sizemode=normal][tabsontop=true] > #nav-bar[collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme) {
@@ -584,7 +568,7 @@ menuitem.bookmark-item {
     padding-right: 2px;
   }
 
-  
+
   #toolbar-menubar:not([autohide="true"]),
   #TabsToolbar[tabsontop="true"],
   #navigator-toolbox[tabsontop="false"] > #nav-bar,
@@ -602,8 +586,8 @@ menuitem.bookmark-item {
     background-clip: padding-box;
   }
 
-  @media (-moz-os-version: windows-vista),          
-  (-moz-os-version: windows-win7),          
+  @media (-moz-os-version: windows-vista),
+  (-moz-os-version: windows-win7),
   (-moz-os-version: windows-win8) {
     #main-window[sizemode=normal] #browser-bottombox:not(:-moz-lwtheme),
     #main-window[sizemode=normal] #addon-bar:not(:-moz-lwtheme) {
@@ -622,7 +606,7 @@ menuitem.bookmark-item {
   }
 
   #main-window[sizemode=normal] .statuspanel-inner {
-    
+
     padding-left: 1px;
     padding-right: 1px;
   }
