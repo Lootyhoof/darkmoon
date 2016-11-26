@@ -13,14 +13,14 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 .console-box {
-  background-color: -moz-Field;
-  color: -moz-FieldText;
+  background-color: rgb(23,23,23);
+  color: #fff;
 }
 
 /* ::::: console rows ::::: */
 
 .console-row {
-  border-bottom: 1px solid ThreeDLightShadow;
+  border-bottom: 1px solid rgb(75,75,75);
   padding: 4px 0px;
 }
 
@@ -80,13 +80,17 @@
 
 /* ..... selected state ..... */
 
+.console-row:hover {
+  background-color: rgb(75,75,75);
+}
+
 .console-row[selected="true"] {
-    background-image: url("chrome://global/skin/console/itemSelected.png");
+  background-color: rgb(110,110,110);
 }
 
 .console-row-code[selected="true"],
 .console-row-content[selected="true"] > .console-row-file > .console-error-source > .text-link {
-  color: inherit !important;
+  color: #fff !important;
 }
 
 /* ::::: icons ::::: */
@@ -129,12 +133,20 @@ toolbarseparator {
 /* Toolbar icons */
 
 #ToolbarMode toolbarbutton {
+  -moz-appearance: none;
+  color: #fff;
+  border: none;
   min-width: 57px;
   padding: 4px !important;
 }
 
+#ToolbarMode toolbarbutton:hover {
+  background-color: rgb(75,75,75);
+}
+
 toolbar#ToolbarMode toolbarbutton:active,
 toolbar#ToolbarMode toolbarbutton[checked="true"] {
+  background-color: rgb(110,110,110);
   -moz-padding-start: 5px !important;
   -moz-padding-end: 3px !important;
 }
@@ -209,12 +221,4 @@ toolbar#ToolbarMode .toolbarbutton-text {
 .toolbarbutton-text {
   -moz-padding-start: 0px;
   -moz-padding-end: 5px;
-}
-
-#ToolbarMode {
-  -moz-appearance: -moz-win-browsertabbar-toolbox;
-}
-
-#ToolbarEval {
-  -moz-appearance: toolbox;
 }
