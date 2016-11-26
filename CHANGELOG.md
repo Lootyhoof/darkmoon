@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.4.2
+- darken error console
+
 ### 1.4.1
 - improve menubar legibility on Vista/Win7/Win8
 - make bookmarks toolbar items more theme-native
