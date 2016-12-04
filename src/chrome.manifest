@@ -3,5 +3,3 @@ skin mozapps darkmoon chrome/mozapps/
 skin global darkmoon chrome/global/
 skin ostarget darkmoon chrome/ostarget/general/
 skin ostarget darkmoon chrome/ostarget/aero/ os=WINNT osversion>=6
-skin appver darkmoon chrome/appver/26/ appversion<27.0.0b1
-skin appver darkmoon chrome/appver/27/ appversion>=27.0.0b1
