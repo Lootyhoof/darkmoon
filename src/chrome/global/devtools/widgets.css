@@ -913,7 +913,7 @@
   pointer-events: none;
 }
 
-.line-graph-widget-tooltip[with-arrows=true]:::before {
+.line-graph-widget-tooltip[with-arrows=true]::before {
   content: "";
   position: absolute;
   border-top: 3px solid transparent;
@@ -921,12 +921,12 @@
   top: calc(50% - 3px);
 }
 
-.line-graph-widget-tooltip[arrow=start][with-arrows=true]:::before {
+.line-graph-widget-tooltip[arrow=start][with-arrows=true]::before {
   -moz-border-end: 3px solid rgba(255,255,255,0.75);
   left: -3px;
 }
 
-.line-graph-widget-tooltip[arrow=end][with-arrows=true]:::before {
+.line-graph-widget-tooltip[arrow=end][with-arrows=true]::before {
   -moz-border-start: 3px solid rgba(255,255,255,0.75);
   right: -3px;
 }
@@ -1530,8 +1530,8 @@
   -moz-image-region: initial;
 }
 
-.manifest-editor .variables-view-delete:::before,
-.manifest-editor .variables-view-add-property:::before {
+.manifest-editor .variables-view-delete::before,
+.manifest-editor .variables-view-add-property::before {
   width: 11px;
   height: 11px;
   content: "";
@@ -1539,11 +1539,11 @@
   background-size: 11px auto;
 }
 
-.manifest-editor .variables-view-delete:::before {
+.manifest-editor .variables-view-delete::before {
   background-image: url("app-manager/remove.svg");
 }
 
-.manifest-editor .variables-view-add-property:::before {
+.manifest-editor .variables-view-add-property::before {
   background-image: url("app-manager/add.svg");
   -moz-margin-end: 2px;
 }
