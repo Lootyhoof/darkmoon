@@ -1,5 +1,6 @@
 @import url("chrome://ostarget/skin/browser.css");
 @import url("chrome://global/skin/");
+@import url("chrome://browser/skin/padlock/padlock.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
@@ -1737,9 +1738,14 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   -moz-margin-start: -24px;
 }
 
-#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon ,
+#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon {
+  list-style-image: url("chrome://browser/skin/identity-secure.svg");
+  width: 32px;
+}
+
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption > vbox > #identity-popup-encryption-icon {
-  list-style-image: url("chrome://browser/skin/Secure24.png");
+  list-style-image: url("chrome://browser/skin/identity-domain-secure.svg");
+  width: 32px;
 }
 
 #identity-popup-help-icon {

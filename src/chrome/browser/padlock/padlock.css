@@ -1,0 +1,108 @@
+#padlock-ib[padshow="ib-trans-bg"][level="ev"] {
+  list-style-image: url("chrome://browser/skin/identity-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-ib[padshow="ib-trans-bg"][level="high"] {
+  list-style-image: url("chrome://browser/skin/identity-domain-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-ib[padshow="ib-trans-bg"][level="low"],
+#padlock-ib[padshow="ib-trans-bg"][level="mixed"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-passive-loaded.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-ib[padshow="ib-trans-bg"][level="broken"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-active-loaded.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-ib-left[padshow="ib-left"][level="ev"] {
+  list-style-image: url("chrome://browser/skin/identity-secure.svg") !important;
+  padding:2px;
+  background-color: transparent;
+}
+
+#padlock-ib-left[padshow="ib-left"][level="high"] {
+  list-style-image: url("chrome://browser/skin/identity-domain-secure.svg") !important;
+  padding:2px;
+  background-color: transparent;
+}
+
+#padlock-ib-left[padshow="ib-left"][level="low"],
+#padlock-ib-left[padshow="ib-left"][level="mixed"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-passive-loaded.svg") !important;
+  padding:2px;
+  background-color: transparent;
+}
+
+#padlock-ib-left[padshow="ib-left"][level="broken"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-active-loaded.svg") !important;
+  padding:2px;
+  background-color: transparent;
+}
+
+#padlock-ub-right[padshow="ub-right"][level="ev"] {
+  list-style-image: url("chrome://browser/skin/identity-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-ub-right[padshow="ub-right"][level="high"] {
+  list-style-image: url("chrome://browser/skin/identity-domain-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-ub-right[padshow="ub-right"][level="low"],
+#padlock-ub-right[padshow="ub-right"][level="mixed"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-passive-loaded.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-ub-right[padshow="ub-right"][level="broken"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-active-loaded.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-sb[padshow="statbar"][level="ev"] {
+  list-style-image: url("chrome://browser/skin/identity-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-sb[padshow="statbar"][level="high"] {
+  list-style-image: url("chrome://browser/skin/identity-domain-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-sb[padshow="statbar"][level="low"],
+#padlock-sb[padshow="statbar"][level="mixed"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-passive-loaded.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-sb[padshow="statbar"][level="broken"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-active-loaded.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-tab[padshow="tabs-bar"][level="ev"] {
+  list-style-image: url("chrome://browser/skin/identity-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-tab[padshow="tabs-bar"][level="high"] {
+  list-style-image: url("chrome://browser/skin/identity-domain-secure.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-tab[padshow="tabs-bar"][level="low"],
+#padlock-tab[padshow="tabs-bar"][level="mixed"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-passive-loaded.svg") !important;
+  background-color: transparent;
+}
+
+#padlock-tab[padshow="tabs-bar"][level="broken"] {
+  list-style-image: url("chrome://browser/skin/identity-mixed-active-loaded.svg") !important;
+  background-color: transparent;
+}
