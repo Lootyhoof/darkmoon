@@ -1,5 +1,16 @@
 # Changelog
 
+### 1.5.1
+- darken feed subscribe page
+- darken livemark icons
+- improve expander appearance
+- make plugin notification icons easier to see
+- darken info icon
+- add security padlocks from upstream
+- use different padlocks on identity popup depending on security type
+- add border to download items
+- merge devtools storage styling from default theme
+
 ### 1.5.0
 - support PM27's devtools
 - drop PM26 support
