@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.5.2
+- fix download animation
+- darken download buttons in update window
+- allow extensions to style their own toolbarbutton-badge
+- use password manager icons from upstream
+
 ### 1.5.1
 - darken feed subscribe page
 - darken livemark icons
