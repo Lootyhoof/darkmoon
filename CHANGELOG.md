@@ -1,5 +1,16 @@
 # Changelog
 
+### 1.6.0
+- add about:home styling for Home Styler
+- add theme-native icons for statusbar options window
+- use theme-native print preview icon stylings
+- add theme-native directory listing icons
+- add new SSL warning icon
+- use new blacklisted site icon
+- add new activity monitor icons
+- add fixes for "Downloads Window" extension
+- use theme-native download icons
+
 ### 1.5.2
 - fix download animation
 - darken download buttons in update window
