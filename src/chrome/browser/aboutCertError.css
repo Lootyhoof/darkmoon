@@ -4,19 +4,19 @@
 
 
 html {
-  background: -moz-Dialog;
+  background: rgb(43, 43, 43);
 }
 
 body {
   margin: 0;
   padding: 0 1em;
-  color: -moz-FieldText;
+  color: #fff;
   font: message-box;
 }
 
 h1 {
   margin: 0 0 .6em 0;
-  border-bottom: 1px solid ThreeDLightShadow;
+  border-bottom: 1px solid rgb(75, 75, 75);
   font-size: 160%;
 }
 
@@ -33,7 +33,7 @@ h2 {
   border-radius: 10px;
   padding: 3em;
   -moz-padding-start: 30px;
-  background: url("chrome://global/skin/icons/sslWarning.png") left 0 no-repeat -moz-Field;
+  background: url("chrome://global/skin/icons/sslWarning.png") left 0 no-repeat rgb(50, 50, 50);
   background-origin: content-box;
 }
 
