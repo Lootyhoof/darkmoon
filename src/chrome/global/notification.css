@@ -20,6 +20,11 @@ notification[type="critical"] {
   color: white;
 }
 
+.messageText > .text-link {
+  color: inherit !important;
+  text-decoration: underline;
+}
+
 .messageImage {
   width: 16px;
   height: 16px;
@@ -55,6 +60,14 @@ notification[type="critical"] {
 
 .popup-notification-description {
   max-width: 24em;
+}
+
+.popup-notification-learnmore-link {
+  margin-top: 1em !important;
+}
+
+.popup-notification-learnmore-link:not([href]) {
+  display: none;
 }
 
 .popup-notification-button-container {
