@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.7.0
+- sync about:support styling with default
+- sync about:permissions styling with default
+- fix "learn more" links in notification popups
+
 ### 1.6.0
 - add about:home styling for Home Styler
 - add theme-native icons for statusbar options window
