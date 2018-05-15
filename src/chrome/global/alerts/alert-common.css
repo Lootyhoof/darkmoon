@@ -119,22 +119,13 @@
   background-color: transparent;
   border-width: 0;
   min-width: 0;
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities");
+  list-style-image: url("chrome://browser/skin/toolbar/options.svg");
   margin-inline-end: 0;
   margin-bottom: 0;
 }
 
 #alertSettings > .button-box {
   padding: 0;
-}
-
-#alertSettings:hover {
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities-grayscale");
-}
-
-#alertSettings[open],
-#alertSettings:hover:active {
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities-blue");
 }
 
 #alertSettings[focusedViaMouse]:-moz-focusring > .button-box {
