@@ -2964,3 +2964,26 @@ notification.pluginVulnerable .messageImage {
   min-width: 0px;
   list-style-image: url("chrome://browser/skin/feeds/feedIcon16.svg");
 }
+
+/* "Tree Style Tab" fixes */
+#TabsToolbar[treestyletab-mode=vertical]:not([treestyletab-style]) .tabs-newtab-button,
+#TabsToolbar[treestyletab-mode=vertical]:not([treestyletab-style]) #alltabs-button {
+  background: var(--tab-background) !important;
+  border-top: 1px solid var(--tab-border-color) !important;
+  border-bottom: 1px solid var(--tab-border-color) !important;
+}
+
+#TabsToolbar[treestyletab-mode=vertical]:not([treestyletab-style]) .tabs-newtab-button:hover,
+#TabsToolbar[treestyletab-mode=vertical]:not([treestyletab-style]) #alltabs-button:hover {
+  background: var(--tab-hover-background) !important;
+  border-top: 1px solid var(--tab-hover-border) !important;
+  border-bottom: 1px solid var(--tab-hover-border) !important;
+}
+
+#TabsToolbar[treestyletab-mode=vertical]:not([treestyletab-style]) #tabs-padlock-tbitem {
+  border-top: 1px solid transparent !important;
+}
+
+#main-window[treestyletab-mode=vertical]:not([treestyletab-style]) .treestyletab-tabbar-placeholder {
+  background: rgb(43,43,43) !important;
+}
