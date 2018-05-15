@@ -39,22 +39,22 @@ spinbuttons {
 
 .spinbuttons-up {
   -moz-appearance: none;
-  background-image: url("chrome://global/skin/arrow/arrow-up.gif");
+  background-image: url("chrome://global/skin/arrow/arrow-v.svg#up");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .spinbuttons-up[disabled="true"] {
-  background-image: url("chrome://global/skin/arrow/arrow-up-dis.gif");
+  background-image: url("chrome://global/skin/arrow/arrow-v.svg#up-dis");
 }
 
 .spinbuttons-down {
   -moz-appearance: none;
-  background-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  background-image: url("chrome://global/skin/arrow/arrow-v.svg#dn");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .spinbuttons-down[disabled="true"] {
-  background-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
+  background-image: url("chrome://global/skin/arrow/arrow-v.svg#dn-dis");
 }

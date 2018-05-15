@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    g {
+      fill: #fff;
+    }
+    #radio-dis:target + g {
+      opacity: .4;
+    }
+  </style>
+  <g id="radio-dis"/>
+  <g id="radio" transform="matrix(4.7244 0 0 4.7244 5.5 5.4961)">
+    <circle cx=".52917" cy=".53" r=".52917" stroke-width=".21167"/>
+  </g>
+</svg>

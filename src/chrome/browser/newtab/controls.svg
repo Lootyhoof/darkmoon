@@ -1,92 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="icons-enhanced-tiles"
-   x="0"
-   y="0"
-   width="288"
-   height="33"
-   viewBox="0 0 288 33"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="controls.svg">
-  <metadata
-     id="metadata71">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="690"
-     inkscape:window-height="480"
-     id="namedview69"
-     showgrid="false"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="17.094499"
-     inkscape:cy="16.5"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="icons-enhanced-tiles" />
-  <defs
-     id="defs3">
-    <style
-       type="text/css"
-       id="style5"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icons-enhanced-tiles" width="288" height="33" version="1.1" viewBox="0 0 288 33" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style type="text/css"><![CDATA[
       /* Glyph Styles */
-
       .glyphShape-style {
         fill: #737373;
       }
-
       .glyphShape-style-hover-gear {
         fill: #00aeff;
       }
-
       .glyphShape-style-hover-pin {
         fill: #00aeff;
       }
-
       .glyphShape-style-hover-delete {
         fill: #666;
       }
-
       .glyphShape-style-hover-active {
         fill: #999;
       }
-
       /* Circle Background Styles */
-
       .glyphShape-style-circle {
         fill: #fff;
       }
-
       .glyphShape-style-circle-dropshadow {
         fill: #000;
         fill-opacity: .3;
         filter: url(#filter-shadow-drop);
       }
-
       .default-transparent {
         opacity: .7;
       }
@@ -97,300 +37,88 @@
         fill: #f0f0f0;
       }
       ]]></style>
-    <filter
-       id="filter-shadow-drop"
-       x="-10%"
-       y="-10%"
-       width="120%"
-       height="120%">
-      <feOffset
-         in="SourceAlpha"
-         dx="0"
-         dy="1.6"
-         result="filter-shadow-drop-offset"
-         id="feOffset8" />
-      <feGaussianBlur
-         in="filter-shadow-drop-offset"
-         stdDeviation="1"
-         result="filter-shadow-drop-blur"
-         id="feGaussianBlur10" />
+    <filter id="filter-shadow-drop">
+      <feOffset dx="0" dy="1.6" in="SourceAlpha" result="filter-shadow-drop-offset"/>
+      <feGaussianBlur in="filter-shadow-drop-offset" result="filter-shadow-drop-blur" stdDeviation="1"/>
     </filter>
-    <path
-       id="glyphShape-gear"
-       d="M14,18v3h-3v-3H14 M15,17h-5v5h5V17L15,17z M21,18v3h-3v-3H21 M22,17h-5v5h5V17L22,17z M14,11v3h-3v-3H14 M15,10h-5v5h5V10   L15,10z M21,11v3h-3v-3H21 M22,10h-5v5h5V10L22,10z" />
-    <circle
-       id="glyphShape-circle"
-       cx="16"
-       cy="16"
-       r="14" />
-    <path
-       id="glyphShape-pin"
-       d="M19,15v-5h2V7H11v3h2v5l-3,2v2h5c0,4.5,0.4,8,1,8s1-3.5,1-8h5v-2L19,15z" />
-    <polygon
-       id="glyphShape-delete"
-       points="22.6,10.6 21.4,9.4 16,14.8 10.6,9.4 9.4,10.6 14.8,16 9.4,21.4      10.6,22.6 16,17.2 21.4,22.6 22.6,21.4 17.2,16" />
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3586">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3588" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3590" />
+    <path id="glyphShape-gear" d="m14 18v3h-3v-3h3m1-1h-5v5h5v-5zm6 1v3h-3v-3h3m1-1h-5v5h5v-5zm-8-6v3h-3v-3h3m1-1h-5v5h5v-5zm6 1v3h-3v-3h3m1-1h-5v5h5v-5z"/>
+    <circle id="glyphShape-circle" cx="16" cy="16" r="14"/>
+    <path id="glyphShape-pin" d="M19,15v-5h2V7H11v3h2v5l-3,2v2h5c0,4.5,0.4,8,1,8s1-3.5,1-8h5v-2L19,15z"/>
+    <polygon id="glyphShape-delete" points="22.6 10.6 21.4 9.4 16 14.8 10.6 9.4 9.4 10.6 14.8 16 9.4 21.4 10.6 22.6 16 17.2 21.4 22.6 22.6 21.4 17.2 16"/>
+    <filter id="i" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3592">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3594" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3596" />
+    <filter id="h" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3598">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3600" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3602" />
+    <filter id="g" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3604">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3606" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3608" />
+    <filter id="f" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3610">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3612" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3614" />
+    <filter id="e" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3616">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3618" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3620" />
+    <filter id="d" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3622">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3624" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3626" />
+    <filter id="c" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3628">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3630" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3632" />
+    <filter id="b" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Invert"
-       id="filter3634">
-      <feColorMatrix
-         type="hueRotate"
-         values="180"
-         result="color1"
-         id="feColorMatrix3636" />
-      <feColorMatrix
-         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         id="feColorMatrix3638" />
+    <filter id="a" color-interpolation-filters="sRGB">
+      <feColorMatrix result="color1" type="hueRotate" values="180"/>
+      <feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/>
     </filter>
   </defs>
-  <g
-     id="icon-gear-default"
-     class="semi-transparent"
-     style="filter:url(#filter3586)">
-    <use
-       xlink:href="#glyphShape-gear"
-       class="glyphShape-style"
-       id="use17" />
+  <g id="icon-gear-default" class="semi-transparent" filter="url(#i)">
+    <use class="glyphShape-style" xlink:href="#glyphShape-gear"/>
   </g>
-  <g
-     id="g19"
-     transform="translate(32)"
-     style="filter:url(#filter3592)">
-    <use
-       xlink:href="#glyphShape-gear"
-       class="glyphShape-style-hover-gear"
-       id="use21" />
+  <g transform="translate(32)" filter="url(#h)">
+    <use class="glyphShape-style-hover-gear" xlink:href="#glyphShape-gear"/>
   </g>
-  <g
-     id="icon-pin-default"
-     transform="translate(64)"
-     class="default-transparent"
-     style="filter:url(#filter3598)">
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle-dropshadow"
-       id="use24" />
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle"
-       id="use26" />
-    <use
-       xlink:href="#glyphShape-pin"
-       class="glyphShape-style"
-       id="use28" />
+  <g id="icon-pin-default" class="default-transparent" transform="translate(64)" filter="url(#g)">
+    <use class="glyphShape-style-circle-dropshadow" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-circle" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style" xlink:href="#glyphShape-pin"/>
   </g>
-  <g
-     id="icon-delete-default"
-     transform="translate(160)"
-     class="default-transparent"
-     style="filter:url(#filter3604)">
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle-dropshadow"
-       id="use45" />
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle"
-       id="use47" />
-    <use
-       xlink:href="#glyphShape-delete"
-       class="glyphShape-style"
-       id="use49" />
+  <g id="icon-delete-default" class="default-transparent" transform="translate(160)" filter="url(#f)">
+    <use class="glyphShape-style-circle-dropshadow" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-circle" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style" xlink:href="#glyphShape-delete"/>
   </g>
-  <g
-     id="icon-delete-hover"
-     transform="translate(192)"
-     style="filter:url(#filter3610)">
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle-dropshadow"
-       id="use52" />
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle"
-       id="use54" />
-    <use
-       xlink:href="#glyphShape-delete"
-       class="glyphShape-style-hover-delete"
-       id="use56" />
+  <g id="icon-delete-hover" transform="translate(192)" filter="url(#e)">
+    <use class="glyphShape-style-circle-dropshadow" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-circle" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-hover-delete" xlink:href="#glyphShape-delete"/>
   </g>
-  <g
-     id="icon-delete-hover-active"
-     transform="translate(224)"
-     class="active-grey"
-     style="filter:url(#filter3616)">
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle-dropshadow"
-       id="use59" />
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle"
-       id="use61" />
-    <use
-       xlink:href="#glyphShape-delete"
-       class="glyphShape-style-hover-active"
-       id="use63" />
+  <g id="icon-delete-hover-active" class="active-grey" transform="translate(224)" filter="url(#d)">
+    <use class="glyphShape-style-circle-dropshadow" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-circle" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-hover-active" xlink:href="#glyphShape-delete"/>
   </g>
-  <g
-     id="g65"
-     transform="translate(256)"
-     style="filter:url(#filter3622)">
-    <use
-       xlink:href="#glyphShape-pin"
-       class="glyphShape-style-pin"
-       id="use67" />
+  <g transform="translate(256)" filter="url(#c)">
+    <use class="glyphShape-style-pin" xlink:href="#glyphShape-pin"/>
   </g>
-  <g
-     id="icon-pin-hover"
-     transform="translate(96)"
-     class="default-transparent"
-     style="opacity:1;filter:url(#filter3628)">
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle-dropshadow"
-       id="use31"
-       style="" />
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle"
-       id="use33"
-       style="fill:#ffffff;fill-opacity:1" />
-    <use
-       xlink:href="#glyphShape-pin"
-       class="glyphShape-style-hover-pin"
-       id="use35"
-       style="" />
+  <g id="icon-pin-hover" class="default-transparent" transform="translate(96)" filter="url(#b)">
+    <use class="glyphShape-style-circle-dropshadow" style="" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-circle" fill="#ffffff" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-hover-pin" style="" xlink:href="#glyphShape-pin"/>
   </g>
-  <g
-     id="icon-pin-hover-active"
-     transform="translate(128)"
-     class="active-grey"
-     style="filter:url(#filter3634)">
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle-dropshadow"
-       id="use38" />
-    <use
-       xlink:href="#glyphShape-circle"
-       class="glyphShape-style-circle"
-       id="use40" />
-    <use
-       xlink:href="#glyphShape-pin"
-       class="glyphShape-style-hover-active"
-       id="use42" />
+  <g id="icon-pin-hover-active" class="active-grey" transform="translate(128)" filter="url(#a)">
+    <use class="glyphShape-style-circle-dropshadow" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-circle" xlink:href="#glyphShape-circle"/>
+    <use class="glyphShape-style-hover-active" xlink:href="#glyphShape-pin"/>
   </g>
 </svg>

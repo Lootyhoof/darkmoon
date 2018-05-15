@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <style>g {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 1.0325;
+    }</style>
+  <g transform="matrix(1,0,0,-1,0,32)">
+    <rect x="1.5" y="3.5" width="29" height="25" rx="3" ry="3"/>
+    <rect x="19.5" y="5.5" width="6.0005" height="1" stroke-width="1.0325"/>
+    <path d="m1.5 9.5h29"/>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="5"
+     height="3"
+     viewBox="0 0 5 3">
+  <style>
+    .t {
+      fill: #fff;
+    }
+    .t:not(:target){
+      display: none;
+    }
+    [id$=dis] {
+      opacity: .4;
+    }
+  </style>
+	<g id="dn" class="t">
+    <path class="main" d="M4.8,0l-2.3,2.65l-2.3-2.65z"/>
+	</g>
+	<g id="dn-dis" class="t">
+    <path class="main" d="M4.8,0l-2.3,2.65l-2.3-2.65z"/>
+	</g>
+	<g id="up" class="t">
+    <path class="main" d="M.2,3l2.3-2.65l2.3,2.65z"/>
+	</g>
+	<g id="up-dis" class="t">
+    <path class="main" d="M.2,3l2.3-2.65l2.3,2.65z"/>
+	</g>
+</svg>

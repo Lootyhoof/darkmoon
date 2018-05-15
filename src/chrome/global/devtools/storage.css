@@ -8,6 +8,9 @@
   min-width: 220px;
   max-width: 500px;
   overflow: auto;
+}
+
+#storage-tree {
   background: var(--theme-sidebar-background);
 }
 

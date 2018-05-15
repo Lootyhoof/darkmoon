@@ -20,8 +20,8 @@
 .searchbar-engine-image {
   height: 16px;
   width: 16px;
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  list-style-image: url(chrome://browser/skin/places/places.svg);
+  -moz-image-region: rect(2px, 396px, 18px, 380px);
   -moz-margin-start: 2px;
 }
 
@@ -43,12 +43,12 @@
 }
 
 .searchbar-dropmarker-image {
-  list-style-image: url("chrome://browser/skin/searchbar-dropdown-arrow.png");
-  -moz-image-region: rect(0, 13px, 11px, 0);
+  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow.svg");
+  opacity: 0.25;
 }
 
 .searchbar-engine-button[open="true"] > .searchbar-dropmarker-image {
-  -moz-image-region: rect(0, 26px, 11px, 13px);
+  opacity: 1;
 }
 
 

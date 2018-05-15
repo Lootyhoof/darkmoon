@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7" height="7" version="1.1" viewBox="0 0 7 7" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    g {
+      fill: #fff;
+    }
+    #check-dis:target + g {
+      opacity: .4;
+    }
+  </style>
+  <g id="check-dis"/>
+	<g id="check">
+    <path d="m3 4.5244 2.8333-4.5244 1.1667 1.1951-3.6667 5.8049-3.3333-3.4146 0.91667-0.93902z"/>
+  </g>
+</svg>

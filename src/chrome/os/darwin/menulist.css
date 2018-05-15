@@ -1,0 +1,81 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+menulist {
+  -moz-appearance: none;
+  margin: 2px 4px;
+  border: 1px solid;
+  -moz-border-top-colors: rgb(75,75,75);
+  -moz-border-right-colors: rgb(75,75,75);
+  -moz-border-bottom-colors: rgb(75,75,75);
+  -moz-border-left-colors: rgb(75,75,75);
+  background-color: rgb(50,50,50);
+  color: #fff;
+  text-shadow: none;
+}
+
+menulist:not([popuponly="true"]) {
+  min-height: 20px !important;
+}
+
+.menulist-label-box {
+  -moz-appearance: menulist-text;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin-bottom: 1px;
+}
+
+.menulist-label {
+  margin: 1px 3px !important;
+}
+
+.menulist-description {
+  font-style: italic;
+  color: GrayText;
+  -moz-margin-start: 1ex !important;
+}
+
+menulist:hover:not(:active):not([disabled=true]) {
+  background-color: rgb(75,75,75);
+}
+
+menulist:hover:active:not([disabled=true]) {
+  background-color: rgb(110,110,110);
+}
+
+/* ..... dropmarker ..... */
+
+menulist > .menulist-dropmarker {
+  border: none;
+  background: transparent;
+}
+
+/* ..... disabled state ..... */
+
+menulist[disabled="true"] {
+  background-color: rgb(62,62,62);
+  color: GrayText;
+}
+
+menulist[disabled="true"] > .menulist-dropmarker {
+  -moz-padding-start: 7px !important;
+}
+
+/* ::::: editable menulists ::::: */
+
+menulist[editable="true"] {
+  -moz-appearance: none;
+  margin: 4px 2px;
+}
+
+html|*.menulist-editable-input {
+  margin: 0px !important;
+  border: none !important;
+  padding: 0px !important;
+  background: inherit;
+  font: inherit;
+}

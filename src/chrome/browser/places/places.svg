@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="396"
+     height="20"
+     viewBox="0 0 396 20">
+  <style>
+    use:not([class]) {
+      stroke-width: 1;
+      stroke: #fff;
+      fill: none;
+    }
+    .inside {
+      stroke-width: 0;
+      stroke: none;
+      fill: #fff;
+    }
+    .complete {
+      stroke-width: 1;
+      stroke: #9C9C9C;
+      fill: #9C9C9C;
+    }
+    .grayOutline {
+      stroke-width: 1;
+      stroke: #808080;
+      fill: none;
+    }
+    .grayInside {
+      stroke-width: 0;
+      stroke: none;
+      fill: #808080;
+    }
+    .grayComplete {
+      stroke-width: 1;
+      stroke: #808080;
+      fill: #808080;
+    }
+    .hiLiteOutline {
+      stroke-width: 1;
+      stroke: HighlightText;
+      fill: none;
+      opacity: .6;
+    }
+    .hiLiteInside {
+      stroke-width: 0;
+      stroke: none;
+      fill: HighlightText;
+      opacity: .6;
+    }
+    .hiLiteComplete {
+      stroke-width: 1;
+      stroke: HighlightText;
+      fill: HighlightText;
+      opacity: .6;
+    }
+  </style>
+  <defs>
+    <linearGradient id="Ga">
+      <stop offset="0" stop-color="#EAECE3"/>
+      <stop offset="1" stop-color="#FBFBF6"/>
+    </linearGradient>
+    <linearGradient x1="9" y1="13" x2="5" y2="3" id="Gb" xlink:href="#Ga" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="Gc">
+      <stop offset="0" stop-color="#F58A1B"/>
+      <stop offset="1" stop-color="#F5AA1B"/>
+    </linearGradient>
+    <linearGradient x1="8" y1="14.5" x2="8" y2="1.5" id="Gd" xlink:href="#Gc" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="Ge">
+      <stop offset="0" stop-color="#FF911A"/>
+      <stop offset="1" stop-color="#FFB31A"/>
+    </linearGradient>
+    <linearGradient x1="8.5" y1="11.5" x2="4.5" y2="4.5" id="Gf" xlink:href="#Ge" gradientUnits="userSpaceOnUse"/>
+    
+
+    <path id="default-shape"
+          d="M2,1.5h2m1.3,0h2m1.4,0h2m1.3,0h2m.5,.5v2m0,1.3v2m0,1.4v2m0,1.3v2m-.5,.5h-2m-1.3,0h-2m-1.4,0h-2m-1.3,0h-2m-.5-.5v-2m0-1.3v-2m0-1.4v-2m0-1.3v-2m.5-.5z"/>
+
+    <g id="history-shape">
+      <circle cx="8" cy="8" r="6.5"/>
+      <path d="M 6.5,3   l 1,5.5   l 4.5,1"/>
+    </g>
+
+    <g id="calendar-shape">
+      <path d = "M 2,2.5   h 11   a 1.5,1.5 0 0,1 1.5,1.5   v 9   a 1.5,1.5 0 0,1 -1.5,1.5   
+                           h -11   a 1.5,1.5 0 0,1 -1.5,-1.5   v -9   a 1.5,1.5 0 0,1 1.5,-1.5   z
+                 M 1,5.5   h 13   M 4.5,1   v 3   M 10.5,1   v 3"/>
+    </g>
+
+    <g id="downloads-shape">
+      <path d="M 2.8,10   h 9.4   a 1.8,1.8 0 0,1 1.8,1.8   v 1.4   a 1.8,1.8 0 0,1 -1.8,1.8  h -9.4   a 1.8,1.8 0 0,1 -1.8,-1.8   v -1.4   a 1.8,1.8 0 0,1 1.8,-1.8   z
+               M 9,12  v 1   h 2   v -1   h -2   z" class="inside"/>
+      <path d="M 7.5,1   v7.5   m -3.5,-3.5   l 3.5,3.5   l 3.5,-3.5"/>
+    </g>
+
+    <g id="tag-shape">
+      <path d="M 3,2.5   h 4   c .5,0 .5,0 1,.5   l 4.5,4.5   c 1.5,1.5 1.5,1.5 0,3   l -2,2   
+                         c -1.5,1.5 -1.5,1.5 -3,0   l -4.5,-4.5   c -.5,-.5 -.5,-.5 -.5,-1   v -4   a .5,.5 0 0,1 .5,-.5   z"/>
+      <circle cx="5.6" cy="5.6" r="1" class="inside"/>
+    </g>
+
+    <g id="allBookmarks-shape">
+      <path d="M 2.5,5   a .5,.5 0 0,1 .5,-.5   h 7.5   v 10   h -7.5   a .5,.5 0 0,1 -.5,-.5   v -9   z
+                         c 0,-1.6 .6,-2.5 2.5,-2.5   h 7.5   v10   h -1.5"/>
+    </g>
+
+    <g id="bookmarksToolbar-shape">
+      <path d="M 2,2.5   h 12   a 1.5,1.5 0 0,1 1.5,1.5   v 8   a 1.5,1.5 0 0,1 -1.5,1.5   
+                         h -12   a 1.5,1.5 0 0,1 -1.5,-1.5   v -8   a 1.5,1.5 0 0,1 1.5,-1.5   z"/>
+      <path class="complete"
+            d="M 5,3.5   h 3   a .5,.5 0 0,1 .5,.5   v 5   l -2,-1.8   l -2,1.8   v -5   a .5,.5 0 0,1 .5,-.5   z"/>
+    </g>
+
+    <g id="toolbar-shape">
+      <path d="M 2,2.5   h 12   a 1.5,1.5 0 0,1 1.5,1.5   v 8   a 1.5,1.5 0 0,1 -1.5,1.5   
+                         h -12   a 1.5,1.5 0 0,1 -1.5,-1.5   v -8   a 1.5,1.5 0 0,1 1.5,-1.5   z"/>
+    </g>
+
+    <g id="bookmarksBadge-shape">
+      <path d="M 5,3.5   h 3   a .5,.5 0 0,1 .5,.5   v 5   l -2,-1.8   l -2,1.8   v -5   a .5,.5 0 0,1 .5,-.5   z"/>
+    </g>
+
+    <g id="bookmarksMenu-shape">
+      <path d="M .5,4   c .7,-2.2 6.3,-2.2 7,0   c .7,-2.2 6.3,-2.2 7,0   l 0,10   c -.7,-2.2 -6.3,-2.2 -7,0   v-10   v10   c -.7,-2.2 -6.3,-2.2 -7,0   l 0,-10   z"/>
+    </g>
+
+    <g id="unsortedFront-shape">
+      <path d="M 11.5,15   l -4.5,-3.5   l -4.5,3.5   v -11   a 1.5,1.5 0 0,1 1.5,-1.5   h 6   a 1.5,1.5 0 0,1 1.5,1.5   v 11   Z"/>
+    </g>
+    <g id="unsortedBack-shape">
+      <path d="M 6,0.5   h 6   a 1.5,1.5 0 0,1 1.5,1.5   v 11   l -.005,-.005   M 6,0.5  h -.5   l .005,-.005"/>
+    </g>
+
+    <g id="folderBack-shape">
+      <path d="M 1,1.75   a 1.75,1.75 0 0,1 1.75,-1.75   h 3.5   a 1.75,1.75 0 0,1 1.75,1.75   v .25   h 5.25   a 1.75,1.75 0 0,1 1.75,1.75   v 1.75  
+                          a 1.75,1.5 0 0,0 -1.75,-1.5   h -10.5   a 1.75,1.5 0 0,0 -1.75,1.5   v -3.75   z"/>
+    </g>
+    <g id="folderFront-shape">
+      <path d="M 1.5,6.75   a 1.25,1.25 0 0,1 1.25,-1.25   h 10.5   a1.25,1.25 0 0,1  1.25,1.25   v 5.5
+                            a 1.25,1.25 0 0,1 -1.25,1.25   h -10.5   a1.25,1.25 0 0,1  -1.25,-1.25   v -5.5  z"/>
+    </g>
+
+    <g id="queryLogo-shape">
+      <circle cx="7.6" cy="8.4" r="2"/>
+      <line x1="9.014" y1="9.814" x2="11" y2="11.8"/>
+    </g>
+
+    <g id="livemarkLogo-shape">
+      <circle cx="5.5" cy="11.5" r="0.125"/>
+      <path d="M 5,9   a 3,3 0 0,1 3,3   m -3,-5.5   a 5.5,5.5 0 0,1  5.5,5.5"/>
+    </g>
+
+
+    <g id="livemarkItem-image">
+      <rect x="1.4" y="1.4" width="13.2" height="13.2"  rx="1.6"  ry="1.6"  stroke-width="1.4" fill="url(#Gb)" stroke="url(#Gd)"/>
+      <circle cx="5" cy="11" r="1"   stroke-width="0" fill="#F5991B" stroke="url(#Gf)"/>
+      <path class="s"  stroke-width="1.5" fill="none" stroke="url(#Gf)"
+            d="M 4,12   m 0,-4.5   a 4.5,4.5 0 0,1 4.5,4.5   m -4.5,-7.5   a 7.5,7.5 0 0,1 7.5,7.5"/>
+    </g>
+
+    <g id="livemarkItemSeen-image">
+      <circle cx="5" cy="11" r="1" class="inside"/>
+      <path stroke-width="1.5" fill="none" stroke="#9C9C9C"
+            d="M 4,12   m 0,-4.5   a 4.5,4.5 0 0,1 4.5,4.5   m -4.5,-7.5   a 7.5,7.5 0 0,1 7.5,7.5"/>
+    </g>
+    
+    <g id="item-shape">
+      <polygon fill="#E4E4E4" points="2,0 2,14 14,14 14,6 8,6 8,0 	" stroke="none"/>
+      <polygon fill="#E3E3E3" points="9.04,0 9.04,5.041 14,5.041 	" stroke="none"/>
+    </g>
+
+  </defs>
+
+  <g id="defaultFavicon">
+    <use xlink:href="#default-shape"             x=  "2"  y="2"/>
+  </g>
+  <g id="history">
+    <use xlink:href="#history-shape"             x= "22"  y="2"/>
+  </g>
+  <g id="calendar">
+    <use xlink:href="#calendar-shape"            x= "42"  y="2"/>
+  </g>
+  <g id="downloads">
+    <use xlink:href="#downloads-shape"           x= "62"  y="2"/>
+  </g>
+  <g id="tag">
+    <use xlink:href="#tag-shape"                 x= "82"  y="2"/>
+  </g>
+  <g id="allBookmarks">
+    <use xlink:href="#allBookmarks-shape"        x="102"  y="2"/>
+  </g>
+  <g id="bookmarksToolbar">
+    <use xlink:href="#toolbar-shape"             x="122"  y="2"/>
+    <use xlink:href="#bookmarksBadge-shape"      x="122"  y="2"   class="complete"/>
+  </g>
+  <g id="bookmarksMenu">
+    <use xlink:href="#bookmarksMenu-shape"       x="142"  y="2"/>
+  </g>
+  <g id="unsortedBookmarks">
+    <use xlink:href="#unsortedFront-shape"       x="162"  y="2"   class="complete"/>
+    <use xlink:href="#unsortedBack-shape"        x="162"  y="2"/>
+  </g>
+  <g id="folderItem">
+    <use xlink:href="#folderBack-shape"          x="182"  y="2"   class="styled" stroke-width="0" fill="#E3E3E3" stroke="none"/>
+    <use xlink:href="#folderFront-shape"         x="182"  y="2"   class="styled" stroke-width="1" fill="#E4E4E4" stroke="#E4E4E4"/>
+  </g>
+  <g id="query">
+    <use xlink:href="#folderBack-shape"          x="202"  y="2"   class="styled" stroke-width="0" fill="#E3E3E3" stroke="none"/>
+    <use xlink:href="#folderFront-shape"         x="202"  y="2"   class="styled" stroke-width="1" fill="#E4E4E4" stroke="#E4E4E4"/>
+    <use xlink:href="#queryLogo-shape"           x="202"  y="2"   class="styled" stroke-width="1" fill="none"    stroke="#8F8F8F"/>
+  </g>
+  <g id="livemarkFolder">
+    <use xlink:href="#folderBack-shape"          x="222"  y="2"   class="styled" stroke-width="0" fill="#E3E3E3" stroke="none"/>
+    <use xlink:href="#folderFront-shape"         x="222"  y="2"   class="styled" stroke-width="1" fill="#E4E4E4" stroke="#E4E4E4"/>
+    <use xlink:href="#livemarkLogo-shape"        x="222"  y="2"   class="styled" stroke-width="1" fill="none"    stroke="#8F8F8F"/>
+  </g>
+  <g id="livemarkItem">
+    <use xlink:href="#livemarkItem-image"        x="242"  y="2"   class="styled"/>
+  </g>
+  <g id="livemarkItemSeen">
+    <use xlink:href="#livemarkItemSeen-image"    x="262"  y="2"   class="styled"/>
+  </g>
+
+  <g id="bookmarksToolbarFocus">
+    <use xlink:href="#toolbar-shape"             x="282"  y="2"   class="grayOutline"/>
+    <use xlink:href="#bookmarksBadge-shape"      x="282"  y="2"   class="grayComplete"/>
+    <use xlink:href="#toolbar-shape"             x="282"  y="2"   class="hiLiteOutline"/>
+    <use xlink:href="#bookmarksBadge-shape"      x="282"  y="2"   class="hiLiteComplete"/>
+  </g>
+  <g id="bookmarksMenuFocus">
+    <use xlink:href="#bookmarksMenu-shape"       x="302"  y="2"   class="grayOutline"/>
+    <use xlink:href="#bookmarksMenu-shape"       x="302"  y="2"   class="hiLiteOutline"/>
+  </g>
+  <g id="unsortedBookmarksFocus">
+    <use xlink:href="#unsortedFront-shape"       x="322"  y="2"   class="grayComplete"/>
+    <use xlink:href="#unsortedBack-shape"        x="322"  y="2"   class="grayOutline"/>
+    <use xlink:href="#unsortedFront-shape"       x="322"  y="2"   class="hiLiteComplete"/>
+    <use xlink:href="#unsortedBack-shape"        x="322"  y="2"   class="hiLiteOutline"/>
+  </g>
+  <g id="folderItemFocus">
+    <use xlink:href="#folderBack-shape"          x="342"  y="2"   class="grayInside"/>
+    <use xlink:href="#folderFront-shape"         x="342"  y="2"   class="grayComplete"/>
+    <use xlink:href="#folderBack-shape"          x="342"  y="2"   class="hiLiteInside"/>
+    <use xlink:href="#folderFront-shape"         x="342"  y="2"   class="hiLiteComplete"/>
+  </g>
+  <g id="defaultFaviconFocus">
+    <use xlink:href="#default-shape"             x="362"  y="2"   class="grayOutline"/>
+    <use xlink:href="#default-shape"             x="362"  y="2"   class="hiLiteOutline"/>
+  </g>
+  <g id="item">
+    <use xlink:href="#item-shape"                x="380"  y="2"/>
+  </g>
+
+</svg>

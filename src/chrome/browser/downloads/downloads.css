@@ -95,7 +95,7 @@ richlistitem[type="download"]:first-child {
 }
 
 .blockedIcon {
-  list-style-image: url("chrome://global/skin/icons/Error.png");
+  list-style-image: url("chrome://global/skin/icons/error-16.svg");
 }
 
 /* We hold .downloadTarget, .downloadDisplayName, .downloadProgress and 
@@ -143,7 +143,6 @@ richlistitem[type="download"]:first-child {
   border: none;
   background: transparent;
   padding: 5px;
-  list-style-image: url("chrome://browser/skin/downloads/buttons.png");
 }
 
 .downloadButton > .button-box {
@@ -165,33 +164,33 @@ richlistitem[type="download"]:first-child {
 /*** Button icons ***/
 
 .downloadButton.downloadCancel {
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#cancel-normal");
 }
 .downloadButton.downloadCancel:hover {
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#cancel");
 }
 .downloadButton.downloadCancel:active {
-  -moz-image-region: rect(0px, 48px, 16px, 32px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#cancel-active");
 }
 
 .downloadButton.downloadShow {
-  -moz-image-region: rect(16px, 16px, 32px, 0px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#show-normal");
 }
 .downloadButton.downloadShow:hover {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#show");
 }
 .downloadButton.downloadShow:active {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#show-active");
 }
 
 .downloadButton.downloadRetry {
-  -moz-image-region: rect(32px, 16px, 48px, 0px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#retry-normal");
 }
 .downloadButton.downloadRetry:hover {
-  -moz-image-region: rect(32px, 32px, 48px, 16px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#retry");
 }
 .downloadButton.downloadRetry:active {
-  -moz-image-region: rect(32px, 48px, 48px, 32px);
+  list-style-image: url("chrome://browser/skin/downloads/buttons.svg#retry-active");
 }
 
 /*** Status and progress indicator ***/
@@ -206,32 +205,32 @@ richlistitem[type="download"]:first-child {
 /*** Main indicator icon ***/
 
 #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+  background: -moz-image-rect(var(--toolbarbutton-image),
                               0, 108, 18, 90) center no-repeat;
   min-width: 18px;
   min-height: 18px;
 }
 
-#downloads-indicator-icon:-moz-lwtheme-darktext {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
+toolbar:not([brighttext]) #downloads-indicator-icon {
+  background: -moz-image-rect(var(--toolbarbutton-inverted-image),
                               0, 108, 18, 90) center no-repeat;
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+  background-image: url("chrome://browser/skin/toolbar/downloads.svg#highlight");
 }
 
 /* In the next few rules, we use :not([counter]) as a shortcut that is
    equivalent to -moz-any([progress], [paused]). */
 
 #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+  background: -moz-image-rect(var(--toolbarbutton-image),
                               0, 108, 18, 90) center no-repeat;
   background-size: 12px;
 }
 
 #downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+  background-image: url("chrome://browser/skin/toolbar/downloads.svg#highlight");
 }
 
 /*** Download notifications ***/
@@ -290,7 +289,7 @@ richlistitem[type="download"]:first-child {
   text-align: center;
 }
 
-#downloads-indicator-counter:-moz-lwtheme-darktext {
+toolbar:not([brighttext]) #downloads-indicator-counter {
   color: hsl(0,0%,30%);
   text-shadow: hsla(0,0%,100%,.5) 0 1px;
 }
@@ -346,3 +345,4 @@ toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
 #downloads-indicator-counter {
   margin-bottom: -1px;
 }
+

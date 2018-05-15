@@ -1,0 +1,42 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+toolbar {
+  -moz-appearance: none;
+  background-color: rgb(43,43,43);
+  color: #fff;
+  min-width: 1px;
+  min-height: 19px;
+  border-top: 1px solid rgb(75,75,75);
+  border-bottom: 1px solid rgb(75,75,75);
+}
+
+menubar:-moz-lwtheme,
+toolbar:-moz-lwtheme {
+  -moz-appearance: none;
+  background: none;
+  border-style: none;
+  color: inherit !important;
+}
+
+menubar {
+  -moz-appearance: none;
+  background-color: rgb(43,43,43);
+  color: #fff;
+  min-width: 1px;
+}
+
+.toolbar-holder {
+  min-width: 1px;
+}
+
+.toolbar-primary {
+  min-height: 24px;
+}
+
+toolbarseparator {
+  -moz-appearance: none;
+  margin: 3px 4px;
+  background: url("chrome://global/skin/toolbar/toolbar-separator.png") transparent repeat-y;
+  padding: 0;
+  width: 1px !important;
+}

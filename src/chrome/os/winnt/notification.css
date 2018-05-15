@@ -1,0 +1,80 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.popup-notification-menubutton {
+  -moz-appearance: none;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.popup-notification-menubutton:hover:active {
+  border-color: rgba(0,0,0,.5);
+}
+
+.popup-notification-menubutton:not([type="menu-button"]),
+.popup-notification-menubutton > .button-menubutton-button,
+.popup-notification-menubutton > .button-menubutton-dropmarker {
+  -moz-appearance: none;
+  margin: 0;
+  border: 1px solid rgb(75,75,75);
+  background: rgb(50,50,50);
+}
+
+.popup-notification-menubutton > .button-menubutton-button {
+  background-color: transparent;
+  padding: 1px;
+  -moz-border-end: none;
+}
+
+.popup-notification-menubutton:not([type="menu-button"]),
+.popup-notification-menubutton > .button-menubutton-button > .button-box {
+  -moz-padding-start: 8px;
+  -moz-padding-end: 5px;
+}
+
+.popup-notification-menubutton > .button-menubutton-dropmarker {
+  padding: 9px 5px 8px;
+  width: auto;
+  height: auto;
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#dn");
+}
+
+.popup-notification-menubutton > .button-menubutton-dropmarker > image {
+  width: 9px;
+}
+
+.popup-notification-menubutton:-moz-focusring > .button-menubutton-dropmarker {
+  outline: 1px dotted ThreeDDarkShadow;
+  outline-offset: -3px;
+}
+
+.popup-notification-menubutton > .button-menubutton-button:-moz-locale-dir(ltr),
+.popup-notification-menubutton > .button-menubutton-dropmarker:-moz-locale-dir(rtl) {
+  border-radius: 2px 0 0 2px;
+}
+
+.popup-notification-menubutton > .button-menubutton-button:-moz-locale-dir(rtl),
+.popup-notification-menubutton > .button-menubutton-dropmarker:-moz-locale-dir(ltr) {
+  border-radius: 0 2px 2px 0;
+}
+
+.popup-notification-menubutton:not([type="menu-button"]):hover,
+.popup-notification-menubutton > .button-menubutton-button:hover,
+.popup-notification-menubutton > .button-menubutton-dropmarker:hover {
+  background: rgb(75,75,75);
+}
+
+.popup-notification-menubutton:not([type="menu-button"]):hover:active,
+.popup-notification-menubutton > .button-menubutton-button:hover:active,
+.popup-notification-menubutton > .button-menubutton-dropmarker:hover:active,
+.popup-notification-menubutton[open="true"] > .button-menubutton-dropmarker {
+  background: rgb(23,23,23);
+}
+
+.popup-notification-closebutton {
+  -moz-margin-end: -14px;
+  margin-top: -10px;
+}

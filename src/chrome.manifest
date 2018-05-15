@@ -2,5 +2,29 @@ skin abouthome darkmoon chrome/abouthome/
 skin browser darkmoon chrome/browser/
 skin mozapps darkmoon chrome/mozapps/
 skin global darkmoon chrome/global/
-skin ostarget darkmoon chrome/ostarget/general/
-skin ostarget darkmoon chrome/ostarget/aero/ os=WINNT osversion>=6
+skin os darkmoon chrome/os/darwin/ os=Darwin
+skin os darkmoon chrome/os/linux/ os=Linux
+skin os darkmoon chrome/os/winnt/ os=WINNT
+
+skin appver darkmoon chrome/appver/27/ appversion<28.0.0a1
+skin appver darkmoon chrome/appver/28/ appversion>=28.0.0a1
+
+override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
+override chrome://browser/skin/page-livemarks.png chrome://browser/skin/feeds/feedIcon16.svg
+override chrome://browser/skin/feeds/audioFeedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
+override chrome://browser/skin/feeds/feedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
+override chrome://browser/skin/feeds/videoFeedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
+override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
+override chrome://browser/skin/preferences/application.png chrome://browser/skin/toolbar/new-window.svg
+override chrome://browser/skin/preferences/mail.png chrome://browser/skin/preferences/mail.svg
+override chrome://browser/skin/preferences/saveFile.png chrome://browser/skin/toolbar/downloads.svg
+
+override chrome://devtools/skin/images/debugging-addons.svg chrome://global/skin/devtools/debugging-addons.svg
+override chrome://devtools/skin/images/debugging-devices.svg chrome://global/skin/devtools/debugging-devices.svg
+override chrome://devtools/skin/images/debugging-tabs.svg chrome://global/skin/devtools/debugging-tabs.svg
+override chrome://devtools/skin/images/debugging-workers.svg chrome://global/skin/devtools/debugging-workers.svg
+override chrome://devtools/skin/images/debugging-workers-generic.svg chrome://global/skin/devtools/workers-generic.svg
+
+override chrome://mozapps/skin/extensions/extensionGeneric-16.png chrome://mozapps/skin/extensions/extensionGeneric-16.svg
+override chrome://mozapps/skin/passwordmgr/key.png chrome://mozapps/skin/passwordmgr/key.svg
+override chrome://mozapps/skin/places/defaultFavicon.png chrome://mozapps/skin/places/defaultFavicon.svg

@@ -2,15 +2,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
-
-
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+:root {
+  --toolbarbutton-image: url("chrome://browser/skin/Toolbar.svg#toolbar");
+}
 
 /* Toolbar */
 #placesToolbar {
@@ -24,7 +18,7 @@
 
 #back-button,
 #forward-button {
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  list-style-image: var(--toolbarbutton-image);
 }
 
 
@@ -76,7 +70,7 @@
 
 #placesMenu > menu > .menubar-text {
   -moz-padding-end: 8px;
-  background: url(chrome://global/skin/arrow/arrow-dn.gif) right center no-repeat;
+  background: url(chrome://global/skin/arrow/arrow-v.svg#dn) right center no-repeat;
 }
 
 #placesMenu > menu > .menubar-text:-moz-locale-dir(rtl) {
@@ -84,37 +78,25 @@
 }
 
 /* organize, view and maintenance buttons icons */
-#organizeButton, 
-#viewMenu, 
-#maintenanceButton {
-  list-style-image: url("chrome://browser/skin/places/libraryToolbar.png");
-}
 
 /* organize button */
 #organizeButton {
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
-}
-#organizeButton:hover,
-#organizeButton[open="true"] {
-  -moz-image-region: rect(16px, 16px, 32px, 0px);
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.svg#organizeButton");
 }
 
 /* view button */
 #viewMenu {
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
-}
-#viewMenu:hover,
-#viewMenu[open="true"] {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.svg#viewMenu");
 }
 
 /* maintenance button */
 #maintenanceButton {
-  -moz-image-region: rect(0px, 48px, 16px, 32px);
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.svg#maintenanceButton");
 }
-#maintenanceButton:hover,
-#maintenanceButton[open="true"] {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
+
+/* clear button */
+#clearDownloadsButton {
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.svg#clearDownloadsButton");
 }
 
 /* Root View */
@@ -145,7 +127,6 @@
 }
 
 #clearDownloadsButton {
-  -moz-appearance: none;
   -moz-padding-start: 9px;
   -moz-padding-end: 9px;
 }

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <path id="desktop-notification" d="m2 19a4 4 0 0 0 4 4h13l7 7v-7a4 4 0 0 0 4-4v-12a4 4 0 0 0-4-4h-20a4 4 0 0 0-4 4zm5-2a1 1 0 1 1 0-2h10a1 1 0 1 1 0 2zm0-4a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2zm0-4a1 1 0 1 1 0-2h18a1 1 0 1 1 0 2z" fill="#9c9c9c"/>
+</svg>

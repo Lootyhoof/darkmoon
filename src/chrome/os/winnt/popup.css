@@ -1,0 +1,146 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: Variables ::::: */
+.panel-arrowcontent {
+  --panel-arrowcontent-background: rgb(50,50,50);
+  --panel-arrowcontent-color: #fff;
+  --panel-arrowcontent-border: 1px solid rgb(75,75,75);
+}
+
+/* ::::: menupopup ::::: */
+
+menupopup,
+panel {
+  border: 1px solid transparent;
+  -moz-border-top-colors   : rgb(75,75,75);
+  -moz-border-left-colors  : rgb(75,75,75);
+  -moz-border-right-colors : rgb(23,23,23);
+  -moz-border-bottom-colors: rgb(23,23,23);
+  padding: 0px;
+  min-width: 1px;
+  background: rgb(43,43,43);
+  color: #fff;
+}
+
+menupopup {
+  -moz-appearance: none;
+}
+
+menupopup > menu > menupopup {
+ /* align submenus */
+  -moz-margin-start: -3px;
+  margin-top: -3px;
+}
+
+panel[type="arrow"] {
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+}
+
+panel[type="arrow"][side="top"],
+panel[type="arrow"][side="bottom"] {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+panel[type="arrow"][side="left"],
+panel[type="arrow"][side="right"] {
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.panel-arrowcontent {
+  padding: 10px;
+  color: var(--panel-arrowcontent-color);
+  background: var(--panel-arrowcontent-background);
+  background-clip: padding-box;
+  border: var(--panel-arrowcontent-border);
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.panel-arrow[side="top"],
+.panel-arrow[side="bottom"] {
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical-themed.svg");
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.panel-arrow[side="top"] {
+  margin-bottom: -5px;
+}
+
+.panel-arrow[side="bottom"] {
+  transform: scaleY(-1);
+  margin-top: -5px;
+}
+
+.panel-arrow[side="left"],
+.panel-arrow[side="right"] {
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-horizontal-themed.svg");
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.panel-arrow[side="left"] {
+  margin-right: -5px;
+}
+
+.panel-arrow[side="right"] {
+  transform: scaleX(-1);
+  margin-left: -5px;
+}
+
+@media (-moz-windows-default-theme) {
+  .panel-arrow[side="top"],
+  .panel-arrow[side="bottom"] {
+    list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical.svg");
+  }
+
+  .panel-arrow[side="left"],
+  .panel-arrow[side="right"] {
+    list-style-image: url("chrome://global/skin/arrow/panelarrow-horizontal.svg");
+  }
+}
+
+/* ::::: tooltip ::::: */
+
+tooltip {
+  -moz-appearance: none;
+  margin-top: 21px;
+  border: 1px solid rgb(75,75,75);
+  padding: 2px 3px;
+  max-width: 40em;
+  background-color: rgb(110,110,110);
+  color: #fff;
+  font: message-box;
+}
+
+tooltip[titletip="true"] {
+ /* See bug 32157 comment 128
+  * margin: -2px 0px 0px -3px;
+  */
+  max-width: none;
+}
+
+/* rules for popups associated with menulists */
+
+menulist > menupopup {
+  -moz-appearance: none;
+  border-width: 1px;
+  -moz-border-top-colors: rgb(75,75,75);
+  -moz-border-right-colors: rgb(75,75,75);
+  -moz-border-bottom-colors: rgb(75,75,75);
+  -moz-border-left-colors: rgb(75,75,75);
+  padding: 0px;
+  min-width: 0px;
+  background-color: rgb(50,50,50);
+}
+

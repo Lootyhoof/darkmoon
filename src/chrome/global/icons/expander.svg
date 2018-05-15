@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16">
+  <style>
+    .t:not(:target){
+      display: none;
+    }
+    path.main {
+      stroke-width: 0;
+      stroke: #fff;
+      fill: #fff;
+    }
+    path.glow {
+      stroke-width 0;
+      fill: #000;
+      filter: url(#blur-filter);
+    }
+  </style>
+  <defs>
+    <filter id="blur-filter">
+      <feGaussianBlur stdDeviation="1.25"/>
+    </filter>
+  </defs>
+	<g id="expand" class="t">
+    <path class="glow" d="M 2,5   h 3   l 3,3   l 3,-3   h 3   l -6,6   l -6,-6   z"/>
+    <path class="main" d="M 2.2,5   h 2.6   l 3.2,3.2   l 3.2,-3.2   h 2.6   l -5.8,5.8   l -5.8,-5.8   z"/>
+	</g>
+	<g id="collapse" class="t">
+    <path class="glow"  d="M 2,11   l 6,-6   l 6,6   h -3   l -3,-3   l -3,3   h -3   z"/>
+    <path class="main" d="M 2.2,11   l 5.8,-5.8   l 5.8,5.8   h -2.6   l -3.2,-3.2   l -3.2,3.2   h -2.6   z"/>
+	</g>
+</svg>

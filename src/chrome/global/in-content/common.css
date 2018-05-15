@@ -1,0 +1,1267 @@
+/* - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+*|*:root {
+  --in-content-page-color: #fff;
+  --in-content-page-background: rgb(23,23,23);
+  --in-content-frame-background: rgb(23,23,23);
+  --in-content-main-border-color: rgb(50,50,50);
+  --in-content-main-background-color: rgb(43,43,43);
+  --in-content-main-background-image: transparent;
+  --in-content-text-color: #fff;
+  --in-content-selected-text: #fff;
+  --in-content-header-border-color: rgb(50,50,50);
+  --in-content-box-background: rgb(50,50,50);
+  --in-content-box-background-odd: #f3f6fa;
+  --in-content-box-background-hover: rgb(75,75,75);
+  --in-content-box-background-active: rgb(23,23,23);
+  --in-content-box-border-color: rgb(75,75,75);
+  --in-content-item-hover: rgb(110,110,110);
+  --in-content-item-selected: rgb(110,110,110);
+  --in-content-border-highlight: #ff9500;
+  --in-content-border-focus: rgb(75,75,75);
+  --in-content-border-hover: rgb(75,75,75);
+  --in-content-border-color: rgb(50,50,50);
+  --in-content-category-text: #fff;
+  --in-content-category-border-focus: 1px dotted #fff;
+  --in-content-category-text-selected: #f2f2f2;
+  --in-content-category-background: #424f5a;
+  --in-content-category-background-hover: #5e6972;
+  --in-content-category-background-active: #343f48;
+  --in-content-tab-color: #424f5a;
+  --in-content-link-color: #fff;
+  --in-content-link-color-hover: rgb(219,219,219);
+  --in-content-link-color-active: rgb(219,219,219);
+  --in-content-link-color-visited: #551a8b;
+  --in-content-primary-button-background: rgb(75,75,75);
+  --in-content-primary-button-background-hover: rgb(110,110,110);
+  --in-content-primary-button-background-active: rgb(43,43,43);
+  --in-content-table-border-dark-color: rgb(50,50,50);
+  --in-content-table-header-background: rgb(110,110,110);
+}
+
+html|html,
+html|body,
+xul|page,
+xul|window {
+  font: message-box;
+  -moz-appearance: none;
+  background-color: var(--in-content-page-background);
+  color: var(--in-content-page-color);
+}
+
+html|body {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+}
+
+html|h1 {
+  font-size: 2.5em;
+  font-weight: lighter;
+  line-height: 1.2;
+  color: var(--in-content-text-color);
+  margin: 0;
+  margin-bottom: .5em;
+}
+
+html|hr {
+  border-style: solid none none none;
+  border-color: var(--in-content-border-color);
+}
+
+xul|caption {
+  -moz-appearance: none;
+  margin: 0;
+}
+
+html|h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+xul|caption > xul|checkbox,
+xul|caption > xul|label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 0 !important;
+}
+
+xul|description {
+  -moz-margin-start: 0;
+}
+
+
+/* something goes here! */
+
+
+*|*.main-content {
+  border: 1px solid var(--in-content-main-border-color);
+  border-radius: 5px;
+  background-color: var(--in-content-main-background-color);
+  background-image: var(--in-content-main-background-image);
+  padding-top: 25px;
+  -moz-padding-end: 44px; /* compensate the 4px margin of child elements */
+  padding-bottom: 40px;
+  -moz-padding-start: 48px;
+  overflow: auto;
+}
+
+xul|prefpane > xul|*.content-box {
+  overflow: visible;
+}
+
+/* groupboxes */
+
+xul|groupbox {
+  -moz-appearance: none;
+  border: none;
+  margin: 15px 0 0;
+  -moz-padding-start: 0;
+  -moz-padding-end: 0;
+  font-size: 1.25rem;
+}
+
+xul|groupbox xul|label {
+  /* !important needed to override toolkit !important rule */
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 0 !important;
+}
+
+/* tabpanels and tabs */
+
+xul|tabpanels {
+  -moz-appearance: none;
+  font-size: 1.25rem;
+  line-height: 22px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+xul|tabs {
+  position:relative;
+  margin: 8px 0 15px;
+  -moz-margin-end: 4px;
+  border: 0;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+xul|*.tabs-left,
+xul|*.tabs-right {
+  border-bottom: none;
+}
+
+xul|tab {
+  -moz-appearance: none;
+  position: relative;
+  margin-top: 0;
+  -moz-margin-end: -1px;
+  padding: 4px 20px;
+  min-height: 44px;
+  max-height: 45px;
+  height: 45px;
+  color: #6d6d6d;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+  border-radius: 0;
+  transition: background-color 50ms ease 0s,
+              border-color 150ms ease 0s;
+}
+xul|tab:last-of-type{
+  -moz-margin-end: 0;
+}
+
+xul|tab::before{
+  display: block;
+  margin: calc(.5em - 4px);
+  -moz-margin-start: -21px;
+  -moz-margin-end: 20px;
+  height: calc(44px - 1em);
+  border-right: 1px solid #c1c1c1;
+  transition: border-color 150ms ease 0s;
+  content: ""; /* just show a border! */
+}
+xul|tab:first-of-type::before{
+  border-color: transparent;
+}
+xul|tabs:hover > tab::before{
+  border-color: transparent;
+}
+
+xul|tabs:hover > tab:-moz-locale-dir(ltr){
+  border-left-color: #c1c1c1;
+  border-top-color: #c1c1c1;
+}
+xul|tabs:hover > tab:-moz-locale-dir(rtl){
+  border-right-color: #c1c1c1;
+  border-top-color: #c1c1c1;
+}
+xul|tabs:hover > tab:last-of-type:-moz-locale-dir(ltr){
+  border-right-color: #c1c1c1;
+}
+xul|tabs:hover > tab:last-of-type:-moz-locale-dir(rtl){
+  border-left-color: #c1c1c1;
+}
+
+xul|tab:hover {
+  background-color: #ebebeb;
+}
+
+xul|tab[selected] {
+  z-index: 2;
+  background-color: #ebebeb;
+  color: var(--in-content-page-color);
+  border-color: #c1c1c1;
+  transition: background-color 50ms ease 0s,
+              border-color 0ms ease 0s;
+}
+xul|tab[selected]::before,
+xul|tab[selected] + tab::before{
+  border-color: transparent;
+  transition: border-color 0ms ease 0s;
+}
+
+xul|tab[selected] + tab:-moz-locale-dir(ltr){
+  border-left-color: transparent;
+  transition: background-color 50ms ease 0s,
+              border-left-color 0ms ease 0s,
+              border-color 150ms ease 0s;
+}
+xul|tab[selected] + tab:-moz-locale-dir(rtl){
+  border-left-color: transparent;
+  transition: background-color 50ms ease 0s,
+              border-right-color 0ms ease 0s,
+              border-color 150ms ease 0s;
+}
+
+xul|*.tab-text {
+  font-size: 1.4rem;
+  font-weight: 600; /* semi-bold --johnGraciliano */
+  line-height: 22px;
+}
+
+
+/* html buttons */
+
+html|button {
+  padding: 3px;
+  /* override forms.css */
+  font: inherit;
+}
+
+/* xul buttons and menulists */
+
+*|button,
+xul|colorpicker[type="button"],
+xul|menulist {
+  -moz-appearance: none;
+  min-height: 30px; /* Testing!  This was "height: 30px;" --johnGraciliano */
+  color: var(--in-content-text-color);
+  line-height: 20px; /* This keeps the single line text button height to 30px */
+  border: 1px solid var(--in-content-box-border-color);
+  -moz-border-top-colors: none !important;
+  -moz-border-right-colors: none !important;
+  -moz-border-bottom-colors: none !important;
+  -moz-border-left-colors: none !important;
+  border-radius: 2px;
+  background-color: var(--in-content-box-background);
+}
+
+html|button:not(.category):enabled:hover,
+xul|button:not([disabled="true"]):hover,
+xul|colorpicker[type="button"]:not([disabled="true"]):hover,
+xul|menulist:not([disabled="true"]):hover {
+  background-color: var(--in-content-box-background-hover);
+}
+
+html|button:not(.category):enabled:hover:active,
+xul|button:not([disabled="true"]):hover:active,
+xul|colorpicker[type="button"]:not([disabled="true"]):hover:active,
+xul|menulist[open="true"]:not([disabled="true"]) {
+  background-color: var(--in-content-box-background-active);
+}
+
+html|button:disabled,
+xul|button[disabled="true"],
+xul|colorpicker[type="button"][disabled="true"],
+xul|menulist[disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+*|button.primary {
+  background-color: var(--in-content-primary-button-background);
+  border-color: transparent;
+  color: var(--in-content-selected-text);
+}
+
+html|button.primary:enabled:hover,
+xul|button.primary:not([disabled="true"]):hover {
+  background-color: var(--in-content-primary-button-background-hover);
+}
+
+html|button.primary:enabled:hover:active,
+xul|button.primary:not([disabled="true"]):hover:active {
+  background-color: var(--in-content-primary-button-background-active);
+}
+
+xul|colorpicker[type="button"] {
+  padding: 6px;
+  width: 50px;
+}
+
+xul|button > xul|*.button-box,
+xul|menulist > xul|*.menulist-label-box {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+}
+
+xul|menulist > xul|*.menulist-label-box > xul|*.menulist-icon[src] {
+  -moz-margin-end: 5px;
+}
+
+xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
+  -moz-appearance: none;
+  margin: 1px 0;
+  -moz-margin-start: 10px;
+  padding: 0;
+  width: 10px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
+}
+
+xul|*.help-button {
+  min-width: 16px;
+  -moz-margin-end: 0;
+  border-width: 0;
+  background-image: none;
+  /* Override default button background */
+  background-color: transparent;
+  box-shadow: none;
+  list-style-image: url("chrome://global/skin/in-content/help-glyph.svg");
+}
+
+xul|*.help-button:not([disabled="true"]):hover {
+  background-image: none;
+  /* Override default button background */
+  background-color: transparent;
+  list-style-image: url("chrome://global/skin/in-content/help-glyph.svg#hover");
+}
+
+xul|*.help-button:not([disabled="true"]):hover:active {
+  background-image: none;
+  /* Override default button background */
+  background-color: transparent;
+  list-style-image: url("chrome://global/skin/in-content/help-glyph.svg#active");
+}
+
+xul|*.close-icon > xul|*.button-box,
+xul|*.help-button > xul|*.button-box {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+xul|*.help-button > xul|*.button-box > xul|*.button-icon {
+  width: 18px;
+  height: 18px;
+}
+
+xul|*.help-button > xul|*.button-box > xul|*.button-text {
+  display: none;
+}
+
+html|*.help-button {
+  width: 18px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  background-image: url("chrome://global/skin/in-content/help-glyph.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+html|*.help-button:hover {
+  background-image: url("chrome://global/skin/in-content/help-glyph.svg#hover");
+}
+
+html|*.help-button:hover:active {
+  background-image: url("chrome://global/skin/in-content/help-glyph.svg#active");
+}
+
+/* Special dimensions for the help button in the options page  --johnGraciliano */
+script[src$="preferences.js"] ~ stack  *|button.help-button {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  min-height: unset;
+  margin: -1px;
+  -moz-margin-end: 0;
+}
+
+/* Reposition the help buttom from the bottom to the top of the options page  --johnGraciliano */
+script[src$="preferences.js"] ~ stack  .main-content{
+  position: relative;
+}
+script[src$="preferences.js"] ~ stack  .main-content > hbox:last-child {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 15px;
+  max-width: calc(100% - 96px);
+  width: 796px ;
+}
+
+xul|*.spinbuttons-button {
+  min-height: initial;
+  -moz-margin-start: 10px !important;
+  -moz-margin-end: 2px !important;
+}
+
+xul|*.spinbuttons-up {
+  margin-top: 2px !important;
+  border-radius: 1px 1px 0 0;
+}
+
+xul|*.spinbuttons-down  {
+  margin-bottom: 2px !important;
+  border-radius: 0 0 1px 1px;
+}
+
+xul|*.spinbuttons-button > xul|*.button-box {
+  padding: 1px 5px 2px !important;
+}
+
+xul|*.spinbuttons-up > xul|*.button-box > xul|*.button-icon {
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#ip");
+}
+
+xul|*.spinbuttons-up[disabled="true"] > xul|*.button-box > xul|*.button-icon {
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#up-dis");
+}
+
+xul|*.spinbuttons-down > xul|*.button-box > xul|*.button-icon {
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#dn");
+}
+
+xul|*.spinbuttons-down[disabled="true"] > xul|*.button-box > xul|*.button-icon {
+  list-style-image: url("chrome://global/skin/arrow/arrow-v.svg#dn-dis");
+}
+
+xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker {
+  -moz-appearance: none;
+  -moz-margin-end: 4px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
+}
+
+xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker > xul|*.dropmarker-icon {
+  width: 18px;
+  height: 18px;
+}
+
+xul|menulist[disabled="true"]:not([editable="true"]) > xul|*.menulist-dropmarker {
+  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown-disabled")
+}
+
+xul|menulist > xul|menupopup,
+xul|button[type="menu"] > xul|menupopup {
+  -moz-appearance: none;
+  border: 1px solid var(--in-content-box-border-color);
+  border-radius: 2px;
+  background-color: var(--in-content-box-background);
+}
+
+xul|menulist > xul|menupopup xul|menu,
+xul|menulist > xul|menupopup xul|menuitem,
+xul|button[type="menu"] > xul|menupopup xul|menu,
+xul|button[type="menu"] > xul|menupopup xul|menuitem {
+  -moz-appearance: none;
+  font-size: 1em;
+  color: var(--in-content-text-color);
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  -moz-padding-start: 10px;
+  -moz-padding-end: 30px;
+}
+
+xul|menulist > xul|menupopup > xul|menu[_moz-menuactive="true"],
+xul|menulist > xul|menupopup > xul|menuitem[_moz-menuactive="true"],
+xul|button[type="menu"] > xul|menupopup > xul|menu[_moz-menuactive="true"],
+xul|button[type="menu"] > xul|menupopup > xul|menuitem[_moz-menuactive="true"] {
+  color: var(--in-content-text-color);
+  background-color: var(--in-content-item-hover);
+}
+
+xul|menulist > xul|menupopup > xul|menu[selected="true"],
+xul|menulist > xul|menupopup > xul|menuitem[selected="true"],
+xul|button[type="menu"] > xul|menupopup > xul|menu[selected="true"],
+xul|button[type="menu"] > xul|menupopup > xul|menuitem[selected="true"] {
+  color: var(--in-content-selected-text);
+  background-color: var(--in-content-item-selected);
+}
+
+xul|menulist > xul|menupopup xul|menuseparator,
+xul|button[type="menu"] > xul|menupopup xul|menuseparator {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--in-content-box-border-color);
+  border-bottom: none;
+}
+
+/* textboxes */
+
+html|input[type="text"],
+html|textarea,
+*|textbox {
+  -moz-appearance: none;
+  box-sizing: border-box;
+  height: 30px; /* These may only be for xul|textbox */
+  color: var(--in-content-text-color);
+  line-height: 20px; /* These may only be for xul|textbox */
+  padding-right: 10px;  /* These may only be for xul|textbox */
+  padding-left: 10px;  /* These may only be for xul|textbox */
+  border: 1px solid var(--in-content-box-border-color);
+  -moz-border-top-colors: none !important;
+  -moz-border-right-colors: none !important;
+  -moz-border-bottom-colors: none !important;
+  -moz-border-left-colors: none !important;
+  border-radius: 2px;
+  background-color: var(--in-content-box-background);
+}
+
+xul|textbox {
+  min-height: 30px; /* Possibly, this should be part of the rule above */
+  /* padding-right: 10px; ** These are applied above */
+  /* padding-left: 10px; ** These are applied above */
+}
+
+html|input[type="text"],
+html|textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 3px 10px; /* in the default theme it's 5px 10px --johnGraciliano */
+}
+
+html|input[type="text"]:not(:disabled):not(:focus):hover,
+html|textarea:not(:disabled):not(:focus):hover,
+html|textbox:not(:disabled):not(:focus):hover,
+xul|textbox:not([disabled="true"]):not([focused]):hover {
+  border-color: var(--in-content-border-hover);
+}
+
+html|input[type="text"]:disabled,
+html|textarea:disabled,
+html|textbox:disabled,
+xul|textbox[disabled="true"] {
+  opacity: 0.5;
+}
+
+/* Links */
+
+html|a,
+.text-link,
+.inline-link {
+  line-height: 22px;
+  color: var(--in-content-link-color);
+  text-decoration: none;
+}
+
+html|a:hover,
+.text-link:hover,
+.inline-link:hover {
+  color: var(--in-content-link-color-hover);
+  text-decoration: underline;
+}
+
+html|a:hover:active,
+.text-link:hover:active,
+.inline-link:hover:active {
+  color: var(--in-content-link-color-active);
+  text-decoration: none;
+}
+
+/* Checkboxes and radio buttons */
+
+/* Hide the actual checkbox */
+html|input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  /*visibility: hidden; */
+  pointer-events: none; /* It is really see thru! */
+  position: absolute;
+  /* z-index: -1; /* This will prevent it from being top, even invisible*/
+}
+
+/* Create a box to style as the checkbox */
+html|input[type="checkbox"] + html|label:before {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+}
+
+html|input[type="checkbox"] + html|label {
+  line-height: 0px;
+}
+
+xul|checkbox {
+  -moz-margin-start: 0;
+}
+
+xul|*.checkbox-check,
+html|input[type="checkbox"] + html|label:before {
+  -moz-appearance: none;
+  box-sizing: border-box;
+  width: 23px;
+  height: 23px;
+  border-radius: 2px;
+  border: 1px solid var(--in-content-box-border-color);
+  -moz-margin-end: 10px;
+  background: initial !important;  /* !important needed to override toolkit checked !important rule */
+}
+
+xul|checkbox:not([disabled="true"]):hover > xul|*.checkbox-check,
+html|input[type="checkbox"]:not(:disabled) + html|label:hover:before {
+  border-color: var(--in-content-border-hover);
+}
+
+xul|*.checkbox-check[checked] {
+  list-style-image: url("chrome://global/skin/in-content/check.svg#check");
+}
+
+html|input[type="checkbox"]:checked + html|label:before {
+  background-image: url("chrome://global/skin/in-content/check.svg#check") !important;
+}
+
+xul|checkbox[disabled="true"] > xul|*.checkbox-check,
+html|input[type="checkbox"]:disabled + html|label {
+  opacity: 0.5;
+}
+
+xul|*.checkbox-label-box {
+  -moz-margin-start: -1px; /* negative margin for the transparent border */
+  -moz-padding-start: 0;
+}
+
+xul|richlistitem > xul|*.checkbox-check {
+  margin: 3px 6px;
+}
+
+xul|radio {
+  -moz-margin-start: 0;
+}
+
+xul|*.radio-check {
+  -moz-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 1px solid var(--in-content-box-border-color);
+  border-radius: 50%;
+  -moz-margin-end: 10px;
+  background: initial;
+}
+
+xul|radio:not([disabled="true"]):hover > xul|*.radio-check {
+  border-color: var(--in-content-border-hover);
+}
+
+xul|*.radio-check[selected] {
+  list-style-image: url("chrome://global/skin/in-content/radio.svg#radio");
+}
+
+xul|radio[disabled="true"] > xul|*.radio-check {
+  opacity: 0.5;
+}
+
+xul|*.radio-label-box {
+  -moz-margin-start: -1px; /* negative margin for the transparent border */
+  -moz-margin-end: 10px;
+  -moz-padding-start: 0;
+}
+
+/* Category List */
+
+*|*#categories {
+  -moz-appearance: none;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  margin: 0;
+  -moz-margin-start: 4px;
+  -moz-margin-end: -1px;
+  margin-top: 74px;
+  margin-bottom: 7px;
+  border-width: 0;
+}
+
+*|*.category {
+  -moz-appearance: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 27px;
+  border: 1px solid transparent;
+  min-height: 0;
+  height: 52px;
+  -moz-box-align: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 150ms;
+}
+button.category { /* With tag "button" to override chrome://devtools/content/aboutdebugging/aboutdebugging.css in Firefox 57 */
+  border-width: 1px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+*|*.category:-moz-locale-dir(ltr) {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+*|*.category:-moz-locale-dir(rtl) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+html|*.category.selected,
+*|*.category[selected] {
+  background-color: rgb(110,110,110);
+  border-color: var(--in-content-main-border-color);
+  -moz-border-end-color: rgb(75,75,75);
+}
+
+*|*#categories[keyboard-navigation="true"]:-moz-focusring > xul|*.category[current] {
+  border: 1px #999 dotted;
+  -moz-border-end: 1px solid rgb(75,75,75);
+}
+
+*|*.category-name {
+  line-height: -moz-use-system-font;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 1px 5px 2px;
+  -moz-margin-start: 6px;
+  -moz-user-select: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* Allow more space to the .main-content when the window is narrow */
+@media (max-width: 800px) {
+  *|*.category-name {
+    display: none;
+  }
+}
+
+*|*.category-icon {
+  width: 32px;
+  height: 32px;
+  -moz-margin-start: 6px;
+}
+
+/* header */
+
+*|*.header {
+  border-bottom: 1px solid var(--in-content-header-border-color);
+  -moz-margin-end: 4px; /* add the 4px end-margin of other elements */
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  -moz-box-align: baseline;
+}
+
+*|*.header-name {
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 40px;
+  margin: 0;
+  -moz-user-select: none;
+}
+
+/*  No text headers in the options page, but a smaller space for the help button  --johnGraciliano */
+script[src$="preferences.js"] ~ stack .header{
+  border: none;
+  margin: -10px 0 -7px;
+  -moz-margin-end: 4px; /* add the 4px end-margin of other elements */
+  padding-bottom: 0;
+}
+script[src$="preferences.js"] ~ stack .header-name{
+  height: 18px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+}
+
+/* File fields */
+
+xul|filefield {
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+xul|*.fileFieldContentBox {
+  background-color: transparent;
+}
+
+xul|*.fileFieldIcon {
+  -moz-margin-start: 10px;
+  -moz-margin-end: 0;
+}
+
+xul|*.fileFieldLabel {
+  -moz-margin-start: -26px;
+  -moz-padding-start: 36px;
+}
+
+/* List boxes */
+
+xul|richlistbox,
+xul|listbox {
+  -moz-appearance: none;
+  -moz-margin-start: 0;
+  background-color: var(--in-content-box-background);
+  border: 1px solid var(--in-content-box-border-color);
+  color: var(--in-content-text-color);
+}
+
+xul|treechildren::-moz-tree-row,
+xul|listbox xul|listitem {
+  padding: 0.3em;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background-image: none;
+}
+
+xul|treechildren::-moz-tree-row(hover),
+xul|listbox xul|listitem:hover {
+  background-color: var(--in-content-item-hover);
+}
+
+xul|treechildren::-moz-tree-row(selected),
+xul|listbox xul|listitem[selected="true"] {
+  background-color: var(--in-content-item-selected);
+  color: var(--in-content-selected-text);
+}
+
+/* Trees */
+
+xul|tree {
+  -moz-appearance: none;
+  font-size: 1em;
+  border: 1px solid var(--in-content-box-border-color);
+  margin: 0;
+}
+
+xul|tree:-moz-focusring,
+xul|richlistbox:-moz-focusring {
+  border: 1px dotted var(--in-content-border-focus);
+}
+
+xul|listheader,
+xul|treecols {
+  -moz-appearance: none;
+  border: none;
+  border-bottom: 1px solid var(--in-content-border-color);
+  padding: 0;
+}
+
+xul|treecol:not([hideheader="true"]),
+xul|treecolpicker {
+  -moz-appearance: none;
+  border: none;
+  background-color: var(--in-content-box-background-hover);
+  color: #fff;
+  padding: 5px 10px;
+}
+
+xul|treecol:not([hideheader="true"]):not([sortable="false"]):hover,
+xul|treecolpicker:hover {
+  background-color: var(--in-content-box-background-active);
+  color: var(--in-content-text-color);
+}
+
+xul|treecol:not([hideheader="true"]):not(:first-child),
+xul|treecolpicker {
+  -moz-border-start-width: 1px;
+  -moz-border-start-style: solid;
+  border-image: linear-gradient(transparent 0%, transparent 20%, #c1c1c1 20%, #c1c1c1 80%, transparent 80%, transparent 100%) 1 1;
+}
+
+xul|treecol:not([hideheader="true"]) > xul|*.treecol-sortdirection[sortDirection] {
+  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
+  width: 18px;
+  height: 18px;
+}
+
+xul|treecol:not([hideheader="true"]) > xul|*.treecol-sortdirection[sortDirection="ascending"] {
+  transform: scaleY(-1);
+}
+
+/* This is the only way to increase the height of a tree row unfortunately */
+xul|treechildren::-moz-tree-row {
+  min-height: 2em;
+}
+
+/* Color needs to be set on tree cell in order to be applied */
+xul|treechildren::-moz-tree-cell-text {
+  color: var(--in-content-text-color);
+}
+
+xul|treechildren::-moz-tree-cell-text(selected) {
+  color: var(--in-content-selected-text);
+}
+
+
+@supports not (-moz-osx-font-smoothing: auto) { /*  This matches any OS except mac OS X 10.6+, thus Windows or Linux (or not Darwin) */
+
+  xul|caption {
+    background-color: transparent;
+  }
+
+  xul|button,
+  html|button,
+  xul|colorpicker[type="button"],
+  xul|menulist {
+    margin: 2px 4px;
+  }
+
+  /* The start margin should get clear at the beginning of a line */
+  hbox > xul|button:first-child {
+    -moz-margin-start: 0;
+    margin-inline-start: 0;
+  }
+  /* Not in this special cases */
+  hbox > vbox > hbox > xul|button:first-child,
+  :-moz-any(row, hbox) > hbox > xul|button:first-child {
+    -moz-margin-start: 4px;
+    margin-inline-start: 4px;
+  }
+
+  xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker {
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+  xul|checkbox {
+    -moz-padding-start: 0;
+  }
+
+  @media not all and (-moz-windows-default-theme) {
+    xul|*.checkbox-check {
+      background-image: none !important;
+    }
+
+    xul|*.checkbox-check[checked] {
+      list-style-image: url("chrome://global/skin/in-content/check.svg#check-native");
+      background-color: -moz-dialog;
+    }
+  }
+
+  xul|radio {
+    -moz-binding: url("chrome://global/content/bindings/radio.xml#radio");
+    -moz-padding-start: 0;
+  }
+
+  @media not all and (-moz-windows-default-theme) {
+    xul|*.radio-check {
+      background-image: none;
+    }
+
+    xul|*.radio-check[selected] {
+      list-style-image: url("chrome://global/skin/in-content/radio.svg#radio-native");
+      background-color: -moz-dialog;
+    }
+  }
+
+  xul|*.radio-icon,
+  xul|*.checkbox-icon {
+    -moz-margin-end: 0;
+  }
+
+  /* Never draw a border for the focusring, use outline instead */
+  xul|*.button-box,
+  xul|*.menulist-label-box,
+  xul|*.radio-label-box,
+  xul|*.checkbox-label-box {
+    border-style: none;
+  }
+
+  xul|*.inline-link:-moz-focusring,
+  xul|button:-moz-focusring > xul|*.button-box,
+  xul|menulist:-moz-focusring > xul|*.menulist-label-box,
+  xul|radio[focused="true"] > xul|*.radio-label-box,
+  html|input[type="checkbox"]:-moz-focusring + html|label:before,
+  xul|checkbox:-moz-focusring > xul|*.checkbox-label-box {
+    outline: 1px dotted;
+  }
+
+  /* Use a 2px border so that selected row highlight is still visible behind
+      an existing high-contrast border that uses the background color */
+  @media not all and (-moz-windows-default-theme) {
+    xul|treechildren::-moz-tree-row(selected),
+    xul|listbox xul|listitem[selected="true"] {
+       border: 2px dotted Highlight;
+    }
+  }
+
+}
+
+
+@supports (-moz-osx-font-smoothing: auto) { /* This matches mac OS X 10.6+ (all supported Darwin) */
+
+  /* Remove the gray background from the groupbox bodies in the Options page for the mac --johnGraciliano */
+  /* xul|page[title="Options"] > */ script[src$="preferences.js"] ~ stack .groupbox-body {
+    -moz-appearance: none;
+  }
+
+  xul|tabs {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  xul|tab[visuallyselected] {
+    text-shadow: none;
+  }
+
+  xul|button,
+  html|button,
+  xul|colorpicker[type="button"],
+  xul|menulist {
+    margin-top: 3px;
+  }
+
+  xul|button,
+  html|button {
+    /* use the same margin of other elements for the alignment */
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  /* The start margin should get clear at the beginning of a line */
+  hbox > xul|button:first-child {
+    -moz-margin-start: 0;
+    margin-inline-start: 0;
+  }
+  /* Not in this special cases */
+  hbox > vbox > hbox > xul|button:first-child,
+  :-moz-any(row, hbox) > hbox > xul|button:first-child {
+    -moz-margin-start: 4px;
+    margin-inline-start: 4px;
+  }
+
+  xul|caption {
+    -moz-padding-start: 0;
+  }
+
+  xul|groupbox > xul|*.groupbox-body {
+    padding: 0;
+  }
+
+  xul|menulist:not([editable="true"]) > xul|menupopup > xul|menuitem[checked="true"]::before,
+  xul|menulist:not([editable="true"]) > xul|menupopup > xul|menuitem[selected="true"]::before {
+    display: none;
+  }
+
+  xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker {
+    display: -moz-box;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+  xul|menulist > xul|menupopup xul|menu,
+  xul|menulist > xul|menupopup xul|menuitem,
+  xul|button[type="menu"] > xul|menupopup xul|menu,
+  xul|button[type="menu"] > xul|menupopup xul|menuitem {
+    -moz-padding-end: 34px;
+  }
+
+  xul|*.help-button > xul|*.button-box > xul|*.button-icon {
+    -moz-margin-start: 0;
+  }
+
+  xul|*.checkbox-icon {
+    margin-right: 0;
+  }
+
+  xul|*.radio-icon {
+    -moz-margin-end: 0;
+  }
+
+  xul|*.numberbox-input-box {
+    -moz-appearance: none;
+    border-width: 0;
+  }
+
+  xul|description {
+    font-size: 1.25rem;
+    line-height: 22px;
+  }
+
+  html|a:-moz-focusring,
+  xul|*.text-link:-moz-focusring,
+  xul|*.inline-link:-moz-focusring {
+    color: #ff9500;
+    text-decoration: underline;
+    box-shadow: none;
+  }
+
+  xul|button:-moz-focusring,
+  xul|menulist:-moz-focusring,
+  xul|checkbox:-moz-focusring > .checkbox-check,
+  xul|radio[focused="true"] > .radio-check,
+  xul|tab:-moz-focusring > .tab-middle > .tab-text {
+    outline: 2px solid rgba(0,149,221,0.5);
+    outline-offset: 1px;
+    -moz-outline-radius: 2px;
+  }
+
+  xul|radio[focused="true"] > .radio-check {
+    -moz-outline-radius: 100%;
+  }
+
+}
+
+
+/* @-moz-document url-prefix("about:privatebrowsing"){ */
+  div#bar.showPrivate{
+    background-color: #000;
+  }
+  .showPrivate ul#forgotten > li{
+    background-image: url("chrome://global/skin/in-content/check.svg#check");
+    background-position: -2px ;
+    background-size: 24px 24px;
+  }
+  .showPrivate ul#kept > li{
+    background-image: url("chrome://browser/skin/warning16.png");
+    background-size: 32px 16px;
+    background-position: -16px 7px;
+  }
+  .showPrivate span#tpEnabled{
+    background-color: #424e5a;
+    background-color: #9b9b9b;
+  }
+  .showPrivate span#tpDisabled{
+    background-color: #000;
+  }
+/* } */
+
+@-moz-document url-prefix("about:performance") {
+  #subprocess-reports td {
+    background-color: rgb(75,75,75) !important;
+  }
+}
+
+/* For the 'Tab Groups' extension */
+page:-moz-any(#tabGroups-preferences,#theFoxOnlyBetter-preferences,#omnisidebar-preferences,#findbartweak-preferences) > stack {
+  min-height: 214px;  /* If the viewport is too small some content will be hidden! */
+  padding: 18px;
+  background-color: var(--in-content-frame-background);
+}
+page:-moz-any(#tabGroups-preferences,#theFoxOnlyBetter-preferences,#omnisidebar-preferences,#findbartweak-preferences) .main-wrapper {
+  border: 1px solid var(--in-content-main-border-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* .main-content, */
+page:-moz-any(#tabGroups-preferences,#theFoxOnlyBetter-preferences,#omnisidebar-preferences,#findbartweak-preferences) .main-wrapper .main-content {
+  border-width: 0;
+}
+page:-moz-any(#tabGroups-preferences,#theFoxOnlyBetter-preferences,#omnisidebar-preferences,#findbartweak-preferences) .category-icon {
+  padding: 4px;
+}
+page:-moz-any(#tabGroups-preferences,#theFoxOnlyBetter-preferences,#omnisidebar-preferences,#findbartweak-preferences) #main-footer {
+  background-color: var(--in-content-box-background);
+}
+
+
+
+
+#body{
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 214px;  /* If the viewport is too small some content will be hidden! */
+  padding: 18px;
+  background-color: var(--in-content-frame-background);
+}
+
+#body > .app > #categories,
+#body > #categories {
+  overflow: auto;
+}
+
+
+/* Rules for about:debugging */
+
+#body > .app > .main-content > div[role=tabpanel] > .header,
+#body > .app > .main-content > #tab-addons > .header,
+#body > .app > .main-content > #tab-workers > .header,
+#body > .main-content > #tab-addons > .header,
+#body > .main-content > #tab-workers > .header{
+  display: none;
+}
+
+#workers > .targets > .target-list > .target-container::before,
+#workers > .targets > .target-container::before,
+#workers > .targets > .target::before,
+#workers > div > .targets > .target::before{
+  content: "";
+  background-image: url(chrome://devtools/skin/images/debugging-workers-generic.svg);
+  background-size: 100%;
+  height: 24px;
+  width: 24px;
+  margin-inline-end: 5px;
+}
+#workers > .targets > .target-list > .target-container::before,
+#workers > .targets > .target-container::before{
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+#workers > .targets > .target-list > .target-container > .target-icon,
+#tab-workers > #workers > .targets > .target-container > .target-icon,
+#tab-workers > #workers > .targets > .target > .target-icon,
+#tab-workers > #workers > div > .targets > .target > .target-icon{
+  display: none;
+}
+
+@supports (not (word-spacing:100%)) and (not (orphans:3)) { /* Firefox = 44 */
+  .category[value="addons"]  > .category-icon,
+  .category[value="workers"] > .category-icon{
+    display: none;
+  }
+  .category[value="addons"]::before{
+    content: "";
+    background-image: url(chrome://devtools/skin/images/debugging-addons.svg);
+    background-size: 100%;
+    height: 32px;
+    min-width: 32px;
+    margin-inline-start: 6px;
+  }
+  .category[value="workers"]::before{
+    content: "";
+    background-image: url(chrome://devtools/skin/images/debugging-workers.svg);
+    background-size: 100%;
+    height: 32px;
+    min-width: 32px;
+    margin-inline-start: 6px;
+  }
+}

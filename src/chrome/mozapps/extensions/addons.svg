@@ -16,28 +16,28 @@
       stroke-width: 1;
     }
     use[id="extensionGeneric"] {
-      fill: #1a96f6;
-      stroke: #1a96f6;
+      fill: #4B89B9;
+      stroke: #4B89B9;
     }
     use[id="themeGeneric"] {
-      fill: #f24cae;
-      stroke: #f24cae;
+      fill: #BD6A9B;
+      stroke: #BD6A9B;
     }
     use[id="pluginGeneric"] {
-      fill: #08d5c9;
-      stroke: #08d5c9;
+      fill: #4FB5AF;
+      stroke: #4FB5AF;
     }
     use[id="dictionaryGeneric"] {
-      fill: #c196fc;
-      stroke: #c196fc;
+      fill: #B7A2D5;
+      stroke: #B7A2D5;
     }
     use[id="languageGeneric"] {
-      fill: #0fca7d;
-      stroke: #0fca7d;
+      fill: #B7A2D5;
+      stroke: #B7A2D5;
     }
     use[id="experimentGeneric"] {
-      fill: #f6bf00;
-      stroke: #f6bf00;
+      fill: #D8BC5D;
+      stroke: #D8BC5D;
     }
   </style>
   <defs style="display: none;">

@@ -1,10 +1,12 @@
 
 body.private > #errorPageContainer {
-  background-image: url("chrome://browser/skin/Privacy-48.png");
+  background-image: url("chrome://browser/skin/toolbar/private.svg");
+  background-size: 48px 48px;
 }
 
 body.normal > #errorPageContainer {
-  background-image: url("chrome://global/skin/icons/question-48.png");
+  background-image: url("chrome://global/skin/icons/question-16.svg");
+  background-size: 48px 48px;
 }
 
 #clearRecentHistoryDesc {
@@ -26,7 +28,7 @@ body.normal > #errorPageContainer {
 #moreInfo {
   font-size: 110%; /* to match the value set in chrome://global/skin/netError.css */
   -moz-padding-start: 25px;
-  background: url("chrome://global/skin/icons/information-16.png") no-repeat top left;
+  background: url("chrome://global/skin/icons/information-16.svg") no-repeat top left;
 }
 
 #moreInfo:-moz-dir(rtl) {
@@ -39,8 +41,4 @@ body.normal > #errorPageContainer {
 
 #moreInfoLinkContainer {
   margin-top: 0.5em;
-}
-
-#moreInfoLinkContainer a {
-  color: #fff;
 }

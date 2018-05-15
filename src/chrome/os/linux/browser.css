@@ -1,0 +1,58 @@
+#appmenu-toolbar-button {
+  -moz-appearance: none;
+  border: none;
+  padding: 3px 5px 3px 3px !important;
+  list-style-image: url("chrome://browser/skin/toolbar/menu.svg");
+  -moz-image-region: auto;
+}
+
+toolbar:not([brighttext]) #appmenu-toolbar-button {
+  list-style-image: url("chrome://browser/skin/toolbar/menu.svg#darktext");
+}
+
+#appmenu-toolbar-button > label,
+#appmenu-toolbar-button > .toolbarbutton-menu-dropmarker {
+  display: none !important;
+}
+
+.toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
+.toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+  list-style-image: none !important;
+}
+
+#appmenu_history > .splitmenu-menuitem > .menu-iconic-left > .menu-iconic-icon {
+  list-style-image: url("chrome://browser/skin/toolbar/history.svg");
+}
+
+/* Places toolbar */
+toolbarbutton.bookmark-item {
+  margin: 0;
+  padding: 2px 3px;
+}
+
+toolbarbutton.bookmark-item:hover:active,
+toolbarbutton.bookmark-item[open="true"] {
+  padding-top: 3px;
+  padding-bottom: 1px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 2px;
+}
+
+.bookmark-item > .toolbarbutton-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Prevent [mode="icons"] from hiding the label */
+.bookmark-item > .toolbarbutton-text {
+  display: -moz-box !important;
+}
+
+.bookmark-item > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
+/* Dropmarker for folder bookmarks */
+.bookmark-item[container] > .toolbarbutton-menu-dropmarker {
+  display: -moz-box !important;
+}

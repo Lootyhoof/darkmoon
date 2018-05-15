@@ -1,44 +1,77 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 /* ..... page navigation ..... */
 
+.navigate-button {
+  min-width: 1.9em;
+}
+
+.navigate-button > .toolbarbutton-icon {
+  /* display: none; |* This is in the default theme.  Here the icons are shown instead of the labels --johnGraciliano */
+  -moz-margin-end: 0;
+  margin-inline-end: 0;
+}
+.navigate-button > .toolbarbutton-text {
+  display: none;
+}
+
+.navigate-button[anonid=navigateHome],
+.navigate-button[anonid=navigateEnd]:-moz-locale-dir(rtl),
 .home-arrow,
 .end-arrow:-moz-locale-dir(rtl) {
   list-style-image: url("chrome://global/skin/printpreview/arrow-left-end.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
+.navigate-button[anonid=navigateHome]:hover,
+.navigate-button[anonid=navigateEnd]:-moz-locale-dir(rtl):hover,
 .home-arrow:hover,
 .end-arrow:-moz-locale-dir(rtl):hover {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
+.navigate-button[anonid=navigateEnd],
+.navigate-button[anonid=navigateHome]:-moz-locale-dir(rtl),
 .end-arrow,
 .home-arrow:-moz-locale-dir(rtl) {
   list-style-image: url("chrome://global/skin/printpreview/arrow-right-end.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
+.navigate-button[anonid=navigateEnd]:hover,
+.navigate-button[anonid=navigateHome]:-moz-locale-dir(rtl):hover,
 .end-arrow:hover,
 .home-arrow:-moz-locale-dir(rtl):hover {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
+.navigate-button[anonid=navigatePrevious],
+.navigate-button[anonid=navigateNext]:-moz-locale-dir(rtl),
 .previous-arrow,
 .next-arrow:-moz-locale-dir(rtl) {
   list-style-image: url("chrome://global/skin/printpreview/arrow-left.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
+.navigate-button[anonid=navigatePrevious]:hover,
+.navigate-button[anonid=navigateNext]:-moz-locale-dir(rtl):hover,
 .previous-arrow:hover,
 .next-arrow:-moz-locale-dir(rtl):hover {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
+.navigate-button[anonid=navigateNext],
+.navigate-button[anonid=navigatePrevious]:-moz-locale-dir(rtl),
 .next-arrow,
 .previous-arrow:-moz-locale-dir(rtl) {
   list-style-image: url("chrome://global/skin/printpreview/arrow-right.png");
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
+.navigate-button[anonid=navigateNext]:hover,
+.navigate-button[anonid=navigatePrevious]:-moz-locale-dir(rtl):hover,
 .next-arrow:hover,
 .previous-arrow:-moz-locale-dir(rtl):hover {
   -moz-image-region: rect(0, 32px, 16px, 16px);
@@ -60,11 +93,9 @@
 .toolbar-portrait-page {
   list-style-image: url("chrome://global/skin/icons/Print-preview.png");
   -moz-image-region: rect(0px 16px 16px 0px);
-  color: #fff;
 }
 
 .toolbar-landscape-page {
   list-style-image: url("chrome://global/skin/icons/Print-preview.png");
   -moz-image-region: rect(0px 32px 16px 16px);
-  color: #fff;
 }

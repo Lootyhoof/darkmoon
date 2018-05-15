@@ -7,40 +7,39 @@
 
 /* Global Styles */
 #BrowserPreferences radio[pane] {
-  list-style-image: url("chrome://browser/skin/preferences/Options.png"); 
   padding: 5px 3px 1px;
 }
 
 radio[pane=paneMain] {
-  -moz-image-region: rect(0, 32px,  32px, 0);
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#general");
 }
 
 radio[pane=paneTabs] {
-  -moz-image-region: rect(0, 64px, 32px, 32px);
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#tabs");
 }
 
 radio[pane=paneContent] {
-  -moz-image-region: rect(0, 96px,  32px, 64px);
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#content");
 }
 
 radio[pane=paneApplications] {
-  -moz-image-region: rect(0, 128px,  32px, 96px);
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#applications");
 }
 
 radio[pane=panePrivacy] {
-  -moz-image-region: rect(0, 160px,  32px, 128px);
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#privacy");
 }
 
 radio[pane=paneSecurity] {
-  -moz-image-region: rect(0, 192px,  32px, 160px);
-}
-
-radio[pane=paneAdvanced] {
-  -moz-image-region: rect(0, 224px, 32px, 192px);
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#security");
 }
 
 radio[pane=paneSync] {
-  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important;
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#sync");
+}
+
+radio[pane=paneAdvanced] {
+  list-style-image: url("chrome://browser/skin/preferences/Options.svg#advanced");
 }
 
 /* Applications Pane */
@@ -83,16 +82,37 @@ radio[pane=paneSync] {
   width: 16px;
   height: 16px;
   margin: 0 2px;
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png") !important;
+  list-style-image: url(chrome://browser/skin/places/places.svg);
+  -moz-image-region: rect(2px, 18px, 18px, 2px);  /* defaultFavicon */
 }
 
 #cookiesChildren::-moz-tree-image(domainCol, container) {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
-  -moz-image-region: rect(0, 32px, 16px, 16px);
+  -moz-image-region: rect(2px, 198px, 18px, 182px);  /* folderItem */
 }
 
 #cookiesChildren::-moz-tree-image(domainCol, container, open) {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
+  -moz-image-region: rect(2px, 198px, 18px, 182px);  /* folderItem */
+}
+
+#cookiesChildren::-moz-tree-image(selected,focus,domainCol) {
+  -moz-image-region: rect(2px, 378px, 18px, 362px);  /* defaultFaviconFocus */
+}
+#cookiesChildren::-moz-tree-image(selected,focus,domainCol,container) {
+  -moz-image-region: rect(2px, 358px, 18px, 342px);  /* folderItemFocus */
+}
+
+#cookiesChildren::-moz-tree-twisty(selected,focus) {
+  list-style-image: url("chrome://global/skin/tree/twisty.svg#clsd-focus");
+}
+#cookiesChildren::-moz-tree-twisty(selected,focus,open) {
+  list-style-image: url("chrome://global/skin/tree/twisty.svg#open-focus");
+}
+
+#cookiesChildren:-moz-locale-dir(rtl)::-moz-tree-twisty(selected,focus) {
+  list-style-image: url("chrome://global/skin/tree/twisty.svg#clsd-focus-rtl");
+}
+#cookiesChildren:-moz-locale-dir(rtl)::-moz-tree-twisty(selected,focus,open) {
+  list-style-image: url("chrome://global/skin/tree/twisty.svg#open-focus-rtl");
 }
 
 #cookieInfoBox {

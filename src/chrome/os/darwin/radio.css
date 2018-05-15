@@ -1,0 +1,86 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+radiogroup {
+  margin: 1px 0px 1px 0px;
+}
+
+radio {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  margin: 4px 2px;
+  -moz-user-focus: ignore;
+}
+
+.radio-label-box {
+  -moz-margin-start: 0px;
+  padding: 0px;
+}
+
+.radio-icon {
+  -moz-margin-end: 2px;
+}
+
+.radio-label {
+  margin: 1px 0 !important;
+}
+
+/* ..... focused state ..... */
+
+radio[focused="true"] > .radio-label-box {
+  border: 1px dotted rgb(75,75,75);
+}
+
+/* ..... disabled state ..... */
+
+radio[disabled="true"] > .radio-check-box1 {
+  background-color: rgb(62,62,62);
+}
+
+radio[disabled="true"] {
+  color: GrayText;
+}
+
+/* ::::: checkmark image ::::: */
+
+.radio-check-box1 {
+  -moz-appearance: none;
+  margin: 1px 0px;
+  border-top: 1px solid rgb(75,75,75);
+  border-right: 1px solid rgb(75,75,75);
+  border-bottom: 1px solid rgb(75,75,75);
+  border-left: 1px solid rgb(75,75,75);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(50,50,50);
+}
+
+.radio-check-box2 {
+  border-top: 1px solid rgb(75,75,75);
+  border-right: 1px solid rgb(75,75,75);
+  border-bottom: 1px solid rgb(75,75,75);
+  border-left: 1px solid rgb(75,75,75);
+  border-radius: 50%;
+  padding: 2px;
+  width: 4px;
+  height: 4px;
+  list-style-image: none;
+}
+
+radio:hover:active > .radio-check-box1 {
+  background-color: rgb(110,110,110);
+}
+
+/* ..... selected state ..... */
+
+radio[selected="true"] > .radio-check-box1 > .radio-check-box2 {
+  list-style-image: url("chrome://global/skin/radio/radio-check.svg#radio");
+}
+
+radio[selected="true"][disabled="true"] > .radio-check-box1 > .radio-check-box2 {
+  list-style-image: url("chrome://global/skin/radio/radio-check.svg#radio-dis") !important
+}

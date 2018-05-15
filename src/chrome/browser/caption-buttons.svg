@@ -1,57 +1,74 @@
-<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style>
+    g:not(:target) {
+      display: none;
+    }
+    use:target > g {
+      display: initial;
+    }
+
     g {
       stroke: ButtonText;
       stroke-width: 0.9px;
       fill: none;
     }
-
-    g:not(:target) {
-      display: none;
+    g:not([id|="close"]) {
+      shape-rendering: crispEdges;
+    }
+    g[id|="close"] {
+      shape-rendering: geometricPrecision;
     }
 
-    use:target > g {
-      display: initial;
+    .highcontrast {
+      stroke-width: 1.9px;
     }
-
-    .highlight > g {
+    .highcontrast-hover > g {
       stroke: HighlightText;
     }
-    
-    .bolder {
-      stroke-width: 1.6px;
-      stroke: black;
+    .white > g {
+      stroke: #fff;
     }
-    
-    .outline  {
-      stroke-width: 4px;
-      stroke: white;
-      opacity: 0.75;
+    .themes {
+      stroke: #fff;
+      stroke-width: 1.9px;
     }
-    
-    .inverted  {
-      stroke-width: 1.6px;
-      stroke: white;
+    .outer-stroke {
+      stroke: #000;
+      stroke-width: 3.5;
+      opacity: .275;
+      shape-rendering: geometricPrecision;
     }
-    
-    .outline-inverted  {
-      stroke-width: 4px;
-      stroke: black;
-      opacity: 0.75;
+    .outer-thinstroke {
+      stroke: #000;
+      stroke-width: 2;
+      opacity: .275;
+      shape-rendering: geometricPrecision;
     }
-    
-    .outline-thinner {
-      stroke-width: 3.6px;
+    .darktext {
+      stroke: #000;
+      stroke-width: 1.9px;
     }
-  
+    .outer-strokeDT {
+      stroke: #fff;
+      stroke-width: 3.5;
+      opacity: .275;
+      shape-rendering: geometricPrecision;
+    }
+    .outer-thinstrokeDT {
+      stroke: #fff;
+      stroke-width: 2;
+      opacity: .275;
+      shape-rendering: geometricPrecision;
+    }
+    .restore-background-window {
+      stroke-width: .9;
+    }
   </style>
-  
   <g id="close">
-    <line x1="1" y1="1" x2="11" y2="11"/>
-    <line x1="11" y1="1" x2="1" y2="11"/>
+    <path d="M1,1 l 10,10 M1,11 l 10,-10"/>
   </g>
   <g id="maximize">
     <rect x="1.5" y="1.5" width="9" height="9"/>
@@ -63,51 +80,66 @@
     <rect x="1.5" y="3.5" width="7" height="7"/>
     <polyline points="3.5,3.5 3.5,1.5 10.5,1.5 10.5,8.5 8.5,8.5"/>
   </g>
-  
-  <g id="close-outline">
-    <line x1="1" y1="1" x2="11" y2="11" stroke-linecap="round" class="outline"/>
-    <line x1="11" y1="1" x2="1" y2="11" stroke-linecap="round" class="outline"/>
-    <line x1="1" y1="1" x2="11" y2="11" class="bolder"/>
-    <line x1="11" y1="1" x2="1" y2="11" class="bolder"/>
+
+  <use id="close-white" class="white" xlink:href="#close"/>
+  <use id="maximize-white" class="white" xlink:href="#maximize"/>
+  <use id="minimize-white" class="white" xlink:href="#minimize"/>
+  <use id="restore-white" class="white" xlink:href="#restore"/>
+
+  <g id="close-highcontrast" class="highcontrast">
+    <path d="M1,1 l 10,10 M1,11 l 10,-10"/>
   </g>
-  <g id="maximize-outline">
-    <rect x="1.2" y="1.2" width="9.6" height="9.6" stroke-linecap="round" class="outline"/>
-    <rect x="1.5" y="1.5" width="9" height="9" class="bolder"/>
+  <g id="maximize-highcontrast" class="highcontrast">
+    <rect x="2" y="2" width="8" height="8"/>
   </g>
-  <g id="minimize-outline">
-    <line x1="1" y1="5.5" x2="11" y2="5.5" stroke-linecap="round" class="outline outline-thinner"/>
-    <line x1="1" y1="5.5" x2="11" y2="5.5" class="bolder"/>
+  <g id="minimize-highcontrast" class="highcontrast">
+    <line x1="1" y1="6" x2="11" y2="6"/>
   </g>
-  <g id="restore-outline">
-    <rect x="1.5" y="3.5" width="7" height="7" stroke-linecap="round" class="outline"/>
-    <polyline points="3.5,3.5 3.5,1.5 10.5,1.5 10.5,8.5 8.5,8.5" stroke-linecap="round" class="outline"/>
-    <rect x="1.5" y="3.5" width="7" height="7" class="bolder"/>
-    <polyline points="3.5,3.5 3.5,1.5 10.5,1.5 10.5,8.5 8.5,8.5" class="bolder"/>
+  <g id="restore-highcontrast" class="highcontrast">
+    <rect x="2" y="4" width="6" height="6"/>
+    <polyline points="3.5,1.5 10.5,1.5 10.5,8.5" class="restore-background-window"/>
   </g>
-  
-  <g id="close-outline-inverted">
-    <line x1="1" y1="1" x2="11" y2="11" stroke-linecap="round" class="outline-inverted"/>
-    <line x1="11" y1="1" x2="1" y2="11" stroke-linecap="round" class="outline-inverted"/>
-    <line x1="1" y1="1" x2="11" y2="11" class="inverted"/>
-    <line x1="11" y1="1" x2="1" y2="11" class="inverted"/>
+
+  <use id="close-highcontrast-hover" class="highcontrast-hover" xlink:href="#close-highcontrast"/>
+  <use id="maximize-highcontrast-hover" class="highcontrast-hover" xlink:href="#maximize-highcontrast"/>
+  <use id="minimize-highcontrast-hover" class="highcontrast-hover" xlink:href="#minimize-highcontrast"/>
+  <use id="restore-highcontrast-hover" class="highcontrast-hover" xlink:href="#restore-highcontrast"/>
+
+  <g id="close-themes" class="themes">
+    <path d="M.4343,.4343 l 11.1314,11.1314 M.4343,11.5657 l 11.1314,-11.1314" class="outer-stroke" />
+    <path d="M1,1 l 10,10 M1,11 l 10,-10"/>
   </g>
-  <g id="maximize-outline-inverted">
-    <rect x="1.2" y="1.2" width="9.6" height="9.6" stroke-linecap="round" class="outline-inverted"/>
-    <rect x="1.5" y="1.5" width="9" height="9" class="inverted"/>
+  <g id="maximize-themes" class="themes">
+    <rect x="2" y="2" width="8" height="8" class="outer-stroke"/>
+    <rect x="2" y="2" width="8" height="8"/>
   </g>
-  <g id="minimize-outline-inverted">
-    <line x1="1" y1="5.5" x2="11" y2="5.5" stroke-linecap="round" class="outline-inverted outline-thinner"/>
-    <line x1="1" y1="5.5" x2="11" y2="5.5" class="inverted"/>
+  <g id="minimize-themes" class="themes">
+    <line x1=".2" y1="6" x2="11.8" y2="6" class="outer-stroke"/>
+    <line x1="1" y1="6" x2="11" y2="6"/>
   </g>
-  <g id="restore-outline-inverted">
-    <rect x="1.5" y="3.5" width="7" height="7" stroke-linecap="round" class="outline-inverted"/>
-    <polyline points="3.5,3.5 3.5,1.5 10.5,1.5 10.5,8.5 8.5,8.5" stroke-linecap="round" class="outline-inverted"/>
-    <rect x="1.5" y="3.5" width="7" height="7" class="inverted"/>
-    <polyline points="3.5,3.5 3.5,1.5 10.5,1.5 10.5,8.5 8.5,8.5" class="inverted"/>
+  <g id="restore-themes" class="themes">
+    <rect x="2" y="4" width="6" height="6" class="outer-stroke"/>
+    <polyline points="2.7,1.25 10.75,1.25 10.75,9.3" class="outer-thinstroke"/>
+    <rect x="2" y="4" width="6" height="6"/>
+    <polyline points="3.5,1.5 10.5,1.5 10.5,8.5" class="restore-background-window"/>
   </g>
-  
-  <use id="close-highlight" class="highlight" xlink:href="#close"/>
-  <use id="maximize-highlight" class="highlight" xlink:href="#maximize"/>
-  <use id="minimize-highlight" class="highlight" xlink:href="#minimize"/>
-  <use id="restore-highlight" class="highlight" xlink:href="#restore"/>
+
+  <g id="close-darktext" class="darktext">
+    <path d="M.4343,.4343 l 11.1314,11.1314 M.4343,11.5657 l 11.1314,-11.1314" class="outer-strokeDT" />
+    <path d="M1,1 l 10,10 M1,11 l 10,-10"/>
+  </g>
+  <g id="maximize-darktext" class="darktext">
+    <rect x="2" y="2" width="8" height="8" class="outer-strokeDT"/>
+    <rect x="2" y="2" width="8" height="8"/>
+  </g>
+  <g id="minimize-darktext" class="darktext">
+    <line x1=".2" y1="6" x2="11.8" y2="6" class="outer-strokeDT"/>
+    <line x1="1" y1="6" x2="11" y2="6"/>
+  </g>
+  <g id="restore-darktext" class="darktext">
+    <rect x="2" y="4" width="6" height="6" class="outer-strokeDT"/>
+    <polyline points="2.7,1.25 10.75,1.25 10.75,9.3" class="outer-thinstrokeDT"/>
+    <rect x="2" y="4" width="6" height="6"/>
+    <polyline points="3.5,1.5 10.5,1.5 10.5,8.5" class="restore-background-window"/>
+  </g>
 </svg>

@@ -1,0 +1,112 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: menupopup ::::: */
+
+menupopup,
+panel {
+  border: 1px solid transparent;
+  padding: 0px;
+  min-width: 1px;
+  color: #fff;
+}
+
+menupopup {
+  -moz-appearance: none;
+  -moz-border-top-colors   : rgb(75,75,75);
+  -moz-border-left-colors  : rgb(75,75,75);
+  -moz-border-right-colors : rgb(23,23,23);
+  -moz-border-bottom-colors: rgb(23,23,23);
+  background: rgb(43,43,43);
+}
+
+/* ::::: arrow panel ::::: */
+
+panel[type="arrow"] {
+  -moz-appearance: none;
+}
+
+panel[type="arrow"][side="top"],
+panel[type="arrow"][side="bottom"] {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+panel[type="arrow"][side="left"],
+panel[type="arrow"][side="right"] {
+  margin-top: -16px;
+  margin-bottom: -16px;
+}
+
+.panel-arrowcontent {
+  padding: 10px;
+  color: #fff;
+  background: rgb(50,50,50);
+  border: 1px solid rgb(75,75,75);
+}
+
+.panel-arrow[side="top"],
+.panel-arrow[side="bottom"] {
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical-themed.svg");
+  position: relative;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.panel-arrow[side="top"] {
+  margin-bottom: -1px;
+}
+
+.panel-arrow[side="bottom"] {
+  transform: scaleY(-1);
+  margin-top: -1px;
+}
+
+.panel-arrow[side="left"],
+.panel-arrow[side="right"] {
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-horizontal-themed.svg");
+  position: relative;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.panel-arrow[side="left"] {
+  margin-right: -1px;
+}
+
+.panel-arrow[side="right"] {
+  transform: scaleX(-1);
+  margin-left: -1px;
+}
+
+/* ::::: tooltip ::::: */
+
+tooltip {
+  -moz-appearance: none;
+  margin-top: 21px;
+  border: 1px solid rgb(75,75,75);
+  /* GTK hardcodes this to 4px */
+  padding: 4px;
+  max-width: 40em;
+  background-color: rgb(110,110,110);
+  color: #fff;
+  font: message-box;
+}
+
+tooltip[titletip="true"] {
+ /* See bug 32157 comment 128
+  * margin: -2px 0px 0px -3px;
+  */
+  max-width: none;
+}
+
+/* rules for popups associated with menulists */
+
+menulist > menupopup {
+  padding: 0px;
+  min-width: 0px;
+}
+

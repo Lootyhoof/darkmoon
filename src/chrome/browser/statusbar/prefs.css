@@ -9,35 +9,21 @@
 }
 
 radio[pane="status4evar-pane-status"] {
-	list-style-image: url("chrome://browser/skin/statusbar/status.png");
+	list-style-image: url("chrome://global/skin/icons/info-24.svg");
 }
 
 radio[pane="status4evar-pane-progress"] {
-	list-style-image: url("chrome://browser/skin/statusbar/progress.png");
+	list-style-image: url("chrome://browser/skin/statusbar/progress.svg");
 }
 
 radio[pane="status4evar-pane-download"] {
-	list-style-image: url("chrome://abouthome/skin/downloads.png");
+	list-style-image: url("chrome://browser/skin/statusbar/downloads.svg");
 }
 
 radio[pane="status4evar-pane-addonbar"] {
-	list-style-image: url("chrome://browser/skin/statusbar/statusbar.png");
+	list-style-image: url("chrome://browser/skin/statusbar/statusbar.svg");
 }
 
 radio[pane="status4evar-pane-advanced"] {
-	list-style-image: url("chrome://browser/skin/preferences/Options.png");
-	-moz-image-region: rect(0px, 224px, 32px, 192px);
+	list-style-image: url("chrome://browser/skin/preferences/Options.svg#advanced");
 }
-
-#status4evar-advanced-urlbar-forceBinding-desc {
-	-moz-appearance: none;
-	pointer-events: none;
-	background-color: transparent;
-	border: none;
-	padding: 0px;
-}
-
-#warningInnerBox {
-	max-width: 25em;
-}
-

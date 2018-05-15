@@ -31,6 +31,5 @@ richlistbox[seltype="multiple"]:focus > richlistitem[current="true"] {
 }
 
 richlistbox[seltype="multiple"]:focus > richlistitem[current="true"][selected="true"] {
-  outline: 1px dotted rgb(60,60,60); /* TODO: find a suitable system color */
+  outline: 1px dotted rgb(60,60,60);
 }
-

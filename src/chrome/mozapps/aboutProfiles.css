@@ -1,0 +1,105 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+html {
+  --aboutProfiles-table-background: rgb(75,75,75);
+  background-color: var(--in-content-frame-background); /* was var(--in-content-page-background) --johnGraciliano */
+  padding: 48px 48px;
+}
+
+body {
+  margin: auto;
+}
+
+#body {
+  box-sizing: content-box;
+  max-width: 90em;
+  background-color: var(--in-content-page-background);
+  color: #fff;
+  border: 1px solid var(--in-content-main-border-color);
+  border-radius: 10px;
+  padding: 3em 30px;
+}
+
+.page-subtitle {
+  margin-bottom: 3em;
+}
+
+button {
+  -moz-margin-start: 0;
+  -moz-margin-end: 8px;
+}
+
+table {
+  background-color: var(--aboutProfiles-table-background);
+  color: var(--in-content-text-color);
+  font: message-box;
+  text-align: start;
+  width: 100%;
+  border: 1px solid var(--in-content-border-color);
+  border-spacing: 0px;
+}
+
+th, td {
+  border-width: 0;
+  border-style: solid;
+  padding: 4px;
+  text-align: start;
+}
+
+th {
+  background-color: var(--in-content-table-header-background);
+  color: var(--in-content-selected-text);
+  border-color: var(--in-content-border-color);
+}
+
+th.column {
+  white-space: nowrap;
+  width: 0px;
+}
+
+td {
+  border-color: var(--in-content-table-border-dark-color);
+}
+
+th:not(:last-child),
+td:not(:last-child){
+  -moz-border-end-width: 1px;
+  border-inline-end-width: 1px;
+}
+
+tr:not(:last-child) > th,
+tr:not(:last-child) > td{
+  border-bottom-width: 1px;
+}
+
+thead + tbody > tr:first-child > td{
+  border-top:  1px solid var(--in-content-border-color);
+}
+
+table button {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin: 1px;
+  height: auto;
+  min-height: unset;
+  line-height: normal;
+}
+
+#action-box {
+  background-color: var(--aboutProfiles-table-background);
+  border: 1px solid var(--in-content-border-color);
+  color: var(--in-content-text-color);
+  float: right;
+  margin-top: 2em;
+  margin-bottom: 20px;
+  -moz-margin-start: 20px;
+  -moz-margin-end: 0;
+  padding: 16px;
+  width: 30%;
+}
+
+#action-box:-moz-dir(rtl) {
+  float: left;
+}

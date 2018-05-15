@@ -6,6 +6,6 @@
      width="16"
      height="16"
      viewBox="0 0 16 16">
-  <circle cx="7.5" cy="7.5" r="7" stroke-width="1" stroke="#ffffff" fill="none"/>
-  <path d="m 7.5,3   l 0,2.25   m 0,.75   l 0,6" stroke-width="1" stroke="#ffffff" fill="none"/>
+  <circle cx="7.5" cy="7.5" r="7" stroke-width="1" stroke="#fff" fill="none"/>
+  <path d="m 7.5,3   l 0,2.25   m 0,.75   l 0,6" stroke-width="1" stroke="#fff" fill="none"/>
 </svg>

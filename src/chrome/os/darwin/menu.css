@@ -1,0 +1,226 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+menu,
+menuitem {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  color: #fff;
+  font: -moz-pull-down-menu;
+  list-style-image: none;
+  -moz-image-region: auto;
+  padding: 0 21px 2px;
+}
+
+menu[disabled="true"], menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+  color: GrayText;
+}
+
+/* ..... internal content .... */
+
+.menu-text,
+.menu-iconic-text,
+.menu-accel,
+.menu-iconic-accel {
+  margin: 0 !important;
+}
+
+.menu-text,
+.menu-iconic-text {
+  font-weight: inherit;
+  color: inherit;
+}
+
+.menu-description {
+  font-style: italic;
+  color: GrayText;
+  -moz-margin-start: 1ex !important;
+}
+
+.menu-iconic-icon {
+  height: 16px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  -moz-margin-end: 5px;
+  /* Empty icons shouldn't take up room, so we need to compensate
+   * the 5px margin-end with a negative margin-start.
+   */
+  -moz-margin-start: -5px;
+}
+
+/* menuitems with icons */
+.menuitem-iconic,
+.menu-iconic,
+menuitem[image],
+menuitem[src] {
+  /* 2px higher than those without icons */
+  padding-top: 1px;
+  padding-bottom: 3px;
+}
+
+.menuitem-iconic > .menu-iconic-left > .menu-iconic-icon,
+.menu-iconic > .menu-iconic-left > .menu-iconic-icon,
+menuitem[image] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[src] > .menu-iconic-left > .menu-iconic-icon {
+  -moz-margin-start: 0;
+  width: 16px;
+}
+
+/* ..... menu arrow box ..... */
+
+.menu-right,
+.menu-accel-container {
+  -moz-margin-start: 21px;
+  -moz-margin-end: -9px;
+  -moz-box-pack: end;
+}
+
+/* The native menuarrow we use is 9px wide on 10.7+ and 8px wide on 10.6,
+ * so it needs to be 'pulled in' one pixel more by the negative margin in
+ * order to align properly: */
+@media not all and (-moz-mac-lion-theme) {
+  .menu-right {
+    -moz-margin-end: -10px;
+  }
+}
+
+.menu-right {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  -moz-margin-start: 6px;
+  -moz-margin-end: 0px;
+  width: 1ex;
+  height: 1ex;
+  /* These next two rules are needed to prevent inheritance and thus ugliness */
+  list-style-image: url("chrome://global/skin/arrow/arrow-h.svg#rit");
+  -moz-image-region: auto;
+  -moz-appearance: none;
+}
+
+.menu-right > image {
+  width: 5px;
+}
+
+/* ::::: menu/menuitems in menubar ::::: */
+
+menubar > menu {
+  -moz-appearance: none;
+  padding: 2px 5px 2px 7px;
+  margin: 1px 0;
+}
+
+menubar > menu[_moz-menuactive="true"] {
+  color: inherit;
+  background-color: transparent;
+}
+
+menubar > menu[_moz-menuactive="true"][open="true"] {
+  -moz-appearance: none;
+  color: #fff;
+  background-color: rgb(110,110,110);
+}
+
+/* ..... internal content .... */
+
+.menubar-left {
+  margin: 0 2px;
+  color: inherit;
+}
+
+.menubar-text {
+  margin: 0 1px !important;
+  color: inherit;
+}
+
+/* ::::: menu/menuitems in popups ::::: */
+
+menupopup > menu,
+menupopup > menuitem {
+  max-width: 42em;
+}
+
+menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"] {
+  color: #fff;
+  background-color: rgb(110,110,110);
+}
+
+/* ::::: menu/menuitems in menulist popups ::::: */
+
+menulist > menupopup > menuitem,
+menulist > menupopup > menu {
+  max-width: none;
+  font: inherit;
+  color: #fff;
+}
+
+/* ::::: menuitems in editable menulist popups ::::: */
+
+menulist[editable="true"] > menupopup > menuitem {
+  -moz-appearance: none;
+}
+
+menulist[editable="true"] > menupopup > menuitem > .menu-iconic-left {
+  display: none;
+}
+
+/* ::::: checked menuitems ::::: */
+
+:not(menulist) > menupopup > menuitem[checked="true"] > .menu-iconic-left,
+:not(menulist) > menupopup > menuitem[selected="true"] > .menu-iconic-left {
+  padding-top: 1px;
+  -moz-margin-start: -15px;
+  -moz-padding-start: 15px;
+  background: url("chrome://global/skin/menu/menu-check.svg#check") bottom left no-repeat transparent;
+}
+
+:not(menulist) > menupopup > menuitem[checked="true"] > .menu-iconic-left:-moz-locale-dir(rtl),
+:not(menulist) > menupopup > menuitem[selected="true"] > .menu-iconic-left:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
+}
+
+menulist:not([editable="true"]) > menupopup > menuitem[checked="true"]::before,
+menulist:not([editable="true"]) > menupopup > menuitem[selected="true"]::before {
+  content: '\2713'; /* a checkmark */
+  display: block;
+  width: 15px;
+  -moz-margin-start: -15px;
+}
+
+/* ::::: menuseparator ::::: */
+
+menuseparator {
+  margin: 2px 3px;
+  border-top: 1px solid rgb(75,75,75);
+}
+
+menuseparator[collapsed="true"] {
+  margin: 0 !important;
+}
+
+menulist > menupopup > menuseparator,
+.menulist-menupopup > menuseparator {
+  padding: 6px 0 5px 0;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: none;
+}
+
+/* ::::: autocomplete ::::: */
+
+.autocomplete-history-popup > menuitem {
+  max-width: none !important;
+  font: message-box;
+}
+
+/* ::::: tree column picker ::::: */
+
+.treecell-popupcell-menu {
+  margin-left: -2px;
+  list-style-image: url("chrome://global/skin/tree/columnpicker.svg");
+  -moz-image-region: auto;
+}

@@ -72,10 +72,10 @@ checkbox:hover:active > .checkbox-check {
 /* ..... checked state ..... */
 
 checkbox[checked="true"] > .checkbox-check {
-  background-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+  background-image: url("chrome://global/skin/checkbox/cbox-check.svg#check");
 }
 
 checkbox[checked="true"][disabled="true"] > .checkbox-check {
-  background-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif") !important
+  background-image: url("chrome://global/skin/checkbox/cbox-check.svg#check-dis") !important
 }
 

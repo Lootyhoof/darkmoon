@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0" y="0" width="378" height="36" viewBox="0 0 378 36">
+  <style>
+    use {
+      fill: none;
+    }
+    use[id="darktext"]:not(:target),
+    use[id="toolbar"]:not(:target) {
+      display: none;
+    }
+    use[id="toolbar"] {
+      stroke: #fff;
+      stroke-width: 1.0325;
+    }
+    use[id="darktext"] {
+      stroke: #000;
+      stroke-width: 1;
+    }
+  </style>
+  <defs style="display: none;">
+    <g id="back-shape">
+      <path d="M 12.5,1.5   l -7,7   l 7,7"/>
+    </g>
+    <g id="forward-shape">
+      <path d="M 5.5,1.5   l 7,7   l -7,7"/>
+    </g>
+    <g id="reload-shape">
+      <path d="M 9.5,9.5   m 3,-5.196   a 6,6 0 1,0 2.916,6.196"/>
+      <path d="M 9,4.627 h 4 v -4"  transform="rotate(-25,13,4.627)"/>
+    </g>
+    <g id="stop-shape">
+      <line x1="3" y1="3" x2="15" y2="15"/>
+      <line x1="3" y1="15" x2="15" y2="3"/>
+    </g>
+    <g id="home-shape">
+      <path d="M 4.5,15.5   h 9   v -7   h 1.9   l -6.4,-6.4   l -6.4,6.4   h 1.9   v 7   Z"/>
+      <path d="M 9.5,11.5   h 2   v -2   h -2   v 2   Z"/>
+    </g>
+    <g id="downloads-shape">
+      <rect x="2.5" y="11.5" width="12" height="4"  rx="1.4" ry="1.4"/>
+      <path d="M 10,13.5   h2"/>
+      <path d="M 8.5,2   v7.5   m -3.5,-3.5   l 3.5,3.5   l 3.5,-3.5"/>
+    </g>
+    <g id="history-shape">
+      <circle cx="9" cy="9" r="6.6"/>
+      <path d="M 7.5,4   l 1,5.5   l 4.5,1"/>
+    </g>
+    <g id="bookmarks-shape">
+      <path d="M 2.5,5   c .7,-2.2 6.3,-2.2 7,0   c .7,-2.2 6.3,-2.2 7,0   l 0,10   c -.7,-2.2 -6.3,-2.2 -7,0   v-10   v10   c -.7,-2.2 -6.3,-2.2 -7,0   l 0,-10   z"/>
+    </g>
+    <g id="new-tab-shape">
+      <path d="M 2.5,15.5   h 14   v -9.7   a 2.3,2.3 0 0,0 -2.3,-2.3   h -9.4   a 2.3,2.3 0 0,0 -2.3,2.3   v 9.7   Z    
+               M 9.5,6   v 7   M 6,9.5   h 7"/>
+    </g>
+    <g id="new-window-shape">
+      <rect x="1.5" y="2.5" width="15" height="13" rx="1.4" ry="1.4"/>
+      <rect x="14.5" y="3.5" width="0.001" height="0.001"/>
+      <path d="M 1.5,5.5   h 15"/>
+    </g>
+    <g id="print-shape">
+      <path d="M 3.5,13.5   h -.6   a 1.4,1.4 0 0,1 -1.4,-1.4   v -4.2   a 1.4,1.4 0 0,1 1.4,-1.4   h 12.2   a 1.4,1.4 0 0,1 1.4,1.4   v 4.2   a 1.4,1.4 0 0,1 -1.4,1.4   h-.6"/>
+      <path d="M 4.5,12.5   l -1,3   h 11   l -1,-3   h -9   Z"/>
+      <path d="M 4.5,6.5   v -4     h 9   v 4"/>
+      <rect x="13.5" y="8.5" width=".001" height=".001"/>
+    </g>
+    <g id="cut-shape">
+      <path d="M 5.25,3.25   l 6.034,7
+             M 12.75,3.25   l -6.25,7.25
+         M 6.5,10.5   a 2.75,1.25 -49.236 0,0 -3.602,4.156
+         a 2.75,1.25 -49.236 0,0 3.602,-4.156
+         M 11.234,10.25   a 3,1.25 49.236 0,0 3.930,4.534
+         a 3,1.25 49.236 0,0 -3.930,-4.534"/>
+    </g>
+    <g id="copy-shape">
+      <path d="M 8.5,11.5   h -6   v -9   h 4.3   l 2.7,2.7   v 1.3   m 0,-1   h -3  v -3
+               M 12.8,6.5   h -4.3   v 9   h 7   v -6.3   l -2.7,-2.7   z   m -0.3,0   v 3   h 3"/>
+    </g>
+    <g id="paste-shape">
+      <path d="M 7.5,13.5   h -3   a 1,1 0 0,1 -1,-1   v -8   a 1,1 0 0,1 1,-1   h 1   m 5,0   h 1   a 1,1 0 0,1 1,1   v 3
+         M 6,2.5   h 4   a .5,.5 0 0,1 .5,.5   v 2   a .5,.5 0 0,1 -.5,.5   h -4   a .5,.5 0 0,1 -.5,-.5   v -2   a .5,.5 0 0,1 .5,-.5   z
+             M 11.8,6.5   h -4.3   v 9   h 7   v -6.3   l -2.7,-2.7   z   m -0.3,0   v 3   h 3"/>
+    </g>
+    <g id="fullscreen-shape">
+      <path d="M 1.5,2.5   h 5.5   m 4,0   h 5.5   v 4.5   m 0,4   v 4.5   h -5.5   m -4,0   h -5.5   v -4.5   m 0,-4   v -4.5   h 2"/>
+      <rect x="3.5" y="4.5" width="11" height="9" rx="1.5" ry="1.5"/>
+    </g>
+    <g id="zoom-out-shape">
+      <path d="M 4,8.5   h 9"/>
+    </g>
+    <g id="zoom-in-shape">
+      <path d="M 4,8.5   h 9   m -4.5 -4.5   v 9"/>
+    </g>
+    <g id="sync-shape">
+      <path  d="M 10,11   v 3.5   h 3.5"  transform="rotate(20,10,14.5)"/>
+      <path  d="M 3.5,3.5   h 3.5   v 3.5"  transform="rotate(20,7,3.5)"/>
+      <path  d="M 7,3.5   a 7,6 0 0,0 -1,11
+                M 11,4   a 8,6 0 0,1 -1,10.5"/>
+    </g>
+    <g id="feed-shape">
+      <circle cx="3.5" cy="14.5" r="1"/>
+      <path  d="M 2,3.5   a 12.5,12.5 0 0,1 12.5,12.5   M 2,8.5   a 7.5,7.5 0 0,1 7.5,7.5"/>
+    </g>
+    <g id="webrtc-shape">
+      <path d="M 11.5,8   l 4,-3   v 8   l -4,-3"/>
+      <rect x="2.5" y="4.5" width="9" height="9" rx="1.4" ry="1.4"/>
+    </g>
+    <g id="bookmark-shape">
+      <path d="M 5.5,15   l 4,-3.5   l 4,3.5   v -10.1   a 1.4,1.4 0 0,0 -1.4,-1.4   h -5.2   a 1.4,1.4 0 0,0 -1.4,1.4   v 10.1   Z"/>
+    </g>
+    <g id="bookmarked-shape">
+      <path d="M 5.5,15   l 4,-3.5   l 4,3.5   v -10.1   a 1.4,1.4 0 0,0 -1.4,-1.4   h -5.2   a 1.4,1.4 0 0,0 -1.4,1.4   v 10.1   Z"/>
+      <path d="M 2,5.5   h 3   m 9,0   h 3"/>
+    </g>
+    <g id="toolbar-shape">
+      <use x="0" xlink:href="#back-shape"/>
+      <use x="18" xlink:href="#forward-shape"/>
+      <use x="36" xlink:href="#reload-shape"/>
+      <use x="54" xlink:href="#stop-shape"/>
+      <use x="72" xlink:href="#home-shape"/>
+      <use x="90" xlink:href="#downloads-shape"/>
+      <use x="108" xlink:href="#history-shape"/>
+      <use x="126" xlink:href="#bookmarks-shape"/>
+      <use x="144" xlink:href="#new-tab-shape"/>
+      <use x="162" xlink:href="#new-window-shape"/>
+      <use x="180" xlink:href="#print-shape"/>
+      <use x="198" xlink:href="#cut-shape"/>
+      <use x="216" xlink:href="#copy-shape"/>
+      <use x="234" xlink:href="#paste-shape"/>
+      <use x="252" xlink:href="#fullscreen-shape"/>
+      <use x="270" xlink:href="#zoom-out-shape"/>
+      <use x="288" xlink:href="#zoom-in-shape"/>
+      <use x="306" xlink:href="#sync-shape"/>
+      <use x="324" xlink:href="#feed-shape"/>
+      <use x="342" xlink:href="#webrtc-shape"/>
+      <use x="360" xlink:href="#bookmark-shape"/>
+      <use x="360" y="18" xlink:href="#bookmarked-shape"/>
+    </g>
+  </defs>
+  <use id="toolbar" xlink:href="#toolbar-shape"/>
+  <use id="darktext" xlink:href="#toolbar-shape"/>
+</svg>

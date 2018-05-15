@@ -37,16 +37,10 @@ html {
   display: none;
 }
 
-.feedBackground {
-  background: url("chrome://browser/skin/feeds/feedIcon.png") 0% 10% no-repeat rgb(50,50,50);
-}
-
-.videoPodcastBackground {
-  background: url("chrome://browser/skin/feeds/videoFeedIcon.png") 0% 10% no-repeat rgb(50,50,50);
-}
-
+.feedBackground,
+.videoPodcastBackground,
 .audioPodcastBackground {
-  background: url("chrome://browser/skin/feeds/audioFeedIcon.png") 0% 10% no-repeat rgb(50,50,50);
+  background: url("chrome://browser/skin/feeds/feedIcon.svg") 0% 10% no-repeat rgb(50,50,50);
 }
 
 #feedHeader[dir="rtl"] {

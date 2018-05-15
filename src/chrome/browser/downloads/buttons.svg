@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0" y="0" width="16" height="16" viewBox="0 0 16 16">
+  <style>
+    use:not(:target) {
+      display: none;
+    }
+    use {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 1;
+    }
+    use[id$="normal"] {
+      opacity: 0.6;
+    }
+    use[id="retry-active"] {
+      stroke: #128ED3;
+    }
+    use[id="cancel-active"] {
+      stroke: #C62323;
+    }
+    use[id="show-active"] {
+      stroke: #F5F500;
+    }
+  </style>
+  <defs>
+    <g id="cancel-shape">
+      <line x1="4" y1="4" x2="12" y2="12"/>
+      <line x1="4" y1="12" x2="12" y2="4"/>
+    </g>
+    <g id="show-shape">
+      <path d="M1.5,2.936v10.13c0,0.796,0.641,1.435,1.435,1.435h10.131c0.8,0,1.435-0.639,1.435-1.435
+              V4.93c0-0.797-0.635-1.436-1.435-1.436H7.479V2.936c0-0.797-0.559-1.436-1.352-1.436H2.935C2.141,1.5,1.5,2.138,1.5,2.936
+              L1.5,2.936z M1.5,8.119c0-1.436,1.193-2.631,2.634-2.631h7.732c1.44,0,2.634,1.196,2.634,2.631"/>
+    </g>
+    <g id="retry-shape">
+      <path d="M8.041,8.935L8.041,8.935z M10.26,5.034
+              c-3.779-2.22-8.159,1.8-6.299,5.82c1.86,3.96,7.739,3.18,8.52-1.2"/>
+      <polyline points="7.921,6.534 10.62,5.274 9.361,2.574 	"/>
+    </g>
+  </defs>
+  <use id="retry"        xlink:href="#retry-shape"/>
+  <use id="retry-normal" xlink:href="#retry-shape"/>
+  <use id="retry-hover"  xlink:href="#retry-shape"/>
+  <use id="retry-active" xlink:href="#retry-shape"/>
+  <use id="cancel"        xlink:href="#cancel-shape"/>
+  <use id="cancel-normal" xlink:href="#cancel-shape"/>
+  <use id="cancel-active" xlink:href="#cancel-shape"/>
+  <use id="show"        xlink:href="#show-shape"/>
+  <use id="show-normal" xlink:href="#show-shape"/>
+  <use id="show-active" xlink:href="#show-shape"/>
+</svg>
+
