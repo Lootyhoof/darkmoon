@@ -7,7 +7,8 @@ wizard {
   width: 55em;
   height: 45em;
   padding: 0;
-  background-color: Window;
+  background-color: rgb(43,43,43);
+  color: #fff;
 }
 
 .wizard-page-box {
@@ -22,7 +23,7 @@ wizardpage {
   -moz-box-align: center;
   margin: 0;
   padding: 0 6em;
-  background-color: Window;
+  background-color: rgb(43,43,43);
 }
 
 .wizard-header {
@@ -54,7 +55,7 @@ wizardpage {
 }
 
 .confirm {
-  border: 1px solid black;
+  border: 1px solid rgb(75,75,75);
   padding: 1em;
   border-radius: 5px;
 }
