@@ -1,5 +1,18 @@
 # Changelog
 
+### 2.0.0
+- re-base from White Moon v3.0.0
+- replace many icons with vectors (from Simple White X)
+- revise identity panel styling
+- redesign tab stylings using pure CSS
+- preserve add-on bar close button in text mode
+- sync devtools styling with default
+- improve Tree Style Tabs tab bar appearance (in vertical mode)
+- add preliminary Pale Moon 28 support
+- improve Linux and macOS support
+- Win10: improve caption button appearance
+- major cleanup
+
 ### 1.7.0
 - sync about:support styling with default
 - sync about:permissions styling with default
