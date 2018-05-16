@@ -111,7 +111,7 @@
 #alertSourceLabel {
   -moz-box-flex: 1;
   font-size: 83.334%;
-  color: GrayText;
+  color: rgb(200,200,200);
 }
 
 #alertSettings {
