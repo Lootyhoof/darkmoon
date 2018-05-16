@@ -9,7 +9,7 @@
 }
 
 /* SCROLLBOX */
-#newtab-scrollbox:not([page-disabled]) {
+#newtab-scrollbox {
   background-color: rgb(43,43,43);
   background-attachment: fixed;
 }
