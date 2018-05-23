@@ -113,6 +113,24 @@ listheader[sortable="true"]:hover:active {
 
 /* ::::: listcell checkbox ::::: */
 
+.listcell-check {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  margin: 2px 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 2px;
+  border: 1px solid;
+  -moz-border-top-colors: rgb(75,75,75);
+  -moz-border-right-colors: rgb(75,75,75);
+  -moz-border-bottom-colors: rgb(75,75,75);
+  -moz-border-left-colors: rgb(75,75,75);
+  min-width: 13px;
+  min-height: 13px;
+  background: rgb(50,50,50) no-repeat 50% 50%;
+}
+
 .listcell-check[checked="true"] {
   background-image: url("chrome://global/skin/checkbox/cbox-check.svg#check");
 }
