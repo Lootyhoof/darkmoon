@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.0.1
+- fix listcell-check styling
+
 ### 2.0.0
 - re-base from White Moon v3.0.0
 - replace many icons with vectors (from Simple White X)
