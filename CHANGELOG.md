@@ -1,5 +1,10 @@
 # Changelog
 
+### 2.0.2
+- PM28: add more autocomplete styling
+- fix pinned tab background image
+- minor cleanup
+
 ### 2.0.1
 - fix listcell-check styling
 
