@@ -1352,7 +1352,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
-  background-image: lvar(--tab-pinned-background);
+  background-image: var(--tab-pinned-background);
 }
 
 .tabbrowser-tab:not([selected=true]):not(:hover):not(:-moz-lwtheme) > * > * > .tab-text {
