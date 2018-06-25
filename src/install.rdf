@@ -9,7 +9,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>darkmoon@lootyhoof-pm</em:id>
-    <em:version>2.0.2</em:version>
+    <em:version>2.0.3</em:version>
     <em:name>Dark Moon</em:name>
     <em:description>The ultimate dark experience.</em:description>
     <em:creator>Lootyhoof</em:creator>

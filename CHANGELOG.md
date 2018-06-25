@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.0.3
+- fix find bar in PM28 beta
+
 ### 2.0.2
 - PM28: add more autocomplete styling
 - fix pinned tab background image
