@@ -11,6 +11,7 @@
 findbar {
   padding: 4px 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,.1) inset;
+  background-color: rgb(43,43,43);
   background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
   background-size: 100% 2px;
   background-repeat: no-repeat;
