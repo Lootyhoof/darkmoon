@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.1.0
+- add PM28 newtab styling
+- add tabbrowser findbar styling
+- improve about:permissions sizing
+- fix disappearing titlebar in private and lwtheme modes on macOS
+
 ### 2.0.3
 - fix find bar in PM28 beta
 
