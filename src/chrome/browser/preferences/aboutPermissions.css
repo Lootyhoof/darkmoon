@@ -12,6 +12,10 @@
   padding-bottom: 0.5em;
 }
 
+#permissions-content {
+  height: 100%;
+}
+
 /* sites box */
 
 #sites-box {
