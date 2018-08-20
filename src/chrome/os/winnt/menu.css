@@ -12,6 +12,7 @@
 
 menu,
 menuitem,
+menucaption,
 .splitmenu-menuitem {
   -moz-appearance: none;
   -moz-box-align: center;
@@ -60,6 +61,12 @@ menuitem.spell-suggestion {
   font-weight: inherit;
   -moz-margin-start: 2px !important;
   -moz-padding-end: 2px;
+}
+
+menucaption > .menu-text,
+menucaption > .menu-iconic-text {
+  font-weight: bold;
+  padding-inline-start: 0 !important;
 }
 
 .menu-description {
@@ -151,7 +158,8 @@ menubar > menu:-moz-window-inactive {
 /* ::::: menu/menuitems in popups ::::: */
 
 menupopup > menu,
-menupopup > menuitem {
+menupopup > menuitem,
+menupopup > menucaption {
   max-width: 42em;
 }
 
@@ -164,9 +172,8 @@ menuitem[_moz-menuactive="true"],
 
 /* ::::: menu/menuitems in menulist popups ::::: */
 
-.menulist-menupopup > menuitem,
 menulist > menupopup > menuitem,
-.menulist-menupopup > menu,
+menulist > menupopup > menucaption,
 menulist > menupopup > menu {
   -moz-appearance: none;
   border: 1px solid transparent;
@@ -176,17 +183,15 @@ menulist > menupopup > menu {
   color: #FFFFFF;
 }
 
-.menulist-menupopup > menuitem > .menu-iconic-left,
 menulist > menupopup > menuitem > .menu-iconic-left,
-.menulist-menupopup > menu > .menu-iconic-left,
+menulist > menupopup > menucaption > .menu-iconic-left,
 menulist > menupopup > menu > .menu-iconic-left {
   display: none;
   padding-top: 0px;
 }
 
-.menulist-menupopup > menuitem > label,
 menulist > menupopup > menuitem > label,
-.menulist-menupopup > menu > label,
+menulist > menupopup > menucaption > label,
 menulist > menupopup > menu > label {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -229,8 +234,7 @@ menuseparator[collapsed="true"] {
   margin: 0 !important;
 }
 
-menulist > menupopup > menuseparator,
-.menulist-menupopup > menuseparator {
+menulist > menupopup > menuseparator {
   padding: 6px 0 5px 0;
   border-top: 1px solid #FFFFFF;
   border-bottom: none;
@@ -241,12 +245,4 @@ menulist > menupopup > menuseparator,
 .autocomplete-history-popup > menuitem {
   max-width: none !important;
   font: message-box;
-}
-
-/* ::::: tree column picker ::::: */
-
-.treecell-popupcell-menu {
-  -moz-margin-start: -2px;
-  list-style-image: url("chrome://global/skin/tree/columnpicker.svg");
-  -moz-image-region: auto;
 }

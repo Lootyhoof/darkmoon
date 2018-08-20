@@ -80,7 +80,7 @@ menulist:hover:active > .menulist-dropmarker {
 
 /* ..... focused state ..... */
 
-menulist:focus:not([open="true"]):not(.menulist-compact) > .menulist-label-box {
+menulist:focus:not([open="true"]) > .menulist-label-box {
   background-color: rgb(110,110,110);
   color: #fff;
 }

@@ -59,6 +59,15 @@ thumb:active {
   background-color: rgb(110,110,110);
 }
 
+/* ::::: slider - a thumb is inside  ::::: */
+slider {
+  -moz-appearance: scrollbartrack-horizontal;
+}
+
+slider[orient="vertical"] {
+  -moz-appearance: scrollbartrack-vertical;
+}
+
 /* ::::: thumb (horizontal) ::::: */
 
 thumb {

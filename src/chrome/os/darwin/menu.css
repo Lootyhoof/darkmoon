@@ -5,7 +5,8 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 menu,
-menuitem {
+menuitem,
+menucaption {
   -moz-appearance: none;
   -moz-box-align: center;
   color: #fff;
@@ -34,6 +35,11 @@ menuitem[_moz-menuactive="true"][disabled="true"] {
 .menu-iconic-text {
   font-weight: inherit;
   color: inherit;
+}
+
+menucaption > .menu-text,
+menucaption > .menu-iconic-text {
+  font-weight: bold;
 }
 
 .menu-description {
@@ -78,15 +84,6 @@ menuitem[src] > .menu-iconic-left > .menu-iconic-icon {
   -moz-margin-start: 21px;
   -moz-margin-end: -9px;
   -moz-box-pack: end;
-}
-
-/* The native menuarrow we use is 9px wide on 10.7+ and 8px wide on 10.6,
- * so it needs to be 'pulled in' one pixel more by the negative margin in
- * order to align properly: */
-@media not all and (-moz-mac-lion-theme) {
-  .menu-right {
-    -moz-margin-end: -10px;
-  }
 }
 
 .menu-right {
@@ -140,7 +137,8 @@ menubar > menu[_moz-menuactive="true"][open="true"] {
 /* ::::: menu/menuitems in popups ::::: */
 
 menupopup > menu,
-menupopup > menuitem {
+menupopup > menuitem,
+menupopup > menucaption {
   max-width: 42em;
 }
 
@@ -153,6 +151,7 @@ menuitem[_moz-menuactive="true"] {
 /* ::::: menu/menuitems in menulist popups ::::: */
 
 menulist > menupopup > menuitem,
+menulist > menupopup > menucaption,
 menulist > menupopup > menu {
   max-width: none;
   font: inherit;
@@ -161,27 +160,20 @@ menulist > menupopup > menu {
 
 /* ::::: menuitems in editable menulist popups ::::: */
 
-menulist[editable="true"] > menupopup > menuitem {
+menulist[editable="true"] > menupopup > menuitem,
+menulist[editable="true"] > menupopup > menucaption {
   -moz-appearance: none;
 }
 
-menulist[editable="true"] > menupopup > menuitem > .menu-iconic-left {
+menulist[editable="true"] > menupopup > :-moz-any(menuitem, menucaption) > .menu-iconic-left {
   display: none;
 }
 
 /* ::::: checked menuitems ::::: */
 
-:not(menulist) > menupopup > menuitem[checked="true"] > .menu-iconic-left,
-:not(menulist) > menupopup > menuitem[selected="true"] > .menu-iconic-left {
-  padding-top: 1px;
-  -moz-margin-start: -15px;
-  -moz-padding-start: 15px;
-  background: url("chrome://global/skin/menu/menu-check.svg#check") bottom left no-repeat transparent;
-}
-
-:not(menulist) > menupopup > menuitem[checked="true"] > .menu-iconic-left:-moz-locale-dir(rtl),
-:not(menulist) > menupopup > menuitem[selected="true"] > .menu-iconic-left:-moz-locale-dir(rtl) {
-  transform: scaleX(-1);
+:not(menulist) > menupopup > menuitem[checked="true"],
+:not(menulist) > menupopup > menuitem[selected="true"] {
+  -moz-appearance: checkmenuitem;
 }
 
 menulist:not([editable="true"]) > menupopup > menuitem[checked="true"]::before,
@@ -215,12 +207,4 @@ menulist > menupopup > menuseparator,
 .autocomplete-history-popup > menuitem {
   max-width: none !important;
   font: message-box;
-}
-
-/* ::::: tree column picker ::::: */
-
-.treecell-popupcell-menu {
-  margin-left: -2px;
-  list-style-image: url("chrome://global/skin/tree/columnpicker.svg");
-  -moz-image-region: auto;
 }
