@@ -1,1 +1,248 @@
-@import url("chrome://appver/skin/aboutNetworking.css");
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://global/skin/in-content/common.css");
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+#sectionTitle {
+  float: left;
+}
+
+#refreshDiv {
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+}
+
+#refreshButton {
+  margin-top: 0;
+}
+
+/** Categories **/
+
+.category {
+  cursor: pointer;
+  /* Center category names */
+  display: flex;
+  align-items: center;
+}
+
+.category .category-name {
+  pointer-events: none;
+}
+
+#categories hr {
+  border-top-color: rgb(50,50,50);
+}
+
+[id].category::before,
+.category[value]::before{
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  margin-inline-start: 6px;
+}
+
+#category-http::before,
+.category[value="http"]::before{
+  content: "";
+  background-image: url(chrome://mozapps/skin/aboutNetworking.svg#http);
+}
+#category-sockets::before,
+.category[value="sockets"]::before{
+  content: "";
+  background-image: url(chrome://mozapps/skin/aboutNetworking.svg#sockets);
+}
+#category-dns::before,
+.category[value="dns"]::before{
+  content: "";
+  background-image: url(chrome://mozapps/skin/aboutNetworking.svg#dns);
+}
+#category-websockets::before,
+.category[value="websockets"]::before{
+  content: "";
+  background-image: url(chrome://mozapps/skin/aboutNetworking.svg#websockets);
+}
+#category-dnslookuptool::before,
+.category[value="dnslookuptool"]::before{
+  content: "";
+  background-image: url(chrome://mozapps/skin/aboutNetworking.svg#dnslookup);
+}
+#category-logging::before,
+.category[value="logging"]::before{
+  content: "";
+  background-image: url(chrome://mozapps/skin/aboutNetworking.svg#logging);
+}
+#category-rcwn::before {
+  content: "";
+}
+
+.header{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#sectionTitle{
+  display: none;
+}
+#refreshDiv{
+  font-size: 1.1rem;
+  margin: 0 0 13px;
+  -moz-padding-end: 2px;
+}
+#refreshButton{
+  line-height: unset;
+  font-size: 1.1rem;
+  height: 23px;
+  vertical-align: bottom;
+  margin: 0;
+  margin-inline-end: 8px;
+  padding: 0 2px;
+}
+
+.main-content{
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.main-content > div:not(.header){
+  padding: 40px 48px;
+  border: 1px solid var(--in-content-main-border-color);
+  border-radius: 5px;
+  overflow: auto;
+  height: calc(100% - 43px);
+  box-sizing: border-box;
+  background-color: var(--in-content-main-background-color);
+  background-image: var(--in-content-main-background-image);
+}
+
+.main-content > div:not(.header)> table{
+  margin-bottom: 40px;
+}
+
+#logging > div {
+  max-width: 800px;
+  min-width: 400px;
+}
+
+#logging > div ~ div ~ div {
+  text-align-last: justify;
+  margin-top: 12px;
+}
+#logging > div > br {
+  display: none;
+}
+
+#logging > div > button {
+  padding: 0 8px;
+}
+
+#logging > div:nth-of-type(+2) > button {
+  margin: 5px 0;
+  margin-inline-start: 40px;
+}
+
+#logging > div > [id^="current-log"] {
+  display: inline-block;
+  margin-inline-start: 20px;
+  min-width: 200px;
+}
+
+#logging > div > input {
+  margin: 10px 12px;
+  min-width: 50%;
+  width: calc(100% - 200px);
+}
+
+/** Warning container **/
+
+/* XXX: a lot of this is duplicated from info-pages.css since that stylesheet
+   is incompatible with this type of layout */
+.warningBackground:not([hidden]) {
+  display: flex;
+}
+
+.warningBackground {
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: var(--in-content-page-background);
+}
+
+.title {
+  position: relative;
+  border-bottom: 1px solid var(--in-content-box-border-color);
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+}
+
+.title::before {
+  content: "";
+  left: -2.3em;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 1.6em;
+  height: 1.6em;
+  background: url("chrome://global/skin/icons/warning.svg") no-repeat left center;
+  background-size: 1.6em;
+}
+
+.warningBackground button {
+  margin-top: 1em;
+  margin-left: 0;
+  min-width: 100px;
+}
+
+/** Content area **/
+
+.main-content {
+  flex: 1;
+}
+
+.tab {
+  padding: 0.5em 0;
+}
+
+.tab table {
+  width: 100%;
+}
+
+th, td, table {
+  border-collapse: collapse;
+  border: none;
+  text-align: start;
+}
+
+th {
+  padding-bottom: 0.5em;
+  font-size: larger;
+}
+
+td {
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid var(--in-content-box-border-color);
+}

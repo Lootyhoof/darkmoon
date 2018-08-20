@@ -6,9 +6,6 @@ skin os darkmoon chrome/os/darwin/ os=Darwin
 skin os darkmoon chrome/os/linux/ os=Linux
 skin os darkmoon chrome/os/winnt/ os=WINNT
 
-skin appver darkmoon chrome/appver/27/ appversion<28.0.0b1
-skin appver darkmoon chrome/appver/28/ appversion>=28.0.0b1
-
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
 override chrome://browser/skin/page-livemarks.png chrome://browser/skin/feeds/feedIcon16.svg
 override chrome://browser/skin/feeds/audioFeedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
