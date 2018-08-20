@@ -99,7 +99,7 @@
 
 /* CELLS */
 .newtab-cell {
-  -moz-margin-end: 20px;
+  margin-inline-end: 20px;
   background-color: rgb(50,50,50);
   border: 1px solid rgb(75,75,75);
   transition: border-color 100ms ease-out;
@@ -110,7 +110,7 @@
 }
 
 .newtab-cell:last-child {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 .newtab-cell:hover:not(:empty) {
@@ -270,7 +270,7 @@
 }
 
 #searchSubmit {
-  -moz-margin-start: -1px;
+  margin-inline-start: -1px;
   padding: 0 9px;
   color: #fff;
   background-color: rgb(60, 60, 60);

@@ -10,7 +10,7 @@
 
 .navigate-button > .toolbarbutton-icon {
   /* display: none; |* This is in the default theme.  Here the icons are shown instead of the labels --johnGraciliano */
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   margin-inline-end: 0;
 }
 .navigate-button > .toolbarbutton-text {

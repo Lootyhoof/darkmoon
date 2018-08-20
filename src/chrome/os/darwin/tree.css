@@ -125,8 +125,8 @@ treecol[hideheader="true"] {
 
 treecol:hover:active,
 treecolpicker:hover:active {
-  -moz-border-start: 2px solid;
-  -moz-border-end: 1px solid;
+  border-inline-start: 2px solid;
+  border-inline-end: 1px solid;
   -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow;
   -moz-border-right-colors: ThreeDDarkShadow;
   -moz-border-bottom-colors: ThreeDDarkShadow;
@@ -148,7 +148,7 @@ treecol[dragging="true"] {
 
 treechildren::-moz-tree-twisty {
   -moz-appearance: treetwisty;
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
 }
 
 treechildren::-moz-tree-twisty(open) {
@@ -166,7 +166,7 @@ treechildren::-moz-tree-indentation {
 /* ::::: gridline style ::::: */
 
 treechildren.gridlines::-moz-tree-cell {
-  -moz-border-end: 1px solid GrayText;
+  border-inline-end: 1px solid GrayText;
   border-bottom: 1px solid GrayText;
 }
 
@@ -176,6 +176,6 @@ treechildren.gridlines::-moz-tree-cell {
   border-width: 0;
   box-shadow: 0 0 1px -moz-mac-focusring inset, 0 0 4px 1px -moz-mac-focusring, 0 0 1.5px 1px -moz-mac-focusring;
   margin: 0;
-  -moz-margin-start: -2px;
+  margin-inline-start: -2px;
   padding: 2px 1px 1px;
 }

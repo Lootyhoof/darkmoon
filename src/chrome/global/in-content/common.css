@@ -94,7 +94,7 @@ xul|caption > xul|label {
 }
 
 xul|description {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 
@@ -107,9 +107,9 @@ xul|description {
   background-color: var(--in-content-main-background-color);
   background-image: var(--in-content-main-background-image);
   padding-top: 25px;
-  -moz-padding-end: 44px; /* compensate the 4px margin of child elements */
+  padding-inline-end: 44px; /* compensate the 4px margin of child elements */
   padding-bottom: 40px;
-  -moz-padding-start: 48px;
+  padding-inline-start: 48px;
   overflow: auto;
 }
 
@@ -123,15 +123,15 @@ xul|groupbox {
   -moz-appearance: none;
   border: none;
   margin: 15px 0 0;
-  -moz-padding-start: 0;
-  -moz-padding-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
   font-size: 1.25rem;
 }
 
 xul|groupbox xul|label {
   /* !important needed to override toolkit !important rule */
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
 }
 
 /* tabpanels and tabs */
@@ -149,7 +149,7 @@ xul|tabpanels {
 xul|tabs {
   position:relative;
   margin: 8px 0 15px;
-  -moz-margin-end: 4px;
+  margin-inline-end: 4px;
   border: 0;
   border-bottom: 1px solid #c1c1c1;
 }
@@ -163,7 +163,7 @@ xul|tab {
   -moz-appearance: none;
   position: relative;
   margin-top: 0;
-  -moz-margin-end: -1px;
+  margin-inline-end: -1px;
   padding: 4px 20px;
   min-height: 44px;
   max-height: 45px;
@@ -177,14 +177,14 @@ xul|tab {
               border-color 150ms ease 0s;
 }
 xul|tab:last-of-type{
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 xul|tab::before{
   display: block;
   margin: calc(.5em - 4px);
-  -moz-margin-start: -21px;
-  -moz-margin-end: 20px;
+  margin-inline-start: -21px;
+  margin-inline-end: 20px;
   height: calc(44px - 1em);
   border-right: 1px solid #c1c1c1;
   transition: border-color 150ms ease 0s;
@@ -326,13 +326,13 @@ xul|menulist > xul|*.menulist-label-box {
 }
 
 xul|menulist > xul|*.menulist-label-box > xul|*.menulist-icon[src] {
-  -moz-margin-end: 5px;
+  margin-inline-end: 5px;
 }
 
 xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
   -moz-appearance: none;
   margin: 1px 0;
-  -moz-margin-start: 10px;
+  margin-inline-start: 10px;
   padding: 0;
   width: 10px;
   height: 16px;
@@ -343,7 +343,7 @@ xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
 
 xul|*.help-button {
   min-width: 16px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   border-width: 0;
   background-image: none;
   /* Override default button background */
@@ -410,7 +410,7 @@ script[src$="preferences.js"] ~ stack  *|button.help-button {
   height: auto;
   min-height: unset;
   margin: -1px;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 /* Reposition the help buttom from the bottom to the top of the options page  --johnGraciliano */
@@ -428,8 +428,8 @@ script[src$="preferences.js"] ~ stack  .main-content > hbox:last-child {
 
 xul|*.spinbuttons-button {
   min-height: initial;
-  -moz-margin-start: 10px !important;
-  -moz-margin-end: 2px !important;
+  margin-inline-start: 10px !important;
+  margin-inline-end: 2px !important;
 }
 
 xul|*.spinbuttons-up {
@@ -464,7 +464,7 @@ xul|*.spinbuttons-down[disabled="true"] > xul|*.button-box > xul|*.button-icon {
 
 xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker {
   -moz-appearance: none;
-  -moz-margin-end: 4px;
+  margin-inline-end: 4px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -497,8 +497,8 @@ xul|button[type="menu"] > xul|menupopup xul|menuitem {
   color: var(--in-content-text-color);
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  -moz-padding-start: 10px;
-  -moz-padding-end: 30px;
+  padding-inline-start: 10px;
+  padding-inline-end: 30px;
 }
 
 xul|menulist > xul|menupopup > xul|menu[_moz-menuactive="true"],
@@ -622,7 +622,7 @@ html|input[type="checkbox"] + html|label {
 }
 
 xul|checkbox {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 xul|*.checkbox-check,
@@ -633,7 +633,7 @@ html|input[type="checkbox"] + html|label:before {
   height: 23px;
   border-radius: 2px;
   border: 1px solid var(--in-content-box-border-color);
-  -moz-margin-end: 10px;
+  margin-inline-end: 10px;
   background: initial !important;  /* !important needed to override toolkit checked !important rule */
 }
 
@@ -656,8 +656,8 @@ html|input[type="checkbox"]:disabled + html|label {
 }
 
 xul|*.checkbox-label-box {
-  -moz-margin-start: -1px; /* negative margin for the transparent border */
-  -moz-padding-start: 0;
+  margin-inline-start: -1px; /* negative margin for the transparent border */
+  padding-inline-start: 0;
 }
 
 xul|richlistitem > xul|*.checkbox-check {
@@ -665,7 +665,7 @@ xul|richlistitem > xul|*.checkbox-check {
 }
 
 xul|radio {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 xul|*.radio-check {
@@ -674,7 +674,7 @@ xul|*.radio-check {
   height: 23px;
   border: 1px solid var(--in-content-box-border-color);
   border-radius: 50%;
-  -moz-margin-end: 10px;
+  margin-inline-end: 10px;
   background: initial;
 }
 
@@ -691,9 +691,9 @@ xul|radio[disabled="true"] > xul|*.radio-check {
 }
 
 xul|*.radio-label-box {
-  -moz-margin-start: -1px; /* negative margin for the transparent border */
-  -moz-margin-end: 10px;
-  -moz-padding-start: 0;
+  margin-inline-start: -1px; /* negative margin for the transparent border */
+  margin-inline-end: 10px;
+  padding-inline-start: 0;
 }
 
 /* Category List */
@@ -704,8 +704,8 @@ xul|*.radio-label-box {
   z-index: 1;
   background-color: transparent;
   margin: 0;
-  -moz-margin-start: 4px;
-  -moz-margin-end: -1px;
+  margin-inline-start: 4px;
+  margin-inline-end: -1px;
   margin-top: 74px;
   margin-bottom: 7px;
   border-width: 0;
@@ -716,8 +716,8 @@ xul|*.radio-label-box {
   box-sizing: border-box;
   background-color: transparent;
   color: #fff;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 27px;
+  padding-inline-start: 4px;
+  padding-inline-end: 27px;
   border: 1px solid transparent;
   min-height: 0;
   height: 52px;
@@ -745,12 +745,12 @@ html|*.category.selected,
 *|*.category[selected] {
   background-color: rgb(110,110,110);
   border-color: var(--in-content-main-border-color);
-  -moz-border-end-color: rgb(75,75,75);
+  border-inline-end-color: rgb(75,75,75);
 }
 
 *|*#categories[keyboard-navigation="true"]:-moz-focusring > xul|*.category[current] {
   border: 1px #999 dotted;
-  -moz-border-end: 1px solid rgb(75,75,75);
+  border-inline-end: 1px solid rgb(75,75,75);
 }
 
 *|*.category-name {
@@ -758,7 +758,7 @@ html|*.category.selected,
   font-size: 1.5rem;
   padding: 0;
   margin: 1px 5px 2px;
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
   -moz-user-select: none;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -773,14 +773,14 @@ html|*.category.selected,
 *|*.category-icon {
   width: 32px;
   height: 32px;
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
 }
 
 /* header */
 
 *|*.header {
   border-bottom: 1px solid var(--in-content-header-border-color);
-  -moz-margin-end: 4px; /* add the 4px end-margin of other elements */
+  margin-inline-end: 4px; /* add the 4px end-margin of other elements */
   margin-bottom: 15px;
   padding-bottom: 15px;
   -moz-box-align: baseline;
@@ -798,7 +798,7 @@ html|*.category.selected,
 script[src$="preferences.js"] ~ stack .header{
   border: none;
   margin: -10px 0 -7px;
-  -moz-margin-end: 4px; /* add the 4px end-margin of other elements */
+  margin-inline-end: 4px; /* add the 4px end-margin of other elements */
   padding-bottom: 0;
 }
 script[src$="preferences.js"] ~ stack .header-name{
@@ -822,13 +822,13 @@ xul|*.fileFieldContentBox {
 }
 
 xul|*.fileFieldIcon {
-  -moz-margin-start: 10px;
-  -moz-margin-end: 0;
+  margin-inline-start: 10px;
+  margin-inline-end: 0;
 }
 
 xul|*.fileFieldLabel {
-  -moz-margin-start: -26px;
-  -moz-padding-start: 36px;
+  margin-inline-start: -26px;
+  padding-inline-start: 36px;
 }
 
 /* List boxes */
@@ -836,7 +836,7 @@ xul|*.fileFieldLabel {
 xul|richlistbox,
 xul|listbox {
   -moz-appearance: none;
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
   background-color: var(--in-content-box-background);
   border: 1px solid var(--in-content-box-border-color);
   color: var(--in-content-text-color);
@@ -901,8 +901,8 @@ xul|treecolpicker:hover {
 
 xul|treecol:not([hideheader="true"]):not(:first-child),
 xul|treecolpicker {
-  -moz-border-start-width: 1px;
-  -moz-border-start-style: solid;
+  border-inline-start-width: 1px;
+  border-inline-start-style: solid;
   border-image: linear-gradient(transparent 0%, transparent 20%, #c1c1c1 20%, #c1c1c1 80%, transparent 80%, transparent 100%) 1 1;
 }
 
@@ -946,13 +946,13 @@ xul|treechildren::-moz-tree-cell-text(selected) {
 
   /* The start margin should get clear at the beginning of a line */
   hbox > xul|button:first-child {
-    -moz-margin-start: 0;
+    margin-inline-start: 0;
     margin-inline-start: 0;
   }
   /* Not in this special cases */
   hbox > vbox > hbox > xul|button:first-child,
   :-moz-any(row, hbox) > hbox > xul|button:first-child {
-    -moz-margin-start: 4px;
+    margin-inline-start: 4px;
     margin-inline-start: 4px;
   }
 
@@ -962,7 +962,7 @@ xul|treechildren::-moz-tree-cell-text(selected) {
   }
 
   xul|checkbox {
-    -moz-padding-start: 0;
+    padding-inline-start: 0;
   }
 
   @media not all and (-moz-windows-default-theme) {
@@ -978,7 +978,7 @@ xul|treechildren::-moz-tree-cell-text(selected) {
 
   xul|radio {
     -moz-binding: url("chrome://global/content/bindings/radio.xml#radio");
-    -moz-padding-start: 0;
+    padding-inline-start: 0;
   }
 
   @media not all and (-moz-windows-default-theme) {
@@ -994,7 +994,7 @@ xul|treechildren::-moz-tree-cell-text(selected) {
 
   xul|*.radio-icon,
   xul|*.checkbox-icon {
-    -moz-margin-end: 0;
+    margin-inline-end: 0;
   }
 
   /* Never draw a border for the focusring, use outline instead */
@@ -1058,18 +1058,18 @@ xul|treechildren::-moz-tree-cell-text(selected) {
 
   /* The start margin should get clear at the beginning of a line */
   hbox > xul|button:first-child {
-    -moz-margin-start: 0;
+    margin-inline-start: 0;
     margin-inline-start: 0;
   }
   /* Not in this special cases */
   hbox > vbox > hbox > xul|button:first-child,
   :-moz-any(row, hbox) > hbox > xul|button:first-child {
-    -moz-margin-start: 4px;
+    margin-inline-start: 4px;
     margin-inline-start: 4px;
   }
 
   xul|caption {
-    -moz-padding-start: 0;
+    padding-inline-start: 0;
   }
 
   xul|groupbox > xul|*.groupbox-body {
@@ -1091,11 +1091,11 @@ xul|treechildren::-moz-tree-cell-text(selected) {
   xul|menulist > xul|menupopup xul|menuitem,
   xul|button[type="menu"] > xul|menupopup xul|menu,
   xul|button[type="menu"] > xul|menupopup xul|menuitem {
-    -moz-padding-end: 34px;
+    padding-inline-end: 34px;
   }
 
   xul|*.help-button > xul|*.button-box > xul|*.button-icon {
-    -moz-margin-start: 0;
+    margin-inline-start: 0;
   }
 
   xul|*.checkbox-icon {
@@ -1103,7 +1103,7 @@ xul|treechildren::-moz-tree-cell-text(selected) {
   }
 
   xul|*.radio-icon {
-    -moz-margin-end: 0;
+    margin-inline-end: 0;
   }
 
   xul|*.numberbox-input-box {

@@ -58,12 +58,12 @@ listheader[sortable="true"]:hover:active {
   border: 1px solid rgb(60,60,60);
   padding-top: 1px;
   padding-bottom: 0px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 5px;
+  padding-inline-end: 4px;
 }
 
 .listheader-icon {
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 .listheader-label {
@@ -98,13 +98,13 @@ listheader[sortable="true"]:hover:active {
   margin: 0px !important;
   padding-top: 0px;
   padding-bottom: 1px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 0px;
+  padding-inline-start: 4px;
+  padding-inline-end: 0px;
   white-space: nowrap;
 }
 
 .listcell-icon {
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 .listcell-label[disabled="true"] {
@@ -119,8 +119,8 @@ listheader[sortable="true"]:hover:active {
   margin: 2px 4px;
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 2px;
+  padding-inline-start: 4px;
+  padding-inline-end: 2px;
   border: 1px solid;
   -moz-border-top-colors: rgb(75,75,75);
   -moz-border-right-colors: rgb(75,75,75);

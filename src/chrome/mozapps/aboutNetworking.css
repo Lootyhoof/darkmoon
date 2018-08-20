@@ -100,7 +100,7 @@ body {
 #refreshDiv{
   font-size: 1.1rem;
   margin: 0 0 13px;
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
 }
 #refreshButton{
   line-height: unset;

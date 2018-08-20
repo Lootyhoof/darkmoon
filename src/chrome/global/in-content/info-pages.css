@@ -7,8 +7,8 @@ body {
   min-height: 100vh;
   padding-top: 0;
   padding-bottom: 0;
-  -moz-padding-start: calc(48px + 4.6em);
-  -moz-padding-end: 48px;
+  padding-inline-start: calc(48px + 4.6em);
+  padding-inline-end: 48px;
   padding-inline-start: calc(48px + 4.6em);
   padding-inline-end: 48px;
   align-items: center;
@@ -40,8 +40,8 @@ body > .container > h1:not(:empty) /* This is for  about:about  */
   background-position: left 0;
   background-repeat: no-repeat;
   background-size: 1.6em;
-  -moz-margin-start: -2.3em;
-  -moz-padding-start: 2.3em;
+  margin-inline-start: -2.3em;
+  padding-inline-start: 2.3em;
   margin-inline-start: -2.3em;
   padding-inline-start: 2.3em;
   font-size: 2.5em;
@@ -68,8 +68,8 @@ body > .container > h1:not(:empty) /* This is for  about:about  */
 
   .title {
     background-image: none !important;
-    -moz-padding-start: 0;
-    -moz-margin-start: 0;
+    padding-inline-start: 0;
+    margin-inline-start: 0;
     padding-inline-start: 0;
     margin-inline-start: 0;
   }
@@ -82,7 +82,7 @@ body > .container > h1:not(:empty) /* This is for  about:about  */
 ul, ol {
   margin: 0;
   padding: 0;
-  -moz-margin-start: 1em;
+  margin-inline-start: 1em;
   margin-inline-start: 1em;
 }
 
@@ -119,7 +119,7 @@ ul.columns {
 }
 
 .button-container > button:first-child {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
   margin-inline-start: 0;
 }
 

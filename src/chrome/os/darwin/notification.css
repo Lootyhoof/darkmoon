@@ -26,13 +26,13 @@
 .popup-notification-menubutton > .button-menubutton-button {
   background-color: transparent;
   padding: 1px;
-  -moz-border-end: none;
+  border-inline-end: none;
 }
 
 .popup-notification-menubutton:not([type="menu-button"]),
 .popup-notification-menubutton > .button-menubutton-button > .button-box {
-  -moz-padding-start: 8px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 8px;
+  padding-inline-end: 5px;
 }
 
 .popup-notification-menubutton > .button-menubutton-dropmarker {
@@ -71,6 +71,6 @@
 }
 
 .popup-notification-closebutton {
-  -moz-margin-end: -14px;
+  margin-inline-end: -14px;
   margin-top: -10px;
 }

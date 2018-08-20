@@ -181,7 +181,7 @@ splitter.status4evar-status-splitter:not(:hover) {
 }
 
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label {
-	-moz-margin-start: 5px !important;
+	margin-inline-start: 5px !important;
 }
 
 /*
@@ -198,7 +198,7 @@ splitter.status4evar-status-splitter {
  */
 
 #urlbar-progress-alt {
-	-moz-margin-end: -2px;
+	margin-inline-end: -2px;
 }
 
 /*

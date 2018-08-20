@@ -53,14 +53,14 @@ menuitem.spell-suggestion {
 
 .menu-text {
   -moz-appearance: none;
-  -moz-padding-start: 1.45em !important;
+  padding-inline-start: 1.45em !important;
 }
 
 .menu-text,
 .menu-iconic-text {
   font-weight: inherit;
-  -moz-margin-start: 2px !important;
-  -moz-padding-end: 2px;
+  margin-inline-start: 2px !important;
+  padding-inline-end: 2px;
 }
 
 menucaption > .menu-text,
@@ -72,14 +72,14 @@ menucaption > .menu-iconic-text {
 .menu-description {
   font-style: italic;
   color: GrayText;
-  -moz-margin-start: 1ex !important;
+  margin-inline-start: 1ex !important;
 }
 
 .menu-accel,
 .menu-iconic-accel {
   color: inherit;
-  -moz-margin-start: 0.74em !important;
-  -moz-margin-end: 1.35em !important;
+  margin-inline-start: 0.74em !important;
+  margin-inline-end: 1.35em !important;
 }
 
 .menu-iconic-left {
