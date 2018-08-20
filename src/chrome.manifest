@@ -11,7 +11,6 @@ override chrome://browser/skin/page-livemarks.png chrome://browser/skin/feeds/fe
 override chrome://browser/skin/feeds/audioFeedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
 override chrome://browser/skin/feeds/feedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
 override chrome://browser/skin/feeds/videoFeedIcon16.png chrome://browser/skin/feeds/feedIcon16.svg
-override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
 override chrome://browser/skin/preferences/application.png chrome://browser/skin/toolbar/new-window.svg
 override chrome://browser/skin/preferences/mail.png chrome://browser/skin/preferences/mail.svg
 override chrome://browser/skin/preferences/saveFile.png chrome://browser/skin/toolbar/downloads.svg
