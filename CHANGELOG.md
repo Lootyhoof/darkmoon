@@ -1,5 +1,13 @@
 # Changelog
 
+### 2.2.0
+- sync global stylings with Pale Moon 28
+- remove redundant devtools styling
+- use non-prefixed -inline syntax
+- update media controls
+- mark as compatible with Pale Moon 28 only
+- fix alltabs icon appearance when in "menu" mode
+
 ### 2.1.0
 - add PM28 newtab styling
 - add tabbrowser findbar styling
