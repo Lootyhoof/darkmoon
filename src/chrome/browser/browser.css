@@ -1542,7 +1542,7 @@ toolbar:not([brighttext]) .tabbrowser-arrowscrollbox > .scrollbutton-down {
   width: 26px;
 }
 
-#alltabs-button {
+#alltabs-button:not([type="menu"]) {
   list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.svg#alltabs");
 }
 
@@ -1550,7 +1550,7 @@ toolbar:not([brighttext]) #alltabs-button:not([type="menu"]) {
   list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.svg#darktext");
 }
 
-#alltabs-button:hover:active {
+#alltabs-button:not([type="menu"]):hover:active {
   list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.svg#active");
 }  
 
