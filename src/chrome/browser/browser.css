@@ -375,10 +375,14 @@ toolbarbutton.bookmark-item {
 
 toolbarbutton.bookmark-item:hover {
   background-color: rgb(75,75,75);
+  color: white;
+  text-shadow: none;
 }
 
 toolbarbutton.bookmark-item:hover:active {
   background-color: rgb(23,23,23);
+  color: white;
+  text-shadow: none;
 }
 
 /* ::::: primary toolbar buttons ::::: */
