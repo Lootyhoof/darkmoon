@@ -21,6 +21,7 @@ toolbarbutton {
 
 toolbarbutton:-moz-lwtheme {
   text-shadow: none;
+  color: inherit;
 }
 
 .toolbarbutton-icon[label]:not([label=""]),

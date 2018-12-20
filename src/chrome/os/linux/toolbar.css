@@ -10,6 +10,12 @@ toolbox {
   color: #fff;
 }
 
+toolbox:-moz-lwtheme {
+  color: inherit;
+  text-shadow: inherit;
+  background-color: transparent;
+}
+
 /* ::::: menubar & toolbar ::::: */
 
 toolbar, menubar {
@@ -42,6 +48,9 @@ menubar, toolbar[type="menubar"] {
 menubar:-moz-lwtheme,
 toolbar:-moz-lwtheme {
   -moz-appearance: none;
+  background-color: transparent;
+  border-top: none;
+  border-bottom: none;
   color: inherit !important;
 }
 
