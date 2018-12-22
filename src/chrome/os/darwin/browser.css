@@ -109,3 +109,17 @@ toolbarbutton.bookmark-item > menupopup {
 .bookmark-item > .toolbarbutton-icon[type="menu"] {
   margin-inline-end: 5px;
 }
+
+#main-window[privatebrowsingmode=temporary] #TabsToolbar::before {
+  display: -moz-box;
+  content: "";
+  background-image: url("chrome://browser/skin/toolbar/private.svg");
+  background-size: auto 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+}
+
+#main-window[privatebrowsingmode=temporary] #TabsToolbar:not([brighttext])::before {
+  background-image: url("chrome://browser/skin/toolbar/private.svg#darktext");
+}

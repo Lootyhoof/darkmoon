@@ -56,3 +56,19 @@ toolbarbutton.bookmark-item[open="true"] {
 .bookmark-item[container] > .toolbarbutton-menu-dropmarker {
   display: -moz-box !important;
 }
+
+/* Private browsing indicator */
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="true"] ~ #TabsToolbar::before {
+  display: -moz-box;
+  content: "";
+  background-image: url("chrome://browser/skin/toolbar/private.svg");
+  background-size: auto 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+}
+
+#main-window[privatebrowsingmode=temporary] #toolbar-menubar[autohide="true"] ~ #TabsToolbar:not([brighttext])::before {
+  background-image: url("chrome://browser/skin/toolbar/private.svg#darktext");
+}
