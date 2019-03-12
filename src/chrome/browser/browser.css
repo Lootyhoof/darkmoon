@@ -408,6 +408,11 @@ toolbar:not([brighttext]) .toolbarbutton-1 {
   list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow.svg");
 }
 
+.toolbarbutton-1 > .toolbarbutton-menu-dropmarker > image,
+.toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > image {
+  width: auto;
+}
+
 toolbar:not([brighttext]) .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
 toolbar:not([brighttext]) .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
   list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow.svg#darktext");
