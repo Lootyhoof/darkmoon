@@ -289,6 +289,16 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
   border: 1px dotted rgb(75,75,75);
 }
 
+/* Special case for the "about" window as that has its own background styling */
+#PMaboutDialog .text-link {
+  color: -moz-nativehyperlinktext;
+  text-decoration: none;
+}
+
+#PMaboutDialog .text-link:hover {
+  text-decoration: underline;
+}
+
 /* :::::: autoscroll popup ::::: */
 
 .autoscroller {
