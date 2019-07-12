@@ -1,0 +1,16 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Font sizes are different per-platform, so we need custom CSS to line them up. */
+.font-type-buttons > .sans-serif-button > .name {
+  margin-top: 5px;
+}
+
+.font-type-buttons > .sans-serif-button > .description {
+  margin-top: -8px;
+}
+
+.font-type-buttons > .serif-button > .name {
+  font-size: 70px;
+} 

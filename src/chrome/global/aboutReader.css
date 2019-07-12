@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://os/skin/aboutReader.css");
+
 /* Avoid adding ID selector rules in this style sheet, since they could
  * inadvertently match elements in the article content. */
 
@@ -47,44 +49,10 @@ body.serif .remove-button  {
 }
 
 .container {
+  --font-size: 12;
   max-width: 30em;
   margin: 0 auto;
-}
-
-.container.font-size1 {
-  font-size: 12px;
-}
-
-.container.font-size2 {
-  font-size: 14px;
-}
-
-.container.font-size3 {
-  font-size: 16px;
-}
-
-.container.font-size4  {
-  font-size: 18px;
-}
-
-.container.font-size5 {
-  font-size: 20px;
-}
-
-.container.font-size6 {
-  font-size: 22px;
-}
-
-.container.font-size7 {
-  font-size: 24px;
-}
-
-.container.font-size8 {
-  font-size: 26px;
-}
-
-.container.font-size9 {
-  font-size: 28px;
+  font-size: var(--font-size);
 }
 
 .container.content-width1 {
@@ -421,45 +389,6 @@ body:not(.loaded) .toolbar:-moz-locale-dir(rtl) {
   margin-top: -5px;
 }
 
-/* Font sizes are different per-platform, so we need custom CSS to line them up. */
-%ifdef XP_MACOSX
-.font-type-buttons > .sans-serif-button > .name {
-  margin-top: 10px;
-}
-
-.font-type-buttons > .sans-serif-button > .description {
-  margin-top: -4px;
-}
-
-.font-type-buttons > .serif-button > .name {
-  font-size: 63px;
-}
-%elifdef XP_WIN
-.font-type-buttons > .sans-serif-button > .name {
-  margin-top: 2px;
-}
-
-.font-type-buttons > .sans-serif-button > .description {
-  margin-top: -4px;
-}
-
-.font-type-buttons > .serif-button > .name {
-  font-size: 63px;
-}
-%else
-.font-type-buttons > .sans-serif-button > .name {
-  margin-top: 5px;
-}
-
-.font-type-buttons > .sans-serif-button > .description {
-  margin-top: -8px;
-}
-
-.font-type-buttons > .serif-button > .name {
-  font-size: 70px;
-}
-%endif
-
 .button:hover,
 .font-size-buttons > button:hover,
 .font-type-buttons > button:hover,
@@ -737,4 +666,15 @@ body:not(.loaded) .toolbar:-moz-locale-dir(rtl) {
 .moz-reader-content .invisible,
 .moz-reader-content .sr-only {
   display: none;
+}
+
+/* Enforce wordpress and similar emoji/smileys aren't sized to be full-width */
+.moz-reader-content img.wp-smiley,
+.moz-reader-content img.emoji {
+  display: inline-block;
+  border-width: 0;
+  /* height: auto is implied from `.moz-reader-content *` rule. */
+  width: 1em;
+  margin: 0 .07em;
+  padding: 0;
 }
