@@ -15,11 +15,6 @@ toolbar:not([brighttext]) #appmenu-toolbar-button {
   display: none !important;
 }
 
-.toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
-.toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
-  list-style-image: none !important;
-}
-
 #appmenu_history > .splitmenu-menuitem > .menu-iconic-left > .menu-iconic-icon {
   list-style-image: url("chrome://browser/skin/toolbar/history.svg");
 }
