@@ -1,5 +1,10 @@
 # Changelog
 
+### 2.4.0
+- update Reader View styling to reflect changes in Pale Moon 28.6.0+
+- fix "about" window text legibility
+- Linux: make sure toolbarbutton dropmarkers show correctly
+
 ### 2.3.1
 - fix toolbarbutton dropmarker width
 
