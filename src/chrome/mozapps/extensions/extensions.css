@@ -576,6 +576,10 @@
   --view-highlight-color: rgb(86,85,79);
 }
 
+.addon-view[notification="warning"][native="false"] {
+  --view-highlight-color: rgb(86, 83, 79);
+}
+
 .addon-view[notification="error"] {
   --view-highlight-color: rgb(89,81,81);
 }
