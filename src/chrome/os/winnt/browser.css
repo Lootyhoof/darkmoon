@@ -191,6 +191,91 @@ toolbarbutton.bookmark-item[open="true"] {
   }
 }
 
+/* ::::: fullscreen window controls ::::: */
+
+#window-controls {
+  -moz-box-align: start;
+  /* Make sure the window controls are always last on the toolbar */
+  -moz-box-ordinal-group: 100;
+  margin-inline-start: 4px;
+}
+
+#minimize-button,
+#restore-button,
+#close-button {
+  -moz-appearance: none;
+  border-style: none;
+  list-style-image: url("chrome://global/skin/icons/windowControls.png");
+  margin: 0;
+  padding: 0;
+}
+
+#minimize-button {
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+#minimize-button:hover {
+  -moz-image-region: rect(16px, 16px, 32px, 0);
+}
+
+#minimize-button:hover:active {
+  -moz-image-region: rect(32px, 16px, 48px, 0);
+}
+
+#restore-button {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+#restore-button:hover {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+#restore-button:hover:active {
+  -moz-image-region: rect(32px, 32px, 48px, 16px);
+}
+
+#close-button {
+  -moz-image-region: rect(0, 49px, 16px, 32px);
+}
+
+#close-button:hover {
+  -moz-image-region: rect(16px, 49px, 32px, 32px);
+}
+
+#close-button:hover:active {
+  -moz-image-region: rect(32px, 49px, 48px, 32px);
+}
+
+#minimize-button:-moz-locale-dir(rtl),
+#restore-button:-moz-locale-dir(rtl),
+#close-button:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
+}
+
+@media (-moz-os-version: windows-win10) {
+  #window-controls {
+    margin-inline-start: 0;
+  }
+
+  #window-controls > toolbarbutton {
+    margin: 0;
+    padding: 2px 4px;
+    transition: background-color linear 120ms;
+  }
+
+  #minimize-button,
+  #restore-button,
+  #close-button,
+  #minimize-button:hover,
+  #restore-button:hover,
+  #close-button:hover,
+  #minimize-button:hover:active,
+  #restore-button:hover:active,
+  #close-button:hover:active {
+    -moz-image-region: auto;
+  }
+}
+
 @media all and (-moz-windows-compositor) {
   #main-window {
   background-color: transparent;
@@ -222,19 +307,25 @@ toolbarbutton.bookmark-item[open="true"] {
       -moz-appearance: none !important;
     }
 
-    .titlebar-button {
+    .titlebar-button,
+    #window-controls > toolbarbutton {
       border: none;
       border-radius: 0px;
       margin: 0 !important;
-      padding: 8px 17px;
       transition: background-color linear 120ms;
     }
+
+    .titlebar-button {
+      padding: 8px 17px;
+    }
     
-    .titlebar-button:hover {
+    .titlebar-button:hover,
+    #window-controls > toolbarbutton:not(#close-button):hover {
       background-color: hsla(0, 0%, 100%, .17);
     }
 
-    .titlebar-button:hover:active {
+    .titlebar-button:hover:active,
+    #window-controls > toolbarbutton:not(#close-button):hover:active {
       background-color: hsla(0, 0%, 100%, .27);
       transition: none;
     }
@@ -243,11 +334,13 @@ toolbarbutton.bookmark-item[open="true"] {
       opacity: 0.5;
     }
 
-    #titlebar-close:hover {
+    #titlebar-close:hover,
+    #close-button:hover {
       background-color: hsla(0, 86%, 49%, 1);
     }
 
-    #titlebar-close:hover:active {
+    #titlebar-close:hover:active,
+    #close-button:hover:active {
       background-color: hsla(0, 60%, 39%, 1);
       transition: none;
     }
@@ -266,7 +359,8 @@ toolbarbutton.bookmark-item[open="true"] {
       margin-top: -4px;
     }
 
-    #titlebar-min {
+    #titlebar-min,
+    #minimize-button {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-white);
     }
 
@@ -274,14 +368,17 @@ toolbarbutton.bookmark-item[open="true"] {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-white);
     }
 
-    #main-window[sizemode="maximized"] #titlebar-max {
+    #main-window[sizemode="maximized"] #titlebar-max,
+    #restore-button {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-white);
     }
 
-    #titlebar-close {
+    #titlebar-close,
+    #close-button {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
     }
-    #titlebar-close:hover {
+    #titlebar-close:hover,
+    #close-button:hover {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
     }
 

@@ -790,50 +790,6 @@ toolbar:not([brighttext]) #tabview-button {
   -moz-image-region: rect(1px, 71px, 17px, 55px);
 }
 
-/* ::::: fullscreen window controls ::::: */
-
-#TabsToolbar > #window-controls {
-  margin-inline-start: 4px;
-}
-
-#minimize-button,
-#restore-button,
-#close-button {
-  list-style-image: url("chrome://global/skin/icons/windowControls.png");
-  padding: 0;
-}
-
-#minimize-button {
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-#minimize-button:hover {
-  -moz-image-region: rect(16px, 16px, 32px, 0);
-}
-#minimize-button:hover:active {
-  -moz-image-region: rect(32px, 16px, 48px, 0);
-}
-#restore-button {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-#restore-button:hover {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
-}
-#restore-button:hover:active {
-  -moz-image-region: rect(32px, 32px, 48px, 16px);
-}
-#close-button {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
-  -moz-appearance: none;
-  border-style: none;
-  margin: 2px;
-}
-#close-button:hover {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
-}
-#close-button:hover:active {
-  -moz-image-region: rect(32px, 48px, 48px, 32px);
-}
-
 /* ::::: Location Bar ::::: */
 
 #urlbar,
