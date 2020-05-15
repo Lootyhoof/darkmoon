@@ -5,9 +5,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
-/*
- * General styles
- */
+/* General styles */
 
 #status4evar-status-widget,
 #status4evar-progress-widget {
@@ -28,9 +26,7 @@
 	padding: 2px 4px;
 }
 
-/*
- * Options button
- */
+/* Options button */
 
 #status4evar-options-button {
 	list-style-image: url("chrome://browser/skin/statusbar/pms24.png");
@@ -40,9 +36,7 @@ toolbar[iconsize="small"] #status4evar-options-button {
 	list-style-image: url("chrome://browser/skin/statusbar/pms16.png");
 }
 
-/*
- * Download status
- */
+/* Download status */
 
 toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"],
 toolbar[mode="text"] #status4evar-download-button {
@@ -112,9 +106,7 @@ toolbar:not([brighttext]) #status4evar-download-button #status4evar-download-ico
 	animation-duration: 1s;
 }
 
-/*
- * Splitter
- */
+/* Splitter */
 
 splitter.status4evar-status-splitter {
 	-moz-appearance: splitter;
@@ -127,9 +119,7 @@ splitter.status4evar-status-splitter:not(:hover) {
 	-moz-appearance: none;
 }
 
-/*
- * General progress
- */
+/* General progress */
 
 #status4evar-progress-bar[s4estyle="true"] > * {
 	border: none;
@@ -149,74 +139,8 @@ splitter.status4evar-status-splitter:not(:hover) {
 	border-right: none;
 }
 
-/*
- * Status bar
- */
+/* Status bar */
 
 #status-bar > .statusbar-resizerpanel {
 	display: none !important;
 }
-
-
-/*
- * General
- */
-
-#status4evar-status-text,
-#status4evar-progress-bar {
-	margin: 0px 3px;
-}
-
-/*
- * Download status
- */
-
-#status4evar-download-progress-bar {
-	height: 4px;
-}
-
-#status4evar-download-button #status4evar-download-icon {
-	min-width: 18px;
-	min-height: 18px;
-}
-
-toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label {
-	margin-inline-start: 5px !important;
-}
-
-/*
- * Splitter
- */
-
-splitter.status4evar-status-splitter {
-	width: 6px;
-	margin: 0px -3px;
-}
-
-/*
- * Location bar
- */
-
-#urlbar-progress-alt {
-	margin-inline-end: -2px;
-}
-
-/*
- * Status bar
- */
-
-#browser-bottombox[s4eboarder="true"] :-moz-any(#status4evar-status-bar, #addon-bar) {
-	-moz-appearance: none;
-}
-
-#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"]) {
-	box-shadow: none !important;
-	border: none !important;
-	border-top: 2px solid !important;
-	-moz-border-top-colors: ThreeDShadow ThreeDHighlight !important;
-}
-
-#browser-bottombox[s4eboarder="true"] > *:not([hidden="true"]):not([collapsed="true"]) ~ * {
-	border: none !important;
-}
-
