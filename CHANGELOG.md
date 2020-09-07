@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.5.1
+- fix download status icon width
+
 ### 2.5.0
 - support other GTK-based operating systems
 - provide platform-specific custom statusbar styling to ensure it works in all platforms
