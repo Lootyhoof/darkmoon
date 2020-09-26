@@ -904,7 +904,8 @@ html|*.urlbar-input:-moz-lwtheme:-moz-placeholder,
 
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
   margin-inline-end: 4px;
 }
 
@@ -940,7 +941,8 @@ html|*.urlbar-input:-moz-lwtheme:-moz-placeholder,
 
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
   background-position: right;
   background-size: 1px;
   background-repeat: no-repeat;
@@ -948,7 +950,8 @@ html|*.urlbar-input:-moz-lwtheme:-moz-placeholder,
 
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI:-moz-locale-dir(rtl),
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:-moz-locale-dir(rtl),
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain:-moz-locale-dir(rtl) {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain:-moz-locale-dir(rtl),
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent:-moz-locale-dir(rtl) {
   background-position: left;
 }
 
@@ -963,6 +966,10 @@ html|*.urlbar-input:-moz-lwtheme:-moz-placeholder,
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   color: hsl(207,100%,63%);
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
+  color: rgb(156,156,0);
 }
 
 /* page proxy icon */
