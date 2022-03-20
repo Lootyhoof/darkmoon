@@ -9,23 +9,36 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>darkmoon@lootyhoof-pm</em:id>
-    <em:version>2.5.1</em:version>
+    <em:version>2.6.0</em:version>
     <em:name>Dark Moon</em:name>
     <em:description>The ultimate dark experience.</em:description>
     <em:creator>Lootyhoof</em:creator>
     <em:type>4</em:type>
     <em:internalName>darkmoon</em:internalName>
     <em:skinnable>true</em:skinnable>
+    <em:updateURL>https://raw.githubusercontent.com/Lootyhoof/darkmoon/master/update.xml</em:updateURL>
 
     <em:contributor>Louis Chan</em:contributor>
     <em:contributor>Graciliano</em:contributor>
 
     <em:targetApplication>
+      <!-- Pale Moon -->
       <Description>
-        <!-- Pale Moon -->
         <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
         <em:minVersion>28.6.0</em:minVersion>
-        <em:maxVersion>29.*</em:maxVersion>
+        <em:maxVersion>30.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    <em:targetApplication>
+      <!-- Applications using Firefox GUID -->
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <!--
+            Pale Moon 30 and above will stop using its own GUID to
+            "further improve extension compatibility"
+          -->
+        <em:minVersion>30.0.0a1</em:minVersion>
+        <em:maxVersion>30.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>
