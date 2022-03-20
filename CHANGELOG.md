@@ -1,5 +1,10 @@
 # Changelog
 
+### 2.6.0
+- add mixed-mode SSL styling
+- don't use native styling for sidebarheader
+- support Pale Moon 30
+
 ### 2.5.1
 - fix download status icon width
 
