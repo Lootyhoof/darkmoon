@@ -274,13 +274,14 @@
   padding: 0 9px;
   color: #fff;
   background-color: rgb(60, 60, 60);
+  background-image: none !important;
   border: 1px solid;
   border-color: rgb(75, 75, 75);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   transition-property: background-color, border-color, box-shadow;
   transition-duration: 150ms;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 #searchSubmit:-moz-dir(rtl) {
