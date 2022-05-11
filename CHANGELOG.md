@@ -1,5 +1,10 @@
 # Changelog
 
+### 2.7.0
+- initial HTML date/time picker support
+- improve about:newtab searchbar appearance
+- support Pale Moon 31
+
 ### 2.6.0
 - add mixed-mode SSL styling
 - don't use native styling for sidebarheader
