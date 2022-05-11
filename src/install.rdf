@@ -16,7 +16,6 @@
     <em:type>4</em:type>
     <em:internalName>darkmoon</em:internalName>
     <em:skinnable>true</em:skinnable>
-    <em:updateURL>https://raw.githubusercontent.com/Lootyhoof/darkmoon/master/update.xml</em:updateURL>
 
     <em:contributor>Louis Chan</em:contributor>
     <em:contributor>Graciliano</em:contributor>
