@@ -252,7 +252,8 @@ toolbarbutton.bookmark-item[open="true"] {
   transform: scaleX(-1);
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
   #window-controls {
     margin-inline-start: 0;
   }
@@ -289,10 +290,11 @@ toolbarbutton.bookmark-item[open="true"] {
     -moz-appearance: -moz-win-exclude-glass;
   }
 
-/* ==== Windows 10 styling ==== */
+/* ==== Windows 10/11 styling ==== */
 
-  @media (-moz-os-version: windows-win10) {
-    /* Draw XUL caption buttons on Win10 */
+  @media (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
+    /* Draw XUL caption buttons on Win10/11 */
     #appmenu-button {
       margin-top: -1px !important;
       margin-bottom: 5px !important;
@@ -478,12 +480,11 @@ toolbarbutton.bookmark-item[open="true"] {
     }
   }
 
-/* ==== Windows Vista/7/8 styling ==== */
+/* ==== Windows 7/8 styling ==== */
 
-  @media (-moz-os-version: windows-vista),
-         (-moz-os-version: windows-win7),
+  @media (-moz-os-version: windows-win7),
          (-moz-os-version: windows-win8) {
-    /* Make sure the native margins are correct on Win Vista/7/8.
+    /* Make sure the native margins are correct on Win 7/8.
      * We can't use -moz-win-glass there because the border sizing would
      * not be correct. */
     #main-window {
@@ -496,7 +497,7 @@ toolbarbutton.bookmark-item[open="true"] {
     }
 
     /* The borders on the glass frame are ours, and inside #browser, and on
-     * vista and win7 we want to make sure they are "glassy", so we can't use
+     * win7 we want to make sure they are "glassy", so we can't use
      * #browser as the exclude-glass container. We use #appcontent instead. */
     #browser {
       -moz-appearance: none;
@@ -544,10 +545,9 @@ toolbarbutton.bookmark-item[open="true"] {
     color: inherit;
   }
 
-  /* Show toolbar borders on vista through win8, but not on win10 and later: */
-  @media (-moz-os-version: windows-vista),
-  (-moz-os-version: windows-win7),
-  (-moz-os-version: windows-win8) {
+  /* Show toolbar borders on win7/win8, but not on win10 and later: */
+  @media (-moz-os-version: windows-win7),
+         (-moz-os-version: windows-win8) {
      /* Vertical toolbar border */
     #main-window[sizemode=normal] #navigator-toolbox::after,
     #main-window[sizemode=normal] #navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
@@ -572,10 +572,9 @@ toolbarbutton.bookmark-item[open="true"] {
     }
   }
 
-  /* Round top corners on Vista/7/8, but not Win10 because it's flush against the window edge */
-  @media (-moz-os-version: windows-vista),
-  (-moz-os-version: windows-win7),
-  (-moz-os-version: windows-win8) {
+  /* Round top corners on Win7/8, but not Win10 because it's flush against the window edge */
+  @media (-moz-os-version: windows-win7),
+         (-moz-os-version: windows-win8) {
     #main-window[sizemode=normal][tabsontop=false] #PersonalToolbar:not(:-moz-lwtheme) {
       border-top-left-radius: 3.5px;
       border-top-right-radius: 3.5px;
